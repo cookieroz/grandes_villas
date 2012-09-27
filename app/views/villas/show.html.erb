@@ -1,0 +1,39 @@
+<% provide(:title, @villa.name) %>
+
+<p id="notice"><%= notice %></p>
+
+<h2 class="villa-h2-bg"> <%= @villa.name %> </h2>
+
+<p>
+  <b>Content:</b>
+  <%= @villa.content %>
+</p>
+
+<div id="calendar">
+  <h2 id="month" class="center">
+    <%= link_to "<", date: @date.prev_month %>
+    <%= @date.strftime("%B %Y") %>
+    <%= link_to ">", date: @date.next_month %>
+  </h2>
+  <%= calendar do |date| %>
+      <%= date.day %>
+  <% end %>
+</div>
+
+<hr />
+
+<p>
+  <b>Tags:</b>
+  <%= join_tags(@villa) %>
+</p>
+
+<h2>Comments</h2>
+<%= render @villa.comments %>
+
+<%= render "comments/form" %>
+
+<br />
+
+
+<%= link_to 'Edit', edit_villa_path(@villa) %> |
+<%= link_to 'Back', villas_path %>

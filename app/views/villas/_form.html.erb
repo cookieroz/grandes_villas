@@ -1,0 +1,33 @@
+<% @villa.tags.build %>
+<%= form_for(@villa) do |villa_form| %>
+  <% if @villa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@villa.errors.count, "error") %> prohibited this villa from being saved:</h2>
+
+      <ul>
+      <% @villa.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= villa_form.label :name %><br />
+    <%= villa_form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= villa_form.label :title %><br />
+    <%= villa_form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= villa_form.label :content %><br />
+    <%= villa_form.text_area :content %>
+  </div>
+  <h2>Tags</h2>
+  <%= render :partial => 'tags/form',
+             :locals => {:form => villa_form} %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
