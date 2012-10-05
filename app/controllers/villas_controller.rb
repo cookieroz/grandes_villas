@@ -14,6 +14,7 @@ class VillasController < ApplicationController
   # GET /villas/1.json
   def show
     @villa = Villa.find(params[:id])
+    @images = @villa.photos
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
 
     respond_to do |format|
@@ -26,6 +27,7 @@ class VillasController < ApplicationController
   # GET /villas/new.json
   def new
     @villa = Villa.new
+     @villa.photos.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +38,7 @@ class VillasController < ApplicationController
   # GET /villas/1/edit
   def edit
     @villa = Villa.find(params[:id])
+     @villa.photos.build
   end
 
   # POST /villas

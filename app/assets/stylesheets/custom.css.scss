@@ -2,6 +2,10 @@
 
 @import "bootstrap-responsive";
 
+@import 'gallery/responsive/elastislide';
+@import 'gallery/responsive';
+@import 'gallery/slideshow';
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -175,14 +179,14 @@ aside {
 
 /* forms */
 
-input, textarea, select, .uneditable-input {
+/*input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
   height: auto;
   margin-bottom: 15px;
   @include box_sizing;
-}
+}   */
 
 #error_explanation {
   color:#f00;
@@ -274,6 +278,7 @@ aside {
 /* Villa Page Customizations */
 
 h2.villa-h2-bg {
+  color: #004151;
   background-image: image-url('villa-h2-bg.gif');
   background-repeat: repeat-x;
   height: 41px;

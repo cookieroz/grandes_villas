@@ -4,6 +4,14 @@
 
 <h2 class="villa-h2-bg"> <%= @villa.name %> </h2>
 
+<div>
+  <ul id="gallery">
+    <% @villa.photos.each do |photo| %>
+        <li><%= image_tag(photo.image.url) %> </li>
+    <% end %>
+    </ul>
+</div>
+
 <p>
   <b>Content:</b>
   <%= @villa.content %>

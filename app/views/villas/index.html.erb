@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Title</th>
     <th>Content</th>
     <th></th>
     <th></th>
@@ -13,7 +12,6 @@
 <% @villas.each do |villa| %>
   <tr>
     <td><%= villa.name %></td>
-    <td><%= villa.title %></td>
     <td><%= villa.content %></td>
     <td><%= link_to 'Show', villa %></td>
     <td><%= link_to 'Edit', edit_villa_path(villa) %></td>
@@ -25,3 +23,18 @@
 <br />
 
 <%= link_to 'New Villa', new_villa_path %>
+
+<% if no_villa? then %>
+    <section>
+      </br>
+      <p>This is the Index page for Villa. There are no Villas at the moment.
+        Click 'New Villa' to add one. Once you add a villa or two, click on
+        the villa name to navigate to the Villa/Show action. From there you
+        may navigate to the Photo Upload feature.<p>
+    </section>
+<% else %>
+    <section>
+      </br>
+      <p>Click on a Villa Name to view/upload photos.<p>
+    </section>
+<% end %>

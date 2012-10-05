@@ -1,33 +1,56 @@
 <% @villa.tags.build %>
-<%= form_for(@villa) do |villa_form| %>
-  <% if @villa.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@villa.errors.count, "error") %> prohibited this villa from being saved:</h2>
+<%= form_for @villa,
+             :html => {:multipart => true, :id => "fileupload" }  do |villa_form| %>
+    <% if @villa.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@villa.errors.count, "error") %> prohibited this post from being saved:</h2>
+          <ul>
+            <% @villa.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
-      <ul>
-      <% @villa.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+    <div class="field">
+      <%= villa_form.label :name %><br />
+      <%= villa_form.text_field :name %>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= villa_form.label :name %><br />
-    <%= villa_form.text_field :name %>
-  </div>
-  <div class="field">
-    <%= villa_form.label :title %><br />
-    <%= villa_form.text_field :title %>
-  </div>
-  <div class="field">
-    <%= villa_form.label :content %><br />
-    <%= villa_form.text_area :content %>
-  </div>
-  <h2>Tags</h2>
-  <%= render :partial => 'tags/form',
-             :locals => {:form => villa_form} %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= villa_form.fields_for :photos do |photo| %>
+        <% if photo.object.new_record? %>
+            <%= photo.file_field :image, multiple: true, name: "villa[photos_attributes][][image]"  %>
+        <% else %>
+            <%= image_tag(photo.object.image.url(:thumb)) %>
+            <%= photo.check_box :_destroy %>
+        <% end %>
+    <% end %>
+
+    <script type="text/javascript" charset="utf-8">
+        $('#uploadForm input').change(function(){
+            $(this).parent().ajaxSubmit({
+                beforeSubmit: function(a,f,o) {
+                    o.dataType = 'json';
+                },
+                complete: function(XMLHttpRequest, textStatus) {
+                    // XMLHttpRequest.responseText will contain the URL of the uploaded image.
+                    // Put it in an image element you create, or do with it what you will.
+                    // For example, if you have an image elemtn with id "my_image", then
+                    //  $('#my_image').attr('src', XMLHttpRequest.responseText);
+                    // Will set that image tag to display the uploaded image.
+                }
+            });
+        });
+    </script>
+
+    <div class="field">
+      <%= villa_form.label :content %><br />
+      <%= villa_form.text_area :content %>
+    </div>
+    <h2>Tags</h2>
+    <%= render :partial => 'tags/form',
+               :locals => {:form => villa_form} %>
+    <div class="actions">
+      <%= villa_form.submit %>
+    </div>
 <% end %>

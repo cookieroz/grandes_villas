@@ -1,7 +1,14 @@
 GrandesVillas::Application.routes.draw do
+
   resources :villas do
     resources :comments
   end
+
+  get "photos/index"
+
+  get "photos/show"
+
+  resources :uploads
 
   get "home/index"
 

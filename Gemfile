@@ -6,6 +6,13 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
+gem 'rails-gallery'
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'jquery-fileupload-rails'
+gem 'rmagick'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
@@ -28,10 +35,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-ui-rails'
 end
-
-gem 'jquery-rails'
 
 group :test do
   gem 'capybara', '1.1.2'
@@ -43,7 +47,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
-# gem 'jbuilder'
+#  gem 'jbuilder'
 
 # Use unicorn as the app server
 # gem 'unicorn'
