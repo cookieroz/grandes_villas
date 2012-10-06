@@ -2,10 +2,6 @@
 
 @import "bootstrap-responsive";
 
-@import 'gallery/responsive/elastislide';
-@import 'gallery/responsive';
-@import 'gallery/slideshow';
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
@@ -35,9 +31,10 @@ textarea {
 
 .center {
   text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
+}
+
+h1.center {
+  margin-bottom: 10px;
 }
 
 /* Calendar Styles */
@@ -94,57 +91,13 @@ textarea {
   padding-left: 20px;
 }
 
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
-}
-
 /* miscellaneous */
 
 .debug_dump {
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 45px;
+  margin-top: 5px;
   @include box_sizing;
 }
 
@@ -275,12 +228,92 @@ aside {
   }
 }
 
+/* header styles */
+header {
+  background-image: image-url('main_bg.gif');
+  background-repeat: repeat-x;
+  height: 136px;
+  .navbar-inner {
+    background: none;
+    box-shadow: none;
+    padding-top: 95px;
+    nav ul.nav li {
+      font-size: 1.1em;
+      a {
+      color: #ffffff;
+      &:hover { color: #FFA500; }
+      }
+    }
+    nav ul.nav li.active a {
+      background: none;
+      color: #FFA500;
+      &:hover {
+        background: none;
+        color: #FFA500;
+      }
+    }
+    #logo {
+      float: left;
+      margin-right: 10px;
+      margin-top: -70px;
+      font-size: 1.7em;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      font-weight: bold;
+      line-height: 1;
+    }
+    #logo-villas {
+      float: left;
+      margin-left: 150px;
+      margin-top: -60px;
+    }
+  }
+}
+
 /* Villa Page Customizations */
 
 h2.villa-h2-bg {
-  color: #004151;
   background-image: image-url('villa-h2-bg.gif');
   background-repeat: repeat-x;
-  height: 41px;
+  border: 1px solid #B9DAE2;
+  color: #004151;
+  height: 40px;
   text-align: center;
 }
+
+/* Contact Form Changes */
+
+form.contact-form {
+  margin: 0 auto;
+  padding: 15px;
+  width: 530px;
+}
+
+
+/* footer */
+
+footer {
+  background: #004151;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: #ffffff;
+    &:hover {
+      color: $gray;
+    }
+  }
+  small {
+    clear: left;
+    color: #DCDCDC;
+    display: block;
+    padding: 0 0 20px 0;
+  }
+  #footer-logo {
+    float: right;
+  }
+}
+
+

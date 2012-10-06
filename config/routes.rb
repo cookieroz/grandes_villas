@@ -1,8 +1,17 @@
 GrandesVillas::Application.routes.draw do
 
+  resources :activities
+
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
+  match '/contact', to: 'messages#new'
+  match '/owner', to: 'static_pages#owner'
+
   resources :villas do
     resources :comments
   end
+
+  resources :messages
 
   get "photos/index"
 

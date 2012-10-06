@@ -1,13 +1,21 @@
 <footer class="footer">
-  <small>
-    <a href="http://grandesvillas.com/">Grandes Villas</a>
-    by Diez Family
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   "#" %></li>
-      <li><%= link_to "Contact", "#" %></li>
-      <li><a href="#">News</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav>
+      <ul class="nav nav-pills pull-left">
+        <li><%= link_to "Home",   root_path %></li>
+        <li><%= link_to "Rent a Villa", villas_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Rent Your Property", owner_path %></li>
+        <li><%= link_to "About", about_path %></li>
+      </ul>
+    </nav>
+    <%= link_to image_tag("footer_logo.gif"), root_path, id: "footer-logo" %>
+    <small>
+      Use of this Web site constitutes acceptance of the GrandesVillas.com
+      Terms & Conditions and Privacy Policy.
+      <br />
+      © Copyright 2012 -Present GrandesVillas. All rights reserved.
+    </small>
+
+  </div>
 </footer>

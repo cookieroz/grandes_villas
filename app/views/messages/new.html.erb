@@ -1,0 +1,43 @@
+<h1 class="center">Contact Us</h1>
+
+<p>Ut nulla velit, convallis vel mattis sed, tincidunt in ipsum. Morbi
+  eget est in dolor aliquet consectetur lacinia et odio. Aenean a metus
+  feugiat purus accumsan consectetur. Integer eget quam ac nunc eleifend
+  pretium sit amet egestas leo. Phasellus id erat ipsum, at pulvinar tellus.
+  In vestibulum luctus lobortis. Nulla in odio diam, quis suscipit neque.
+  Morbi consequat leo nec est vestibulum cursus.</p>
+
+<%= form_for @message,
+                    :html => { :class => 'form-horizontal contact-form' } do |f| %>
+    <% if @message.errors.any? %>
+        <div class="error_messages">
+          <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+          <ul>
+            <% @message.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="control-group">
+      <%= f.label :name, class: "control-label" %>
+      <div class="controls">
+          <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :email, class: "control-label" %>
+      <div class="controls">
+        <%= f.text_field :email %>
+      </div>
+    </div>
+    <div class="control-group">
+      <%= f.label :content, "Message", class: "control-label" %>
+      <div class="controls">
+        <%= f.text_area :content, :rows => 5 %>
+      </div>
+    </div>
+    <div class="actions center">
+      <%= f.submit "Send Message", class: "btn btn-primary" %>
+    </div>
+<% end %>

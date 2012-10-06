@@ -6,17 +6,20 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
-gem 'rails-gallery'
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-fileupload-rails'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'nested_form'
+gem 'simple_form'
+gem 'active_attr'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
   gem 'annotate', '~> 2.4.1.beta'
+  gem 'letter_opener'
 end
 
 # Bundle edge Rails instead:

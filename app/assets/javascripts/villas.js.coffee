@@ -6,3 +6,5 @@ jQuery ->
   $('#fileupload').fileupload
 
   $('#gallery').galleryView()
+
+
