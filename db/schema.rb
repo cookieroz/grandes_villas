@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006113249) do
+ActiveRecord::Schema.define(:version => 20121006120246) do
 
   create_table "activities", :force => true do |t|
     t.string   "activity"
@@ -31,28 +31,12 @@ ActiveRecord::Schema.define(:version => 20121006113249) do
 
   add_index "comments", ["villa_id"], :name => "index_comments_on_villa_id"
 
-  create_table "fotos", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "photos", :force => true do |t|
     t.string   "caption"
     t.integer  "villa_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "image"
-  end
-
-  create_table "spud_photos", :force => true do |t|
-    t.string   "title"
-    t.string   "caption"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
   end
 
   create_table "tags", :force => true do |t|
