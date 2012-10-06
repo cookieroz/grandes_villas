@@ -7,19 +7,19 @@ gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-gem 'jquery-fileupload-rails'
-gem 'rmagick'
-gem 'carrierwave'
-gem 'nested_form'
-gem 'simple_form'
-gem 'active_attr'
+gem 'jquery-rails', '2.1.3'
+gem 'jquery-ui-rails', '1.1.0'
+gem 'jquery-fileupload-rails', '0.3.4'
+gem 'rmagick', '2.13.1'
+gem 'carrierwave', '0.5.8'
+gem 'nested_form', '0.2.3'
+gem 'simple_form', '2.0.3'
+gem 'active_attr', '0.6.0'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
   gem 'annotate', '~> 2.4.1.beta'
-  gem 'letter_opener'
+  gem 'letter_opener', '0.1.0'
 end
 
 # Bundle edge Rails instead:
