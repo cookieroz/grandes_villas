@@ -17,8 +17,6 @@ GrandesVillas::Application.routes.draw do
 
   get "photos/show"
 
-  resources :uploads
-
   get "home/index"
 
   # The priority is based upon order of creation:

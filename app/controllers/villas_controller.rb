@@ -27,7 +27,6 @@ class VillasController < ApplicationController
   # GET /villas/new.json
   def new
     @villa = Villa.new
-     @villa.photos.build
 
     respond_to do |format|
       format.html # new.html.erb

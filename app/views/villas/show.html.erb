@@ -4,6 +4,7 @@
 
 <h2 class="villa-h2-bg"> <%= @villa.name %> </h2>
 
+<!-- Refactor into a partial -->
 <div>
   <ul id="gallery">
     <% @villa.photos.each do |photo| %>
@@ -17,6 +18,14 @@
   <%= @villa.content %>
 </p>
 
+<b>Categories:</b>
+<ul>
+  <% @villa.categories.each do |category| %>
+      <li><%= category.name %></li>
+  <% end %>
+</ul>
+
+<!-- Refactor into a partial -->
 <div id="calendar">
   <h2 id="month" class="center">
     <%= link_to "<", date: @date.prev_month %>
