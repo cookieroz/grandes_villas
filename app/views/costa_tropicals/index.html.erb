@@ -43,7 +43,7 @@
             <%= link_to image_tag(costa_tropical.ct_image_url(:thumb), class: 'thumbnail'), costa_tropical %>
           </div>
           <div class="span6">
-            <h3><a href="#"><%= costa_tropical.title %></a></h3>
+            <h3><%= link_to costa_tropical.title, costa_tropical %></h3>
             <p class="meta"><%= costa_tropical.city %></p>
             <p><%= costa_tropical.content %></p>
           </div>
@@ -54,7 +54,7 @@
             <br />
             <%= link_to 'Edit', edit_costa_tropical_path(costa_tropical),
                         class: 'btn btn-primary btn-large' %>
-            <%= link_to 'Discover More', costa_tropical,
+            <%= link_to 'Delete', costa_tropical,
                         method: :delete, data: { confirm: 'Are you sure?' },
                         class: 'btn btn-danger btn-large' %>
           </div>
