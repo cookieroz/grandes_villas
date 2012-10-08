@@ -12,9 +12,9 @@ class Villa < ActiveRecord::Base
 
   accepts_nested_attributes_for :photos, :allow_destroy => true
 
-  has_many :categorizations
-  has_many :categories, through: :categorizations
-  accepts_nested_attributes_for :categories, allow_destroy: :true
+  #has_many :categorizations
+  #has_many :categories, through: :categorizations
+
 
   #has_attached_file :pic, :styles =>
   #                { :medium => "300x300>", :thumb => "100x100>" },

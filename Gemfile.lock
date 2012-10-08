@@ -189,7 +189,7 @@ DEPENDENCIES
   jquery-ui-rails (= 1.1.0)
   letter_opener (= 0.1.0)
   nested_form (= 0.2.3)
-  pg
+  pg (= 0.14.1)
   rails (= 3.2.8)
   rmagick (= 2.13.1)
   rspec-rails (= 2.8.1)
