@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @costa_tropical.title %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @costa_tropical.city %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @costa_tropical.category %>
+</p>
+
+<p>
+  <b>Activity:</b>
+  <%= @costa_tropical.activity %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @costa_tropical.content %>
+</p>
+
+<%= image_tag(@costa_tropical.ct_image_url) %>
+
+
+<%= link_to 'Edit', edit_costa_tropical_path(@costa_tropical) %> |
+<%= link_to 'Back', costa_tropicals_path %>

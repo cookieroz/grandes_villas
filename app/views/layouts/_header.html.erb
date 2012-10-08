@@ -13,8 +13,8 @@
             <%= link_to "Rent a Villa", villas_path %>
           </li>
           <li class="divider-vertical"></li>
-          <li class="">
-            <%= link_to "Costa Tropical", '#' %>
+          <li class="class="<%= 'active' if current_page?(costa_tropicals_path) %>">
+            <%= link_to "Costa Tropical", costa_tropicals_path %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(contact_path) %>">

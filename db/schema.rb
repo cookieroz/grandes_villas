@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008175951) do
+ActiveRecord::Schema.define(:version => 20121008200510) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(:version => 20121008175951) do
   end
 
   add_index "comments", ["villa_id"], :name => "index_comments_on_villa_id"
+
+  create_table "costa_tropicals", :force => true do |t|
+    t.string   "title"
+    t.string   "category"
+    t.string   "ct_image"
+    t.string   "city"
+    t.string   "activity"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "photos", :force => true do |t|
     t.string   "caption"

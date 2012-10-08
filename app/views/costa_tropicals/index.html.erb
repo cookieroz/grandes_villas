@@ -1,0 +1,96 @@
+<% provide(:title, 'The Costa Tropical, Granada Spain') %>
+
+<div class="page-header">
+  <h1>Discover the Costa Tropical <small>Your next holiday
+  desintation.</small></h1>
+</div>
+
+
+
+<div class="span12">
+
+  <div class="thumbnails">
+    <div class="row">
+      <div class="span3 pull-left">
+        <a href="#">
+          <img src="http://placehold.it/200x200" alt="" class="thumbnail">
+        </a>
+      </div>
+      <div class="span6">
+        <h3><a href="#">Costa Tropical Title</a></h3>
+        <p class="meta">Town Name</p>
+        <p>CONTENT with its private pool and jacuzzi is located in
+          the urbanization Fuentes de Almuñecar. The urbanization is
+          located on the spectacular hillside part of Almuñecar on the
+          Costa Tropical, just three minutes from the sea, beach and
+          town. The urbanization consists of independent houses /
+          apartments / and villas which guarantees rest, views and
+          privacy. It is located just 1.5 km from the magnificent
+          beaches of Almuñecar such as Velilla beach, Tesorillo,
+          Pozuelo and San Cristobal. Being situated ...</p>
+      </div>
+      <div class="span3">
+        <a href="#" class="btn btn-info btn-large">Discover More</a>
+      </div>
+    </div>
+    <hr />
+  </div>
+
+  <% @costa_tropicals.each do |costa_tropical| %>
+      <div class="thumbnails">
+        <div class="row">
+          <div class="span3 pull-left">
+            <%= link_to image_tag(costa_tropical.ct_image_url(:thumb), class: 'thumbnail'), costa_tropical %>
+          </div>
+          <div class="span6">
+            <h3><a href="#"><%= costa_tropical.title %></a></h3>
+            <p class="meta"><%= costa_tropical.city %></p>
+            <p><%= costa_tropical.content %></p>
+          </div>
+          <div class="span3">
+            <%= link_to 'Discover More', costa_tropical,
+                        class: 'btn btn-info btn-large' %>
+            <br />
+            <br />
+            <%= link_to 'Edit', edit_costa_tropical_path(costa_tropical),
+                        class: 'btn btn-primary btn-large' %>
+            <%= link_to 'Discover More', costa_tropical,
+                        method: :delete, data: { confirm: 'Are you sure?' },
+                        class: 'btn btn-danger btn-large' %>
+          </div>
+        </div>
+        <hr />
+      </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @costa_tropicals.each do |costa_tropical| %>
+  <tr>
+    <td><%= costa_tropical.title %></td>
+    <td><%= costa_tropical.city %></td>
+    <td><%= costa_tropical.category %></td>
+    <td><%= costa_tropical.activity %></td>
+    <td><%= costa_tropical.content %></td>
+    <td><%= image_tag(costa_tropical.ct_image_url(:thumb)) %></td>
+    <td><%= link_to 'Show', costa_tropical %></td>
+    <td><%= link_to 'Edit', edit_costa_tropical_path(costa_tropical) %></td>
+    <td><%= link_to 'Destroy', costa_tropical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Costa tropical', new_costa_tropical_path %>

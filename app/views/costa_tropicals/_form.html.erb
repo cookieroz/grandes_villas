@@ -1,0 +1,16 @@
+<%= simple_form_for(@costa_tropical) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :city %>
+    <%= f.input :category %>
+    <%= f.input :activity %>
+    <%= f.file_field :ct_image %>
+    <%= f.input :content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
