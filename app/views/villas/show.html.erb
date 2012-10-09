@@ -5,7 +5,26 @@
 <h2 class="villa-h2-bg"> <%= @villa.name %> </h2>
 
 <!-- Refactor into a partial -->
-<div>
+<div class="row">
+
+  <ul class="nav nav-pills">
+    <li id="overview" class="active">
+      <a href="#overview">Overview</a>
+    </li>
+    <li>
+      <a href="#descript">Description</a>
+    </li>
+    <li>
+      <a href="#map-link">Map</a>
+    </li>
+    <li>
+      <a href="#avail">Availability</a>
+    </li>
+    <li>
+      <a href="#rates">Rates</a>
+    </li>
+  </ul>
+
   <ul id="gallery">
     <% @villa.photos.each do |photo| %>
         <li><%= image_tag(photo.image.url) %> </li>
@@ -13,10 +32,127 @@
     </ul>
 </div>
 
-<p>
-  <b>Content:</b>
-  <%= @villa.content %>
-</p>
+<hr />
+
+<div class="row">
+
+  <ul class="nav nav-pills">
+    <li>
+      <a href="#overview">Overview</a>
+    </li>
+    <li id="descript" class="active">
+      <a href="#descript">Description</a>
+    </li>
+    <li>
+      <a href="#map-link">Map</a>
+    </li>
+    <li>
+      <a href="#avail">Availability</a>
+    </li>
+    <li>
+      <a href="#rates">Rates</a>
+    </li>
+  </ul>
+
+  <div class="span12">
+    <p class="lead">Description of <%= @villa.name %>: </p>
+    <%= @villa.content %>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <ul class="nav nav-pills">
+    <li>
+      <a href="#overview">Overview</a>
+    </li>
+    <li>
+      <a href="#descript">Description</a>
+    </li>
+    <li id="map-link" class="active">
+      <a href="#map-link">Map</a>
+    </li>
+    <li>
+      <a href="#avail">Availability</a>
+    </li>
+    <li>
+      <a href="#rates">Rates</a>
+    </li>
+  </ul>
+  <div class="span6">
+    <%= gmaps(
+                :markers => { :data => @json },
+                :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
+                                  :auto_zoom => false, 	# :auto_zoom defaults to full zoom in, set to false to utilize :zoom
+                                  :zoom => 15 }		# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
+        ) %>
+  </div>
+  <div class="span6">
+    CONTACT FORM HERE
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+    <ul class="nav nav-pills">
+      <li>
+        <a href="#overview">Overview</a>
+      </li>
+      <li>
+        <a href="#descript">Description</a>
+      </li>
+      <li>
+        <a href="#map-link">Map</a>
+      </li>
+      <li id="avail" class="active">
+        <a href="#avail">Availability</a>
+      </li>
+      <li>
+        <a href="#rates">Rates</a>
+      </li>
+    </ul>
+  <div class="span12">
+    <!-- Refactor into a partial -->
+    <div id="calendar">
+      <h2 id="month" class="center">
+        <%= link_to "<", date: @date.prev_month %>
+        <%= @date.strftime("%B %Y") %>
+        <%= link_to ">", date: @date.next_month %>
+      </h2>
+      <%= calendar do |date| %>
+          <%= date.day %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <ul class="nav nav-pills">
+    <li>
+      <a href="#overview">Overview</a>
+    </li>
+    <li>
+      <a href="#descript">Description</a>
+    </li>
+    <li>
+      <a href="#map-link">Map</a>
+    </li>
+    <li>
+      <a href="#avail">Availability</a>
+    </li>
+    <li id="rates" class="active">
+      <a href="#rates">Rates</a>
+    </li>
+  </ul>
+  <div class="span12">
+    <!-- Refactor into a partial -->
+    RATES HERE
+  </div>
+</div>
 
 <!--<b>Categories:</b>
 <ul>
@@ -24,18 +160,6 @@
       <li><%# category.name %></li>
   <%#end %>
 </ul>  -->
-
-<!-- Refactor into a partial -->
-<div id="calendar">
-  <h2 id="month" class="center">
-    <%= link_to "<", date: @date.prev_month %>
-    <%= @date.strftime("%B %Y") %>
-    <%= link_to ">", date: @date.next_month %>
-  </h2>
-  <%= calendar do |date| %>
-      <%= date.day %>
-  <% end %>
-</div>
 
 <hr />
 
@@ -54,3 +178,5 @@
 
 <%= link_to 'Edit', edit_villa_path(@villa) %> |
 <%= link_to 'Back', villas_path %>
+
+<%= yield :scripts %>

@@ -16,6 +16,7 @@ gem 'carrierwave', '0.5.8'
 gem 'nested_form', '0.2.3'
 gem 'simple_form', '2.0.3'
 gem 'active_attr', '0.6.0'
+gem 'gmaps4rails', '1.5.5'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'

@@ -17,6 +17,7 @@ class VillasController < ApplicationController
     @villa = Villa.find(params[:id])
     @images = @villa.photos
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
+    @json = @villa.to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb

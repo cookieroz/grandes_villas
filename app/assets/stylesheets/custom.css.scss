@@ -292,6 +292,14 @@ p.meta {
   font-weight: bold;
 }
 
+/* gmaps4rails bootstrap overrides */
+#map img {
+  max-width: none;
+}
+#map label {
+  width: auto; display:inline;
+}
+
 /*Costa Tropical Customizations*/
 .costa-description {
   font-size: 16px;

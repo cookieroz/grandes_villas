@@ -1,5 +1,6 @@
 class Villa < ActiveRecord::Base
-  attr_accessible :content, :name, :tags_attributes, :photos_attributes
+  attr_accessible :content, :name, :address, :latitude, :longitude,
+                  :tags_attributes, :photos_attributes
 
   validates :name,  :presence => true
 
@@ -11,6 +12,17 @@ class Villa < ActiveRecord::Base
           :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
 
   accepts_nested_attributes_for :photos, :allow_destroy => true
+
+  acts_as_gmappable :latitude => 'latitude', :longitude => 'longitude',
+                    :process_geocoding => :geocode?,
+                    :address => "address", :normalized_address => "address",
+                    :msg => "Sorry, not even Google could figure out where that is"
+
+  def geocode?
+    (!address.blank? && (latitude.blank? || longitude.blank?)) || address_changed?
+  end
+
+
 
   #has_many :categorizations
   #has_many :categories, through: :categorizations

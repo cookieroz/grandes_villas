@@ -28,6 +28,21 @@
     <% end %>
 
     <div class="field">
+      <%= villa_form.label :address %><br />
+      <%= villa_form.text_field :address %>
+    </div>
+
+    <div class="field">
+      <%= villa_form.label :latitude %><br />
+      <%= villa_form.text_field :latitude %>
+    </div>
+
+    <div class="field">
+      <%= villa_form.label :longitude %><br />
+      <%= villa_form.text_field :longitude %>
+    </div>
+
+    <div class="field">
       <%= villa_form.label :content %><br />
       <%= villa_form.text_area :content %>
     </div>
