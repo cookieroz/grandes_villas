@@ -1,6 +1,10 @@
-<h1>Editing costa_tropical</h1>
+<% provide(:title, 'Edit Costa Tropical Item') %>
+
+<div class="page-header">
+  <h1>Edit this Costa Tropical Item</h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @costa_tropical %> |
-<%= link_to 'Back', costa_tropicals_path %>
+<%= link_to 'Show', @costa_tropical, class: 'btn' %> |
+<%= link_to 'Back', costa_tropicals_path, class: 'btn btn-inverse' %>

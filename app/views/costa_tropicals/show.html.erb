@@ -1,31 +1,36 @@
+<% provide(:title, @costa_tropical.title ) %>
+
+<h2 class="villa-h2-bg"> <%= @costa_tropical.title %> </h2>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @costa_tropical.title %>
-</p>
+<div class="row">
+  <div class="span6 pull-left">
+    <%= image_tag(@costa_tropical.ct_image_url(:medium), class: 'thumbnail') %>
+  </div>
+  <div class="span6">
+     <div class="well well-large">
+       <dl class="dl-horizontal costa">
+         <dt>City: </dt>
+         <dd><%= @costa_tropical.city %></dd>
 
-<p>
-  <b>City:</b>
-  <%= @costa_tropical.city %>
-</p>
+         <dt>Category: </dt>
+         <dd><%= @costa_tropical.category %></dd>
 
-<p>
-  <b>Category:</b>
-  <%= @costa_tropical.category %>
-</p>
+         <dt>Activity: </dt>
+         <dd><%= @costa_tropical.activity %></dd>
+       </dl>
+     </div>
+  </div>
+</div>
 
-<p>
-  <b>Activity:</b>
-  <%= @costa_tropical.activity %>
-</p>
+<hr />
 
-<p>
-  <b>Content:</b>
-  <%= @costa_tropical.content %>
-</p>
-
-<%= image_tag(@costa_tropical.ct_image_url) %>
+<div class="row">
+   <div class="costa-description span12">
+     <%= @costa_tropical.content %>
+   </div>
+</div>
 
 
 <%= link_to 'Edit', edit_costa_tropical_path(@costa_tropical) %> |

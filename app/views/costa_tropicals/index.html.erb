@@ -64,33 +64,7 @@
   <% end %>
 </div>
 
-
-
-
-
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @costa_tropicals.each do |costa_tropical| %>
-  <tr>
-    <td><%= costa_tropical.title %></td>
-    <td><%= costa_tropical.city %></td>
-    <td><%= costa_tropical.category %></td>
-    <td><%= costa_tropical.activity %></td>
-    <td><%= costa_tropical.content %></td>
-    <td><%= image_tag(costa_tropical.ct_image_url(:thumb)) %></td>
-    <td><%= link_to 'Show', costa_tropical %></td>
-    <td><%= link_to 'Edit', edit_costa_tropical_path(costa_tropical) %></td>
-    <td><%= link_to 'Destroy', costa_tropical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
 <br />
 
-<%= link_to 'New Costa tropical', new_costa_tropical_path %>
+<%= link_to 'New Costa tropical', new_costa_tropical_path,
+            class: 'btn btn-warning btn-large' %>

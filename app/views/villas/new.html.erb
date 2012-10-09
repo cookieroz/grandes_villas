@@ -1,5 +1,9 @@
-<h1>New villa</h1>
+<% provide(:title, 'Create a New Villa') %>
+
+<div class="page-header">
+  <h1>Create a New Villa</h1>
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', villas_path %>
+<%= link_to 'Back', villas_path, class: 'btn' %>
