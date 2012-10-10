@@ -17,7 +17,7 @@
           <div class="span6">
             <h3><%= link_to costa_tropical.title, costa_tropical %></h3>
             <p class="meta"><%= costa_tropical.city %></p>
-            <p><%= costa_tropical.content %></p>
+            <p><%= truncate(costa_tropical.content, :length => 380) %></p>
           </div>
           <div class="span3">
             <%= link_to 'Discover More', costa_tropical,

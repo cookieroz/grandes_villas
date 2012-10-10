@@ -104,7 +104,7 @@
 <% @villas.each do |villa| %>
   <tr>
     <td><%= villa.name %></td>
-    <td><%= villa.content %></td>
+    <td><%= truncate(villa.content, :length => 380) %></td>
     <td><%= link_to 'Show', villa %></td>
     <td><%= link_to 'Edit', edit_villa_path(villa) %></td>
     <td><%= link_to 'Destroy', villa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
