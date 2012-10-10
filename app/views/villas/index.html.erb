@@ -3,38 +3,19 @@
 <div class="page-header">
   <h1>Our Holiday Villa Rentals <small>Subtext for header</small></h1>
 </div>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
   <!-- Refactor into a partial -->
   <div class="span12">
-
+    <% @villas.each do |villa| %>
      <div class="villas-index-list thumbnails">
        <div class="row">
          <div class="span3 pull-left">
-           <a href="#">
-             <img src="http://placehold.it/200x200" alt="" class="thumbnail">
-           </a>
+           <%= link_to image_tag(villa.photos.first.image_url(:thumb),
+                                 class: 'thumbnail'), villa %>
          </div>
          <div class="span6">
-           <h3><a href="#">Villa Name</a></h3>
+           <h3><%= link_to villa.name, villa %></h3>
            <p class="meta">Town Name</p>
-           <p>This villa with its private pool and jacuzzi is located in
-             the urbanization Fuentes de Almuñecar. The urbanization is
-             located on the spectacular hillside part of Almuñecar on the
-             Costa Tropical, just three minutes from the sea, beach and
-             town. The urbanization consists of independent houses /
-             apartments / and villas which guarantees rest, views and
-             privacy. It is located just 1.5 km from the magnificent
-             beaches of Almuñecar such as Velilla beach, Tesorillo,
-             Pozuelo and San Cristobal. Being situated ...</p>
+           <p><%= truncate(villa.content, :length => 380) %></p>
          </div>
          <div class="span3">
            <div class="well">
@@ -45,80 +26,29 @@
                <li>Pools: Private</li>
                <li>Type: Beach Villa</li>
              </ul>
+             <%= link_to 'Read More About This Villa', villa,
+                         class: 'btn btn-info' %>
            </div>
-           <a href="#" class="btn btn-info btn-large">Read more about Villa</a>
+           <%= link_to 'Edit', edit_villa_path(villa),
+                       class: 'btn btn-primary' %>
+           <%= link_to 'Delete', villa,
+                       method: :delete, data: { confirm: 'Are you sure?' },
+                       class: 'btn btn-danger' %>
          </div>
        </div>
        <hr />
      </div>
-
-    <div class="villas-index-list thumbnails">
-      <div class="row">
-        <div class="span3 pull-left">
-          <a href="#">
-            <img src="http://placehold.it/200x200" alt="" class="thumbnail">
-          </a>
-        </div>
-        <div class="span6">
-          <h3><a href="#">Villa Name</a></h3>
-          <p class="meta">Town Name</p>
-          <p>This villa with its private pool and jacuzzi is located in
-            the urbanization Fuentes de Almuñecar. The urbanization is
-            located on the spectacular hillside part of Almuñecar on the
-            Costa Tropical, just three minutes from the sea, beach and
-            town. The urbanization consists of independent houses /
-            apartments / and villas which guarantees rest, views and
-            privacy. It is located just 1.5 km from the magnificent
-            beaches of Almuñecar such as Velilla beach, Tesorillo,
-            Pozuelo and San Cristobal. Being situated ...</p>
-        </div>
-        <div class="span3">
-          <div class="well">
-            <h4>Villa Features</h4>
-            <ul class="amenities-list-info unstyled">
-              <li>Bedrooms:10</li>
-              <li>Bathrooms:5</li>
-              <li>Pools: Private</li>
-              <li>Type: Beach Villa</li>
-            </ul>
-          </div>
-          <a href="#" class="btn btn-info btn-large">Read more about Villa</a>
-        </div>
-      </div>
-      <hr />
-    </div>
-
+     <% end %>
   </div>
-
-  <ul class="thumbnails">
-    <li>
-      <div class="thumbnail">
-        <img src="http://placehold.it/200x200" alt="" class="pull-left">
-
-        <h3>Thumbnail label</h3>
-        <p>Thumbnail caption...</p>
-      </div>
-    </li>
-  </ul>
-
-<% @villas.each do |villa| %>
-  <tr>
-    <td><%= villa.name %></td>
-    <td><%= truncate(villa.content, :length => 380) %></td>
-    <td><%= link_to 'Show', villa %></td>
-    <td><%= link_to 'Edit', edit_villa_path(villa) %></td>
-    <td><%= link_to 'Destroy', villa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
 <br />
 
-<%= link_to 'New Villa', new_villa_path %>
+  <%= link_to 'Create New Villa', new_villa_path,
+              class: 'btn btn-warning btn-large' %>
 
 <% if no_villa? then %>
     <section>
-      </br>
+      <br />
       <p>This is the Index page for Villa. There are no Villas at the moment.
         Click 'New Villa' to add one. Once you add a villa or two, click on
         the villa name to navigate to the Villa/Show action. From there you
@@ -126,7 +56,7 @@
     </section>
 <% else %>
     <section>
-      </br>
+      <br />
       <p>Click on a Villa Name to view/upload photos.<p>
     </section>
 <% end %>

@@ -2,11 +2,9 @@
 
 <h2 class="villa-h2-bg"> <%= @costa_tropical.title %> </h2>
 
-<p id="notice"><%= notice %></p>
-
 <div class="row">
   <div class="span6 pull-left">
-    <%= image_tag(@costa_tropical.ct_image_url(:medium), class: 'thumbnail') %>
+    <%= image_tag(@costa_tropical.ct_image_url, class: 'thumbnail') %>
   </div>
   <div class="span6">
      <div class="well well-large">
