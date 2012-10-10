@@ -1,12 +1,15 @@
 class Villa < ActiveRecord::Base
-  attr_accessible :content, :name, :address, :latitude, :longitude,
-                  :tags_attributes, :photos_attributes
+  attr_accessible :content, :name, :address, :latitude,
+                  :longitude,:tags_attributes, :category_ids,
+                  :photos_attributes
 
   validates :name,  :presence => true
 
   has_many :comments, :dependent => :destroy
   has_many :tags
   has_many :photos, :dependent => :destroy
+  has_many :categorizations
+  has_many :categories, through: :categorizations
 
   accepts_nested_attributes_for :tags, :allow_destroy => :true,
           :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
@@ -21,12 +24,6 @@ class Villa < ActiveRecord::Base
   def geocode?
     (!address.blank? && (latitude.blank? || longitude.blank?)) || address_changed?
   end
-
-
-
-  #has_many :categorizations
-  #has_many :categories, through: :categorizations
-
 
   #has_attached_file :pic, :styles =>
   #                { :medium => "300x300>", :thumb => "100x100>" },
