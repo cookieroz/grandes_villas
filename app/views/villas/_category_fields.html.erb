@@ -1,6 +1,6 @@
 <fieldset>
-  <%= f.label :name, "Category to Add" %>
-  <%= f.text_field :name %>
-  <%= f.hidden_field :_destroy %>
+  <%= villa_form.label :name, "Add a Category" %>
+  <%= villa_form.text_field :name %>
+  <%= villa_form.hidden_field :_destroy %>
   <%= link_to "remove", '#', class: "remove_fields" %>
 </fieldset>

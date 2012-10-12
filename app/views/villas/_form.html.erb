@@ -1,6 +1,7 @@
 <% @villa.tags.build %>
 <%= form_for @villa,
-             :html => {:multipart => true, :id => "fileupload" }  do |villa_form| %>
+             :html => {:multipart => true, :id => "fileupload",
+                       :class =>"form-horizontal villa-form" }  do |villa_form| %>
     <% if @villa.errors.any? %>
         <div id="errorExplanation">
           <h2><%= pluralize(@villa.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,52 +13,61 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= villa_form.label :name %><br />
+    <div class="control-group">
+      <%= villa_form.label :name, class: "control-label" %>
       <%= villa_form.text_field :name %>
     </div>
 
     <!-- Refactor into a partial -->
+    <div class="control-group">
     <%= villa_form.fields_for :photos do |photo| %>
         <% if photo.object.new_record? %>
             <%= photo.file_field :image %>
         <% else %>
-            <%= image_tag(photo.object.image.url(:thumb)) %>
-            <%= photo.check_box :_destroy %>
+            <label class="checkbox">
+                <%= image_tag(photo.object.image.url(:thumb)) %>
+                <%= photo.check_box :_destroy %>
+            </label>
         <% end %>
     <% end %>
+    </div>
 
-    <div class="field">
-      <%= villa_form.label :address %><br />
+    <div class="control-group">
+      <%= villa_form.label :address, class: "control-label" %>
       <%= villa_form.text_field :address %>
     </div>
 
-    <div class="field">
-      <%= villa_form.label :latitude %><br />
+    <div class="control-group">
+      <%= villa_form.label :latitude, class: "control-label" %>
       <%= villa_form.text_field :latitude %>
     </div>
 
-    <div class="field">
-      <%= villa_form.label :longitude %><br />
+    <div class="control-group">
+      <%= villa_form.label :longitude, class: "control-label" %>
       <%= villa_form.text_field :longitude %>
     </div>
 
-    <div class="field">
-      <%= villa_form.label :content %><br />
+    <div class="control-group">
+      <%= villa_form.label :content, class: "control-label" %>
       <%= villa_form.text_area :content %>
     </div>
 
     <!--Refactor into a partial -->
-    <div class="field">
-      <%= hidden_field_tag "villa[category_ids][]", nil%>
-      <% Category.all.each do |category| %>
-          <%= check_box_tag "villa[category_ids][]",
-                            category.id,
-                            @villa.category_ids.include?(category.id),
-                            id: dom_id(category)%>
-          <%= label_tag dom_id(category), category.name %><br/>
-      <% end %>
+    <div class="control-group">
+      <div class="controls">
+        <%= hidden_field_tag "villa[category_ids][]", nil%>
+        <% Category.all.each do |category| %>
+            <%= check_box_tag "villa[category_ids][]",
+                              category.id,
+                              @villa.category_ids.include?(category.id),
+                              id: dom_id(category)%>
+            <%= label_tag dom_id(category), category.name, class: "cat-check" %>
+        <% end %>
+      </div>
     </div>
+
+    <%= link_to_add_fields "Add Category", villa_form, :categories %>
+
 
 
     <h2>Tags</h2>

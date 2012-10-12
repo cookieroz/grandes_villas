@@ -288,6 +288,27 @@ h2.villa-h2-bg {
   }
 }
 
+.villa-form {
+  width: 100%;
+  label {
+    padding: 0 10px 0 0;
+  }
+  .cat-check {
+    padding: 0 0 0 20px;
+    width: 150px;
+  }
+  input[type="checkbox"] {
+    display: block;
+    float: left;
+  }
+  input[type="file"] {
+    padding: 0 0 10px 150px;
+  }
+  textarea {
+    width: 70%;
+  }
+}
+
 p.meta {
   color: #FFA500;
   font-size: 16px;
