@@ -32,6 +32,22 @@
     <% end %>
     </div>
 
+    <!--Refactor into a partial -->
+    <div class="control-group">
+      <div class="controls">
+      <%= hidden_field_tag "villa[location_ids][]", nil%>
+      <% Location.all.each do |location| %>
+          <%= radio_button_tag "villa[location_ids][]",
+                               location.id,
+                               @villa.location_ids.include?(location.id),
+                               id: dom_id(location)%>
+          <%= label_tag dom_id(location), location.place,
+                        class: "rad-check radio" %>
+      <% end %>
+        <%= link_to_add_fields "Add Location", villa_form, :locations %>
+      </div>
+    </div>
+
     <div class="control-group">
       <%= villa_form.label :address, class: "control-label" %>
       <%= villa_form.text_field :address %>

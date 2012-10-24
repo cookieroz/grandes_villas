@@ -3,8 +3,13 @@ class VillasController < ApplicationController
   # GET /villas.json
 
   def index
-    @villas = Villa.all
 
+    if params[:location_id]
+      @locations = Location.all
+      @villas = Villa.by_locations(params[:location_id])
+    else
+      @villas = Villa.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb

@@ -20,32 +20,36 @@
     </li>
   </ul>
 
-  <ul id="gallery">
-    <% @villa.photos.each do |photo| %>
-        <li><%= image_tag(photo.image.url) %> </li>
-    <% end %>
+  <div class="span9">
+    <ul id="gallery">
+      <% @villa.photos.each do |photo| %>
+          <li><%= image_tag(photo.image.url) %> </li>
+      <% end %>
     </ul>
+  </div>
+  <div class="span3 villa-features">
+    <div class="well">
+      <ul class="unstyled">
+        <% @villa.locations.each do |location| %>
+            <li>Location: <strong><%= location.place %></strong></li>
+        <% end %>
+        <li>Bedrooms: <strong>test</strong></li>
+        <li>Sleeps: <strong>test</strong></li>
+      </ul>
+      <h4 class="orangeText">Villa Features:</h4>
+        <% @villa.categories.each do |category| %>
+            <div class="span1 darkBlueText">
+              <%= category.name %>
+            </div>
+        <% end %>
+      <div class="clear"></div>
+    </div>
+  </div>
 </div>
 
 <hr />
 
 <div class="row">
-
-  <ul class="nav nav-pills">
-    <li>
-      <a href="#overview">Overview</a>
-    </li>
-    <li>
-      <a href="#map-link">Map</a>
-    </li>
-    <li>
-      <a href="#avail">Availability</a>
-    </li>
-    <li>
-      <a href="#rates">Rates</a>
-    </li>
-  </ul>
-
   <div class="span12">
     <p class="lead">Description of <%= @villa.name %>: </p>
     <%= @villa.content %>
@@ -136,13 +140,6 @@
     RATES HERE
   </div>
 </div>
-
-<b>Categories:</b>
-<ul>
-  <% @villa.categories.each do |category| %>
-      <li><%= category.name %></li>
-  <% end %>
-</ul>
 
 <hr />
 

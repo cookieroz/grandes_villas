@@ -1047,7 +1047,7 @@ if (typeof Object.create !== 'function') {
 		show_panels: true, 				//BOOLEAN - flag to show or hide panel portion of gallery
 		show_panel_nav: true, 			//BOOLEAN - flag to show or hide panel navigation buttons
 		enable_overlays: false, 			//BOOLEAN - flag to show or hide panel overlays
-		panel_width: 800, 				//INT - width of gallery panel (in pixels)
+		panel_width: 700, 				//INT - width of gallery panel (in pixels)
 		panel_height: 400, 				//INT - height of gallery panel (in pixels)
 		panel_animation: 'fade', 		//STRING - animation method for panel transitions (crossfade,fade,slide,none)
 		panel_scale: 'crop', 			//STRING - cropping option for panel images (crop = scale image and fit to aspect ratio determined by panel_width and panel_height, fit = scale image and preserve original aspect ratio)

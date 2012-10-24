@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010184416) do
+ActiveRecord::Schema.define(:version => 20121022172827) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(:version => 20121010184416) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "locations", :force => true do |t|
+    t.string   "place"
+    t.integer  "villa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "locations", ["villa_id"], :name => "index_locations_on_villa_id"
+
   create_table "photos", :force => true do |t|
     t.string   "caption"
     t.integer  "villa_id"
@@ -63,6 +72,13 @@ ActiveRecord::Schema.define(:version => 20121010184416) do
   end
 
   add_index "tags", ["villa_id"], :name => "index_tags_on_villa_id"
+
+  create_table "villalocations", :force => true do |t|
+    t.integer  "location_id"
+    t.integer  "villa_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "villas", :force => true do |t|
     t.string   "name"
