@@ -137,7 +137,25 @@
   </ul>
   <div class="span12">
     <!-- Refactor into a partial -->
-    RATES HERE
+    <table class="table table-bordered table-hover table-striped">
+      <thead>
+        <tr>
+          <th> Villa Rental Season </th>
+          <th> Villa Weekly Rate </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @villa.rates.each do |rate| %>
+          <tr>
+            <td> <%= rate.price_info %> </td>
+            <td> <%= rate.price %> &euro; </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <p>Additional Observations:</p>
+    <p><%= @villa.observations %></p>
   </div>
 </div>
 

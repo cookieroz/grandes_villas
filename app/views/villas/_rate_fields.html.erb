@@ -1,0 +1,12 @@
+<div class="controls">
+  <%= villa_form.label :price_info, "Please insert rental
+  rate description." %>
+  <%= villa_form.text_field :price_info %>
+
+  <%= villa_form.label :price, "Please insert rental price." %>
+  <%= villa_form.text_field :price %>
+  <%= villa_form.label :_destroy,
+                       :class => "checkbox" do %>
+      <%= villa_form.check_box :_destroy %> Remove All Rate Information
+  <% end %>
+</div>

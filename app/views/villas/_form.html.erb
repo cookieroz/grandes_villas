@@ -85,6 +85,24 @@
     <%= link_to_add_fields "Add Category", villa_form, :categories %>
 
 
+    <!--Refactor into a partial -->
+    <div class="control-group">
+        <%= villa_form.fields_for :rates do |builder| %>
+          <%= render 'rate_fields', villa_form: builder %>
+        <% end %>
+      <div class="controls">
+        <%= link_to_add_fields "Add Rates", villa_form, :rates %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= villa_form.label :observations,
+                           "Please insert any observations
+                               here" %>
+      <%= villa_form.text_area :observations %>
+    </div>
+
+
 
     <h2>Tags</h2>
     <%= render :partial => 'tags/form',

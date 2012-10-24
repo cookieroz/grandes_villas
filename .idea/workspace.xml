@@ -26,34 +26,25 @@
       <file leaf-file-name="villas_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/villas_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="56" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
+            <state line="20" column="55" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/villas/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="97" column="29" selection-start="3364" selection-end="3364" vertical-scroll-proportion="-19.541666">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact_mailer.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="56" selection-start="367" selection-end="367" vertical-scroll-proportion="0.34369886">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="villa.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="villa.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/villa.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="49" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
+            <state line="2" column="60" selection-start="163" selection-end="163" vertical-scroll-proportion="0.050167225">
               <folding />
             </state>
           </provider>
@@ -62,7 +53,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/villas/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="51" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
+            <state line="15" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -78,28 +69,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.galleryview-3.0-dev.css" />
-        <option value="$PROJECT_DIR$/db/migrate/20121013102901_add_columns_to_villas.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.galleryview-3.0-dev.js" />
-        <option value="$PROJECT_DIR$/db/migrate/20121021115759_create_locations.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20121021122904_destroy_columns_to_villas.rb" />
-        <option value="$PROJECT_DIR$/app/views/villas/_location_fields.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/villas/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/villas/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/db/migrate/20121022172827_create_villalocations.rb" />
         <option value="$PROJECT_DIR$/app/models/villalocation.rb" />
         <option value="$PROJECT_DIR$/app/models/location.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/villa.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/villas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/villas/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121024161806_create_rates.rb" />
+        <option value="$PROJECT_DIR$/app/models/rates.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/villas_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121024165706_change_data_type_for_rates.rb" />
+        <option value="$PROJECT_DIR$/app/models/rate.rb" />
+        <option value="$PROJECT_DIR$/app/views/villas/_rate_fields.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/villas/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/villas/show.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121024185316_remove_observations_from_rate.rb" />
+        <option value="$PROJECT_DIR$/app/models/villa.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="501" />
-    <option name="y" value="58" />
+    <option name="x" value="415" />
+    <option name="y" value="59" />
     <option name="width" value="927" />
     <option name="height" value="757" />
   </component>
@@ -164,6 +155,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grandes_villas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grandes_villas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -694,7 +703,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="501" y="58" width="927" height="757" extended-state="0" />
+    <frame x="415" y="59" width="927" height="757" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -770,115 +779,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="56" selection-start="367" selection-end="367" vertical-scroll-proportion="0.34369886">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/tag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="79" selection-end="79" vertical-scroll-proportion="0.09819967" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121022172827_create_villalocations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="160" selection-end="160" vertical-scroll-proportion="0.105820104" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121021115759_create_locations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="36" selection-start="219" selection-end="219" vertical-scroll-proportion="0.30560273" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="30" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.6770833" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/categorization.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="89" selection-end="130" vertical-scroll-proportion="0.10186757" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="63" selection-end="106" vertical-scroll-proportion="0.07364976" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/villalocation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="131" selection-end="131" vertical-scroll-proportion="0.14729951" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="291" selection-end="291" vertical-scroll-proportion="0.25083613">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="51" selection-start="1082" selection-end="1082" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/location.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="35" selection-start="35" selection-end="35" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/villa.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="49" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="218" selection-end="218" vertical-scroll-proportion="0.18292683">
-          <folding>
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1351044399000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="76" selection-start="1768" selection-end="1768" vertical-scroll-proportion="0.026132405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/villas_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="56" selection-start="285" selection-end="285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="56" selection-start="367" selection-end="367" vertical-scroll-proportion="0.34369886">
+        <state line="10" column="23" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tags/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/_category_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/_location_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/rate.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/villas_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="55" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121024161806_create_rates.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="10" selection-start="261" selection-end="261" vertical-scroll-proportion="0.37284896">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121024165706_change_data_type_for_rates.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="67" selection-start="94" selection-end="94" vertical-scroll-proportion="0.052910052">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121024185208_add_observations_to_villa.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="5" selection-start="57" selection-end="118" vertical-scroll-proportion="0.07936508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/_rate_fields.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="63" selection-start="425" selection-end="425" vertical-scroll-proportion="0.28745645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="29" selection-start="3364" selection-end="3364" vertical-scroll-proportion="-19.541666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121024185316_remove_observations_from_rate.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.049099836">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="62" selection-start="356" selection-end="356" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/villa.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="60" selection-start="163" selection-end="163" vertical-scroll-proportion="0.050167225">
           <folding />
         </state>
       </provider>

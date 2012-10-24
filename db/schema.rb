@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022172827) do
+ActiveRecord::Schema.define(:version => 20121024185316) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -64,6 +64,16 @@ ActiveRecord::Schema.define(:version => 20121022172827) do
     t.string   "image"
   end
 
+  create_table "rates", :force => true do |t|
+    t.string   "price_info"
+    t.string   "price"
+    t.integer  "villa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rates", ["villa_id"], :name => "index_rates_on_villa_id"
+
   create_table "tags", :force => true do |t|
     t.string   "name"
     t.integer  "villa_id"
@@ -83,12 +93,13 @@ ActiveRecord::Schema.define(:version => 20121022172827) do
   create_table "villas", :force => true do |t|
     t.string   "name"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
     t.string   "address"
+    t.text     "observations"
   end
 
 end
