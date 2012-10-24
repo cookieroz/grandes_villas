@@ -49,7 +49,19 @@ GrandesVillas::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+      :address  => "smtp.1and1.es",
+      :port  => 25,
+      :user_name  => "rentals@grandesvillas.com",
+      :password  => "clarodeluna4A",
+      :authentication  => :login
+  }
+
+
+
 
   # Enable threaded mode
   # config.threadsafe!
