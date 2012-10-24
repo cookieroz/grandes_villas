@@ -6,10 +6,6 @@
 
 <%= form_tag(villas_path,
              :method => :get) do %>
-    <%# select "location_id",
-               Location.all.collect {|p| [ p.place, p.id ] },
-               :scope =>"location_id",
-               :include_blank => true %>
     <%= select_tag("location_id",
        options_from_collection_for_select(Location.all, :id, :place)) %>
     <%= submit_tag %>
