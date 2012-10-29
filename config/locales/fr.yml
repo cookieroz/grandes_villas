@@ -7,6 +7,13 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
+  villas:
+      index:
+        h1: "Louer Villas"
+  costa_tropicals:
+        index:
+          h1: "Descurir La Costa Tropical"
+          h1small: "Les vacances prochaines."
   date:
     formats:
       default: "%d/%m/%Y"

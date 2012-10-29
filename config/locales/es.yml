@@ -1,4 +1,11 @@
 es:
+  villas:
+    index:
+      h1: "Nuestras Villas de Alquiler"
+  costa_tropicals:
+      index:
+        h1: "Descubre La Costa Tropical"
+        h1small: "Tus proximas vacaciones."
   date:
     abbr_day_names:
     - dom
