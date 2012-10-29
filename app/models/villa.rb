@@ -1,9 +1,11 @@
 class Villa < ActiveRecord::Base
   attr_accessible :content, :name, :address, :latitude, :category_ids,
-                  :longitude, :location_ids, :observations,
+                  :longitude, :location_ids, :observations, :sleeps,
+                  :bedrooms,
                   :tags_attributes, :photos_attributes,
                   :categories_attributes, :locations_attributes,
-                  :rates_attributes
+                  :rates_attributes, :locale
+  translates :content, :observations
 
   validates :name,  :presence => true
 
