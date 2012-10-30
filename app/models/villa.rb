@@ -4,8 +4,7 @@ class Villa < ActiveRecord::Base
                   :bedrooms,
                   :tags_attributes, :photos_attributes,
                   :categories_attributes, :locations_attributes,
-                  :rates_attributes, :locale
-  translates :content, :observations
+                  :rates_attributes
 
   validates :name,  :presence => true
 
@@ -48,6 +47,10 @@ class Villa < ActiveRecord::Base
 
   def self.by_locations(location)
     joins(:locations).where('location_id = ?', location.to_i)
+  end
+
+  def self.by_sleeps(sleeps)
+    where('sleeps = ?', sleeps.to_i)
   end
 
   #has_attached_file :pic, :styles =>
