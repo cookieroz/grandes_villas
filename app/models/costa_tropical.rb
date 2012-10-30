@@ -3,4 +3,7 @@ class CostaTropical < ActiveRecord::Base
                   :activity, :city
 
   mount_uploader :ct_image, CtImageUploader
+
+  extend FriendlyId
+  friendly_id :title
 end

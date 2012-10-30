@@ -6,6 +6,9 @@ class Villa < ActiveRecord::Base
                   :categories_attributes, :locations_attributes,
                   :rates_attributes
 
+  extend FriendlyId
+  friendly_id :name
+
   validates :name,  :presence => true
 
   has_many :comments, :dependent => :destroy

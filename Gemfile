@@ -18,6 +18,7 @@ gem 'simple_form', '2.0.3'
 gem 'active_attr', '0.6.0'
 gem 'gmaps4rails', '1.5.5'
 #gem 'globalize3', '0.2.0'
+gem 'friendly_id', '~> 4.0.1'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
