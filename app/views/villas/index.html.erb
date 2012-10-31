@@ -51,14 +51,17 @@
                <li>Bedrooms: <strong><%= villa.bedrooms %></strong></li>
                <li>Sleeps: <strong><%= villa.sleeps %></strong></li>
              </ul>
-             <%= link_to 'Read More About This Villa', villa,
-                         class: 'btn btn-info' %>
+             <% if current_user %>
+                 <%= link_to 'Edit', edit_villa_path(villa),
+                             class: 'btn btn-primary' %>
+                 <%= link_to 'Delete', villa,
+                             method: :delete, data: { confirm: 'Are you sure?' },
+                             class: 'btn btn-danger' %>
+             <% else %>
+                 <%= link_to 'Read More About This Villa', villa,
+                             class: 'btn btn-info' %>
+             <% end %>
            </div>
-           <%= link_to 'Edit', edit_villa_path(villa),
-                       class: 'btn btn-primary' %>
-           <%= link_to 'Delete', villa,
-                       method: :delete, data: { confirm: 'Are you sure?' },
-                       class: 'btn btn-danger' %>
          </div>
        </div>
        <hr />
@@ -68,8 +71,10 @@
 
 <br />
 
-  <%= link_to 'Create New Villa', new_villa_path,
+  <% if current_user %>
+    <%= link_to 'Create New Villa', new_villa_path,
               class: 'btn btn-warning btn-large' %>
+  <% end %>
 
 <% if no_villa? then %>
     <section>
@@ -78,10 +83,5 @@
         Click 'New Villa' to add one. Once you add a villa or two, click on
         the villa name to navigate to the Villa/Show action. From there you
         may navigate to the Photo Upload feature.<p>
-    </section>
-<% else %>
-    <section>
-      <br />
-      <p>Click on a Villa Name to view/upload photos.<p>
     </section>
 <% end %>

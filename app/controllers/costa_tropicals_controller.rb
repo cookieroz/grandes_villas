@@ -1,4 +1,5 @@
 class CostaTropicalsController < ApplicationController
+  before_filter :authorize, only: [:edit, :update]
   # GET /costa_tropicals
   # GET /costa_tropicals.json
   def index

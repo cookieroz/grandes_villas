@@ -1,4 +1,5 @@
 class VillasController < ApplicationController
+  before_filter :authorize, only: [:edit, :update]
   # GET /villas
   # GET /villas.json
 

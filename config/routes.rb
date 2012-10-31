@@ -20,9 +20,19 @@ GrandesVillas::Application.routes.draw do
     get "home/index"
 
     root :to => 'home#index'
+
+    get 'signup', to: 'users#new', as: 'signup'
+    get 'login', to: 'sessions#new', as: 'login'
+    get 'logout', to: 'sessions#destroy', as: 'logout'
+    match '/admin', to: 'static_pages#admin'
+
+    resources :users
+    resources :sessions
   end
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
   match '', to: redirect("/#{I18n.default_locale}")
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

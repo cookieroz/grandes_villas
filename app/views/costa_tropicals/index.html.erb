@@ -21,13 +21,15 @@
           <div class="span3">
             <%= link_to 'Discover More', costa_tropical,
                         class: 'btn btn-info btn-large' %>
-            <br />
-            <br />
-            <%= link_to 'Edit', edit_costa_tropical_path(costa_tropical),
-                        class: 'btn btn-primary btn-large' %>
-            <%= link_to 'Delete', costa_tropical,
-                        method: :delete, data: { confirm: 'Are you sure?' },
-                        class: 'btn btn-danger btn-large' %>
+            <% if current_user %>
+                <br />
+                <br />
+                <%= link_to 'Edit', edit_costa_tropical_path(costa_tropical),
+                            class: 'btn btn-primary btn-large' %>
+                <%= link_to 'Delete', costa_tropical,
+                            method: :delete, data: { confirm: 'Are you sure?' },
+                            class: 'btn btn-danger btn-large' %>
+            <% end %>
           </div>
         </div>
         <hr />
@@ -37,5 +39,7 @@
 
 <br />
 
-<%= link_to 'New Costa tropical', new_costa_tropical_path,
+<% if current_user %>
+    <%= link_to 'New Costa tropical', new_costa_tropical_path,
             class: 'btn btn-warning btn-large' %>
+<% end %>
