@@ -52,7 +52,7 @@
 <div class="row">
   <div class="span12">
     <p class="lead">Description of <%= @villa.name %>: </p>
-    <%= @villa.content %>
+    <%= raw @villa.content %>
   </div>
 </div>
 
@@ -155,7 +155,7 @@
     </table>
 
     <p>Additional Observations:</p>
-    <p><%= @villa.observations %></p>
+    <p><%= raw @villa.observations %></p>
   </div>
 </div>
 

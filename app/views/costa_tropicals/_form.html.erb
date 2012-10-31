@@ -7,7 +7,8 @@
     <%= f.input :category %>
     <%= f.input :activity %>
     <%= f.file_field :ct_image, class: 'controls' %>
-    <%= f.input :content %>
+    <%= f.input :content, :as => :ckeditor,
+                :label => false, :input_html => { :toolbar => 'Full' } %>
   </div>
 
   <div class="form-actions">
