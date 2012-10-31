@@ -59,7 +59,7 @@ GrandesVillas::Application.configure do
       :address  => "smtp.1and1.es",
       :port  => 25,
       :user_name  => "rentals@grandesvillas.com",
-      :password  => "18613Varadero!",
+      :password  => "Moriscos18613!",
       :authentication  => :login
   }
 
