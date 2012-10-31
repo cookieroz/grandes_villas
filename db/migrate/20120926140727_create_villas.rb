@@ -7,6 +7,9 @@ class CreateVillas < ActiveRecord::Migration
       t.float :longitude
       t.boolean  :gmaps
       t.string   :address
+      t.text   :observations
+      t.integer :sleeps, :default => 4
+      t.integer :bedrooms, :default => 2
 
       t.timestamps
     end
