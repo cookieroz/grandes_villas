@@ -82,7 +82,7 @@
         ) %>
   </div>
   <div class="span6">
-    CONTACT FORM HERE
+    <%= render 'messages/new' %>
   </div>
 </div>
 
@@ -103,19 +103,37 @@
         <a href="#rates">Rates</a>
       </li>
     </ul>
-  <div class="span12">
     <!-- Refactor into a partial -->
-    <div id="calendar">
-      <h2 id="month" class="center">
-        <%= link_to "<", date: @date.prev_month %>
+    <div class="span3">
+      <h2 class="month" class="center">
+        <%= link_to "<", date: @date.months_ago(4) %>
         <%= @date.strftime("%B %Y") %>
-        <%= link_to ">", date: @date.next_month %>
       </h2>
       <%= calendar do |date| %>
           <%= date.day %>
       <% end %>
     </div>
-  </div>
+    <div class="span3">
+      <h2 class="month"><%= @date.months_since(1).strftime("%B %Y") %></h2>
+      <%= calendar @date.months_since(1) do |date| %>
+          <%= date.day %>
+      <% end %>
+    </div>
+    <div class="span3">
+      <h2 class="month"><%= @date.months_since(2).strftime("%B %Y") %></h2>
+      <%= calendar @date.months_since(2) do |date| %>
+          <%= date.day %>
+      <% end %>
+    </div>
+    <div class="span3">
+      <h2 class="month">
+        <%= @date.months_since(3).strftime("%B %Y") %>
+        <%= link_to ">", date: @date.months_since(4) %>
+      </h2>
+      <%= calendar @date.months_since(3) do |date| %>
+          <%= date.day %>
+      <% end %>
+    </div>
 </div>
 
 <hr />

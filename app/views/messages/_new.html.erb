@@ -1,15 +1,7 @@
-<%= form_for @message,
+<h3 class="center">Inquire about <%= @villa.name %> today!</h3>
+
+<%= form_for  :messages,
              :html => { :class => 'form-horizontal contact-form' } do |f| %>
-    <% if @message.errors.any? %>
-        <div class="error_messages">
-          <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
-          <ul>
-            <% @message.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
     <div class="control-group">
       <%= f.label :name, class: "control-label" %>
       <div class="controls">
