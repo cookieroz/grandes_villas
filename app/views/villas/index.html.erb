@@ -39,7 +39,7 @@
            <% villa.locations.each do |location| %>
                <p class="meta"><%= location.place %></p>
            <% end %>
-           <p><%= truncate(villa.content, :length => 380) %></p>
+           <p><%= raw truncate(villa.content, :length => 380) %></p>
          </div>
          <div class="span3">
            <div class="well">
