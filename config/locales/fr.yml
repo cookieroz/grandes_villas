@@ -10,10 +10,29 @@ fr:
   villas:
       index:
         h1: "Louer Villas"
+        location: "Ville"
+        beds: "Chambres"
+        sleeps: "Person"
+      show:
+        overview: "Overview"
+        map: "Map"
+        avail: "Availability"
+        rates: "Prix"
+        location: "Ville"
+        beds: "Chambres"
+        sleeps: "Person"
+        feature: "Features"
+        descript: "Description du"
+        rental-season: "Villa Louer Season"
+        weekly-rate: "Villa Prix pour Semain"
+        observation: "Observation Additionel"
   costa_tropicals:
         index:
           h1: "Descurir La Costa Tropical"
           h1small: "Les vacances prochaines."
+        show:
+          city: "Ville"
+          activity: "Activity"
   date:
     formats:
       default: "%d/%m/%Y"

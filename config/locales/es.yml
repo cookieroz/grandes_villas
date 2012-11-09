@@ -2,10 +2,31 @@ es:
   villas:
     index:
       h1: "Nuestras Villas de Alquiler"
+      location: "Ubicación"
+      beds: "Habitaciones"
+      sleeps: "Duerme"
+
+    show:
+      overview: "Overview"
+      map: "Mapa"
+      avail: "Disponibiliad"
+      rates: "Precios"
+      location: "Ubicación"
+      beds: "Habitaciones"
+      sleeps: "Duerme"
+      feature: "Destacable"
+      descript: "Descripción de"
+      rental-season: "Villa Temporada"
+      weekly-rate: "Villa Precio por Semana"
+      observation: "Observaciones Adicionales"
+
   costa_tropicals:
       index:
         h1: "Descubre La Costa Tropical"
         h1small: "Tus proximas vacaciones."
+      show:
+        city: "Ciudad"
+        activity: "Actividad"
   date:
     abbr_day_names:
     - dom

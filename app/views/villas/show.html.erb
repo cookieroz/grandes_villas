@@ -7,16 +7,16 @@
 
   <ul class="nav nav-pills">
     <li id="overview" class="active">
-      <a href="#overview">Overview</a>
+      <a href="#overview"><%= t ".overview" %></a>
     </li>
     <li>
-      <a href="#map-link">Map</a>
+      <a href="#map-link"><%= t ".map" %></a>
     </li>
     <li>
-      <a href="#avail">Availability</a>
+      <a href="#avail"><%= t ".avail" %></a>
     </li>
     <li>
-      <a href="#rates">Rates</a>
+      <a href="#rates"><%= t ".rates" %></a>
     </li>
   </ul>
 
@@ -31,12 +31,12 @@
     <div class="well">
       <ul class="unstyled">
         <% @villa.locations.each do |location| %>
-            <li>Location: <strong><%= location.place %></strong></li>
+            <li><%= t ".location" %>: <strong><%= location.place %></strong></li>
         <% end %>
-        <li>Bedrooms: <strong><%= @villa.bedrooms %></strong></li>
-        <li>Sleeps: <strong><%= @villa.sleeps %></strong></li>
+        <li><%= t ".beds" %>: <strong><%= @villa.bedrooms %></strong></li>
+        <li><%= t ".sleeps" %>: <strong><%= @villa.sleeps %></strong></li>
       </ul>
-      <h4 class="orangeText">Villa Features:</h4>
+      <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
         <% @villa.categories.each do |category| %>
             <div class="span1 darkBlueText">
               <%= category.name %>
@@ -51,7 +51,7 @@
 
 <div class="row">
   <div class="span12">
-    <p class="lead">Description of <%= @villa.name %>: </p>
+    <p class="lead"><%= t ".descript" %> <%= @villa.name %>: </p>
     <%= raw @villa.content %>
   </div>
 </div>
@@ -61,16 +61,16 @@
 <div class="row">
   <ul class="nav nav-pills">
     <li>
-      <a href="#overview">Overview</a>
+      <a href="#overview"><%= t ".overview" %></a>
     </li>
     <li id="map-link" class="active">
-      <a href="#map-link">Map</a>
+      <a href="#map-link"><%= t ".map" %></a>
     </li>
     <li>
-      <a href="#avail">Availability</a>
+      <a href="#avail"><%= t ".avail" %></a>
     </li>
     <li>
-      <a href="#rates">Rates</a>
+      <a href="#rates"><%= t ".rates" %></a>
     </li>
   </ul>
   <div class="span6">
@@ -91,16 +91,16 @@
 <div class="row">
     <ul class="nav nav-pills">
       <li>
-        <a href="#overview">Overview</a>
+        <a href="#overview"><%= t ".overview" %></a>
       </li>
       <li>
-        <a href="#map-link">Map</a>
+        <a href="#map-link"><%= t ".map" %></a>
       </li>
       <li id="avail" class="active">
-        <a href="#avail">Availability</a>
+        <a href="#avail"><%= t ".avail" %></a>
       </li>
       <li>
-        <a href="#rates">Rates</a>
+        <a href="#rates"><%= t ".rates" %></a>
       </li>
     </ul>
     <!-- Refactor into a partial -->
@@ -141,16 +141,16 @@
 <div class="row">
   <ul class="nav nav-pills">
     <li>
-      <a href="#overview">Overview</a>
+      <a href="#overview"><%= t ".overview" %></a>
     </li>
     <li>
-      <a href="#map-link">Map</a>
+      <a href="#map-link"><%= t ".map" %></a>
     </li>
     <li>
-      <a href="#avail">Availability</a>
+      <a href="#avail"><%= t ".avail" %></a>
     </li>
     <li id="rates" class="active">
-      <a href="#rates">Rates</a>
+      <a href="#rates"><%= t ".rates" %></a>
     </li>
   </ul>
   <div class="span12">
@@ -158,8 +158,8 @@
     <table class="table table-bordered table-hover table-striped">
       <thead>
         <tr>
-          <th> Villa Rental Season </th>
-          <th> Villa Weekly Rate </th>
+          <th> <%= t ".rental-season" %> </th>
+          <th> <%= t ".weekly-rate" %> </th>
         </tr>
       </thead>
       <tbody>
@@ -172,7 +172,7 @@
       </tbody>
     </table>
 
-    <p>Additional Observations:</p>
+    <p><%= t ".observation" %>:</p>
     <p><%= raw @villa.observations %></p>
   </div>
 </div>
