@@ -1,4 +1,35 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<h1>Hello, Rails!</h1>
-<%= link_to "My Blog", villas_path %>
+<div class="pics">
+  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_67.jpg" />
+  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_66.jpg" />
+  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_60.jpg" />
+</div>
+
+<hr />
+<!-- Refactor into a partial -->
+<div class="span12">
+  <div class="row">
+    <h2 class="pull-left">Featured Villas</h2>
+    <%= link_to 'See all villas', villas_path, class: 'pull-right' %>
+  </div>
+  <ul class="thumbnails home-thumb">
+    <% @villas.each do |villa| %>
+        <li class="span3">
+          <div class="thumbnail">
+            <%= link_to image_tag(villa.photos.first.image.url(:thumb),
+                                  class: 'thumbnail'), villa %>
+            <h3><%= link_to villa.name, villa %></h3>
+            <ul class="unstyled">
+              <% villa.locations.each do |location| %>
+                  <li>Location: <strong><%= location.place %></strong></li>
+              <% end %>
+              <li>Bedrooms: <strong><%= villa.bedrooms %></strong></li>
+              <li>Sleeps: <strong><%= villa.sleeps %></strong></li>
+            </ul>
+            <p><%= raw truncate(villa.content, :length => 80) %></p>
+            <%= link_to 'Read More', villa,
+                        class: 'btn btn-info' %>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+</div>

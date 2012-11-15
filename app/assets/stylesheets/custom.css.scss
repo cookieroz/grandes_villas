@@ -173,6 +173,8 @@ header {
     padding-top: 95px;
     nav ul.nav li {
       font-size: 1.1em;
+      padding: 0px;
+      text-shadow: none;
       a {
       color: #ffffff;
       &:hover { color: $villaOrange; }
@@ -324,6 +326,26 @@ form.contact-form {
   padding: 15px;
   width: 530px;
 }
+
+/* homepage styles */
+.pics {
+  height:  291px;
+  width:   910px;
+  padding: 0;
+  margin:  0 auto;
+   img {
+    border:  1px solid #ccc;
+    width:  900px;
+    height: 279px;
+    top:  0;
+    left: 0
+   }
+}
+
+.home-thumb > li {
+  margin-left: 10px;
+}
+
 
 
 /* footer */
