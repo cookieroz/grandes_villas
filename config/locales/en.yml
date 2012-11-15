@@ -2,12 +2,35 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  layouts:
+    header:
+        home: "Home"
+        villa: "Rent a Villa"
+        costa: "Costa Tropical"
+        contact: "Contact"
+        prop: "Rent Your Property"
+        about: "About"
+    footer:
+        home: "Home"
+        villa: "Rent a Villa"
+        costa: "Costa Tropical"
+        contact: "Contact"
+        prop: "Rent Your Property"
+        about: "About"
+  home:
+    index:
+      feature: "Featured Villas"
+      all: "See all villas"
   villas:
       index:
         h1: "Our Holiday Villa Rentals"
         location: "Location"
         beds: "Bedrooms"
         sleeps: "Sleeps"
+        selecttown: "Filter by Town"
+        selectsleep: "Filter by Occupancy"
+        selectbed: "Filter by Bedrooms"
+        readmore: "Read More About This Villa"
       show:
         overview: "Overview"
         map: "Map"
@@ -21,12 +44,27 @@ en:
         rental-season: "Villa Rental Season"
         weekly-rate: "Villa Weekly Rate"
         observation: "Additional Observations"
+        back: "Back"
 
   costa_tropicals:
         index:
           h1: "Discover the Costa Tropical"
           h1small: "Your next holiday destination."
+          discover: "Discover More"
 
         show:
           city: "City"
           activity: "Activity"
+          back: "Back"
+  static_pages:
+    owner:
+      rent: "Rent Your Property with Grandes Villas"
+      contact: "Contact Us"
+    about:
+      about: "About Grandes Villas"
+  messages:
+    new:
+      name: "Name"
+      msg: "Message"
+      send: "Send Message"
+

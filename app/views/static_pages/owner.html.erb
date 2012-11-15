@@ -1,6 +1,6 @@
-<% provide(:title, 'Rent Your Property')%>
+<% provide(:title, t(".rent"))%>
 
-<h1 class="center">Rent Your Property with Grandes Villas</h1>
+<h1 class="center"><%= t ".rent" %></h1>
 
 <p>Nulla suscipit ultrices diam, sed molestie justo viverra sit amet.
   Donec sollicitudin, diam ut congue ornare, dui dolor feugiat lorem, vel
@@ -12,4 +12,4 @@
   Aenean semper libero nec massa elementum luctus id a elit. Suspendisse eu
   leo arcu, sit amet auctor nunc. Cras suscipit vehicula feugiat.</p>
 
-<%= link_to "Contact Us", contact_path %>
+<%= link_to(t(".contact"), contact_path) %>

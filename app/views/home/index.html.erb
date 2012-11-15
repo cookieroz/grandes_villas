@@ -8,8 +8,8 @@
 <!-- Refactor into a partial -->
 <div class="span12">
   <div class="row">
-    <h2 class="pull-left">Featured Villas</h2>
-    <%= link_to 'See all villas', villas_path, class: 'pull-right' %>
+    <h2 class="pull-left"><%= t ".feature" %></h2>
+    <%= link_to(t(".all"), villas_path, class: 'pull-right') %>
   </div>
   <ul class="thumbnails home-thumb">
     <% @villas.each do |villa| %>
@@ -20,14 +20,15 @@
             <h3><%= link_to villa.name, villa %></h3>
             <ul class="unstyled">
               <% villa.locations.each do |location| %>
-                  <li>Location: <strong><%= location.place %></strong></li>
+                  <li><%= t "villas.index.location" %>:
+                    <strong><%= location.place %></strong></li>
               <% end %>
-              <li>Bedrooms: <strong><%= villa.bedrooms %></strong></li>
-              <li>Sleeps: <strong><%= villa.sleeps %></strong></li>
+              <li><%= t "villas.index.beds" %>: <strong><%= villa.bedrooms %></strong></li>
+              <li><%= t "villas.index.sleeps" %>: <strong><%= villa.sleeps %></strong></li>
             </ul>
             <p><%= raw truncate(villa.content, :length => 80) %></p>
-            <%= link_to 'Read More', villa,
-                        class: 'btn btn-info' %>
+            <%= link_to( t("villas.index.readmore"), villa,
+                        class: 'btn btn-info') %>
           </div>
         </li>
     <% end %>

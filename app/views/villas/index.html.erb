@@ -1,4 +1,4 @@
-<% provide(:title, 'Our Holiday Villa Rentals') %>
+<% provide(:title, t(".h1")) %>
 
 <div class="page-header">
   <h1><%= t ".h1" %> <small>Subtext for header</small></h1>
@@ -8,11 +8,11 @@
              :method => :get) do %>
     <%= select_tag("location_id",
        options_from_collection_for_select(Location.all, :id, :place),
-       {:prompt => "Select Town"}) %>
+       {:prompt => t(".selecttown")}) %>
     <%= select(:sleeps, :num, Villa.pluck(:sleeps).uniq,
-               {:prompt => "Select Sleeps Filter"}) %>
+               {:prompt => t(".selectsleep")}) %>
     <%= select(:bedrooms, :num, Villa.pluck(:bedrooms).uniq,
-               {:prompt => "Select Bedroom Filter"}) %>
+               {:prompt => t(".selectbed")}) %>
     <%= submit_tag %>
 <% end %>
 
@@ -63,8 +63,8 @@
                              method: :delete, data: { confirm: 'Are you sure?' },
                              class: 'btn btn-danger' %>
              <% else %>
-                 <%= link_to 'Read More About This Villa', villa,
-                             class: 'btn btn-info' %>
+                 <%= link_to(t(".readmore"), villa,
+                             class: 'btn btn-info') %>
              <% end %>
            </div>
          </div>

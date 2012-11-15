@@ -1,10 +1,33 @@
 es:
+  layouts:
+    header:
+        home: "Inicio"
+        villa: "Alquiler de Villas"
+        costa: "Costa Tropical"
+        contact: "Contacto"
+        prop: "Alquile su Propiedad"
+        about: "Sobre Nosotros"
+    footer:
+        home: "Inicio"
+        villa: "Alquiler de Villas"
+        costa: "Costa Tropical"
+        contact: "Contacto"
+        prop: "Alquile su Propiedad"
+        about: "Sobre Nosotros"
+  home:
+      index:
+        feature: "Villas Descatadas"
+        all: "Ver todas las villas"
   villas:
     index:
       h1: "Nuestras Villas de Alquiler"
       location: "Ubicación"
       beds: "Habitaciones"
       sleeps: "Duerme"
+      selecttown: "Filtrar por Pueblo"
+      selectsleep: "Filtrar por Capacidad"
+      selectbed: "Filtrar por Habitaciones"
+      readmore: "Leer más sobre esta Villa"
 
     show:
       overview: "Overview"
@@ -19,14 +42,28 @@ es:
       rental-season: "Villa Temporada"
       weekly-rate: "Villa Precio por Semana"
       observation: "Observaciones Adicionales"
+      back: "Volver"
 
   costa_tropicals:
       index:
         h1: "Descubre La Costa Tropical"
         h1small: "Tus proximas vacaciones."
+        discover: "Descubre más"
       show:
         city: "Ciudad"
         activity: "Actividad"
+        back: "Volver"
+  static_pages:
+      owner:
+        rent: "Alquile su Propiedad con Grandes Villas"
+        contact: "Contáctenos"
+      about:
+            about: "Conoce Grandes Villas"
+  messages:
+      new:
+        name: "Nombre"
+        msg: "Mensaje"
+        send: "Enviar Mensaje"
   date:
     abbr_day_names:
     - dom

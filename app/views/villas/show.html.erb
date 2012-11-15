@@ -194,6 +194,6 @@
 <% if current_user %>
   <%= link_to 'Edit', edit_villa_path(@villa) %> |
 <% end %>
-<%= link_to 'Back', villas_path %>
+<%= link_to(t(".back"), villas_path) %>
 
 <%= yield :scripts %>

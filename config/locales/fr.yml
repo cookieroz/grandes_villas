@@ -7,12 +7,35 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
+  layouts:
+    header:
+        home: "Accueil"
+        villa: "Louer une villa"
+        costa: "Costa Tropical"
+        contact: "Contact"
+        prop: "Louer Vous Villa"
+        about: "De Nous"
+    footer:
+        home: "Accueil"
+        villa: "Louer une villa"
+        costa: "Costa Tropical"
+        contact: "Contact"
+        prop: "Louer Vous Villa"
+        about: "De Nous"
+  home:
+      index:
+        feature: "Villas Remarquables"
+        all: "Voir tout les villas"
   villas:
       index:
         h1: "Louer Villas"
         location: "Ville"
         beds: "Chambres"
         sleeps: "Person"
+        selecttown: "Filter by Ville"
+        selectsleep: "Filter by Persons"
+        selectbed: "Filter by Chambres"
+        readmore: "Lire plus du Villa"
       show:
         overview: "Overview"
         map: "Map"
@@ -26,13 +49,27 @@ fr:
         rental-season: "Villa Louer Season"
         weekly-rate: "Villa Prix pour Semain"
         observation: "Observation Additionel"
+        back: "Retourne"
   costa_tropicals:
         index:
-          h1: "Descurir La Costa Tropical"
+          h1: "Découvrir La Costa Tropical"
           h1small: "Les vacances prochaines."
+          discover: "Découvrir tout"
         show:
           city: "Ville"
           activity: "Activity"
+          back: "Retourne"
+  static_pages:
+      owner:
+        rent: "Louer Vous Villa avec Grandes Villas"
+        contact: "Nous Contacter"
+      about:
+            about: "Coniu Grandes Villas"
+  messages:
+      new:
+        name: "Nom"
+        msg: "Message"
+        send: "Envoier Message"
   date:
     formats:
       default: "%d/%m/%Y"

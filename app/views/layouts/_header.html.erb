@@ -17,27 +17,27 @@
       <nav>
         <ul class="nav pull-left">
           <li class="<%= 'active' if current_page?(root_path) %>">
-            <%= link_to "Home", root_path %>
+            <%= link_to(t(".home"), root_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(villas_path) %>">
-            <%= link_to "Rent a Villa", villas_path %>
+            <%= link_to(t(".villa"), villas_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="class="<%= 'active' if current_page?(costa_tropicals_path) %>">
-            <%= link_to "Costa Tropical", costa_tropicals_path %>
+            <%= link_to(t(".costa"), costa_tropicals_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(contact_path) %>">
-            <%= link_to "Contact", contact_path %>
+            <%= link_to(t(".contact"), contact_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(owner_path) %>">
-            <%= link_to "Rent Your Property", owner_path %>
+            <%= link_to(t(".prop"), owner_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(about_path) %>">
-            <%= link_to "About", about_path %>
+            <%= link_to(t(".about"), about_path) %>
           </li>
         </ul>
       </nav>
