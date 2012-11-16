@@ -53,6 +53,8 @@ es:
         city: "Ciudad"
         activity: "Actividad"
         back: "Volver"
+      edit:
+        edit: "Editar"
   static_pages:
       owner:
         rent: "Alquile su Propiedad con Grandes Villas"
@@ -64,6 +66,13 @@ es:
         name: "Nombre"
         msg: "Mensaje"
         send: "Enviar Mensaje"
+  simple_form:
+    labels:
+      costa_tropicals:
+        title: "Título"
+        city: "Cuidad"
+        activity: "Actividad"
+        content: "Contenido"
   date:
     abbr_day_names:
     - dom

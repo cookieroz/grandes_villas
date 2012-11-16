@@ -201,7 +201,7 @@ DEPENDENCIES
   factory_girl_rails (= 1.4.0)
   faker (= 1.0.1)
   friendly_id (~> 4.0.1)
-  globalize3
+  globalize3 (= 0.2.0)
   gmaps4rails (= 1.5.5)
   jquery-fileupload-rails (= 0.3.4)
   jquery-rails (= 2.1.3)

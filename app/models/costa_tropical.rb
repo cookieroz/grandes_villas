@@ -9,6 +9,9 @@ class CostaTropical < ActiveRecord::Base
 
   translates :title, :content, :activity, :city
 
+  #globalize_accessors :locales => [:en, :es, :fr],
+  #                    :attributes => [:title, :content, :activity, :city]
+
   class Translation
     attr_accessible :locale
   end

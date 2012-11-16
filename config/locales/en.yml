@@ -51,11 +51,12 @@ en:
           h1: "Discover the Costa Tropical"
           h1small: "Your next holiday destination."
           discover: "Discover More"
-
         show:
           city: "City"
           activity: "Activity"
           back: "Back"
+        edit:
+          edit: "Edit"
   static_pages:
     owner:
       rent: "Rent Your Property with Grandes Villas"
@@ -67,4 +68,11 @@ en:
       name: "Name"
       msg: "Message"
       send: "Send Message"
+  simple_form:
+      labels:
+        costa_tropicals:
+          title: "Title"
+          city: "City"
+          activity: "Activity"
+          content: "Content"
 
