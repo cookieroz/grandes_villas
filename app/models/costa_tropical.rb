@@ -4,10 +4,11 @@ class CostaTropical < ActiveRecord::Base
 
   mount_uploader :ct_image, CtImageUploader
 
-  extend FriendlyId
-  friendly_id :title
+  translates :content, :activity, :city, :title
 
-  translates :title, :content, :activity, :city
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
 
   #globalize_accessors :locales => [:en, :es, :fr],
   #                    :attributes => [:title, :content, :activity, :city]

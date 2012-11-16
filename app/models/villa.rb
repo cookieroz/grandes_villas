@@ -9,7 +9,7 @@ class Villa < ActiveRecord::Base
   translates :content, :observations
 
   extend FriendlyId
-  friendly_id :name
+  friendly_id :name, use: [:slugged, :history]
 
   validates :name,  :presence => true
 
