@@ -6,6 +6,8 @@ class Villa < ActiveRecord::Base
                   :categories_attributes, :locations_attributes,
                   :rates_attributes
 
+  translates :content, :observations
+
   extend FriendlyId
   friendly_id :name
 
@@ -60,4 +62,7 @@ class Villa < ActiveRecord::Base
   #                { :medium => "300x300>", :thumb => "100x100>" },
   #                :processors => lambda { |instance| instance.processors }
   #attr_accessor :watermark
+  class Translation
+    attr_accessible :locale
+  end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031010839) do
+ActiveRecord::Schema.define(:version => 20121116003526) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -52,6 +52,20 @@ ActiveRecord::Schema.define(:version => 20121031010839) do
 
   add_index "comments", ["villa_id"], :name => "index_comments_on_villa_id"
 
+  create_table "costa_tropical_translations", :force => true do |t|
+    t.integer  "costa_tropical_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "content"
+    t.string   "activity"
+    t.string   "city"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "costa_tropical_translations", ["costa_tropical_id"], :name => "index_41b59f000277e188d731b32d2a79acc882816538"
+  add_index "costa_tropical_translations", ["locale"], :name => "index_costa_tropical_translations_on_locale"
+
   create_table "costa_tropicals", :force => true do |t|
     t.string   "title"
     t.string   "category"
@@ -80,6 +94,17 @@ ActiveRecord::Schema.define(:version => 20121031010839) do
     t.string   "image"
   end
 
+  create_table "rate_translations", :force => true do |t|
+    t.integer  "rate_id"
+    t.string   "locale"
+    t.string   "price_info"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rate_translations", ["locale"], :name => "index_rate_translations_on_locale"
+  add_index "rate_translations", ["rate_id"], :name => "index_rate_translations_on_rate_id"
+
   create_table "rates", :force => true do |t|
     t.string   "price_info"
     t.string   "price"
@@ -105,6 +130,18 @@ ActiveRecord::Schema.define(:version => 20121031010839) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+
+  create_table "villa_translations", :force => true do |t|
+    t.integer  "villa_id"
+    t.string   "locale"
+    t.text     "content"
+    t.text     "observations"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "villa_translations", ["locale"], :name => "index_villa_translations_on_locale"
+  add_index "villa_translations", ["villa_id"], :name => "index_villa_translations_on_villa_id"
 
   create_table "villalocations", :force => true do |t|
     t.integer  "location_id"

@@ -6,4 +6,10 @@ class CostaTropical < ActiveRecord::Base
 
   extend FriendlyId
   friendly_id :title
+
+  translates :title, :content, :activity, :city
+
+  class Translation
+    attr_accessible :locale
+  end
 end
