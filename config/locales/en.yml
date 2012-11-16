@@ -27,6 +27,7 @@ en:
         location: "Location"
         beds: "Bedrooms"
         sleeps: "Sleeps"
+        filter: "Filter Villas"
         selecttown: "Filter by Town"
         selectsleep: "Filter by Occupancy"
         selectbed: "Filter by Bedrooms"

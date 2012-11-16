@@ -50,29 +50,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="image_uploader.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="4" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5208333">
+            <state line="5" column="70" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fr.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/fr.yml">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="23" selection-start="1824" selection-end="1824" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="es.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/es.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="62" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="10" column="69" selection-start="249" selection-end="249" vertical-scroll-proportion="0.27173913">
+              <folding>
+                <element signature="e#1138#1200#0" expanded="true" />
+                <element signature="e#1205#1355#0" expanded="true" />
+                <element signature="e#1391#1453#0" expanded="true" />
+                <element signature="e#1458#1571#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,15 +77,6 @@
         <entry file="file://$PROJECT_DIR$/app/models/costa_tropical.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="9" column="47" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="29" selection-start="1900" selection-end="2059" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20121115233248_translate_villas.rb" />
         <option value="$PROJECT_DIR$/app/models/rate.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121116002616_create_rate_translations.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121116003526_create_costa_tropical_translations.rb" />
         <option value="$PROJECT_DIR$/app/views/costa_tropicals/_form.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/locales/fr.yml" />
         <option value="$PROJECT_DIR$/app/views/costa_tropicals/edit.html.erb" />
-        <option value="$PROJECT_DIR$/config/locales/en.yml" />
-        <option value="$PROJECT_DIR$/config/locales/es.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20121116021153_add_slug_to_villas.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121116021236_add_slug_to_costa_tropicals.rb" />
         <option value="$PROJECT_DIR$/app/models/costa_tropical.rb" />
         <option value="$PROJECT_DIR$/app/models/villa.rb" />
         <option value="$PROJECT_DIR$/config/initializers/carrierwave.rb" />
         <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
+        <option value="$PROJECT_DIR$/app/views/villas/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/locales/en.yml" />
+        <option value="$PROJECT_DIR$/config/locales/es.yml" />
+        <option value="$PROJECT_DIR$/config/locales/fr.yml" />
       </list>
     </option>
   </component>
@@ -926,11 +913,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="65" selection-end="79" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/villas/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="43" selection-start="61" selection-end="79" vertical-scroll-proportion="0.0" />
@@ -951,27 +933,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/costa_tropicals/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="51" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="29" selection-start="1900" selection-end="2059" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/fr.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="23" selection-start="1824" selection-end="1824" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/locales/es.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="62" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1023,8 +984,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="566" selection-end="566" vertical-scroll-proportion="0.5208333">
+        <state line="5" column="70" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="31" selection-start="792" selection-end="815" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/es.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="21" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/fr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="36" selection-start="883" selection-end="883" vertical-scroll-proportion="0.49479166">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="69" selection-start="249" selection-end="249" vertical-scroll-proportion="0.27173913">
+          <folding>
+            <element signature="e#1138#1200#0" expanded="true" />
+            <element signature="e#1205#1355#0" expanded="true" />
+            <element signature="e#1391#1453#0" expanded="true" />
+            <element signature="e#1458#1571#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

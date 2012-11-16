@@ -32,6 +32,7 @@ fr:
         location: "Ville"
         beds: "Chambres"
         sleeps: "Person"
+        filter: "Filter Villas"
         selecttown: "Filter by Ville"
         selectsleep: "Filter by Persons"
         selectbed: "Filter by Chambres"

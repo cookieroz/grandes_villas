@@ -24,6 +24,7 @@ es:
       location: "Ubicación"
       beds: "Habitaciones"
       sleeps: "Duerme"
+      filter: "Filtrar Villas"
       selecttown: "Filtrar por Pueblo"
       selectsleep: "Filtrar por Capacidad"
       selectbed: "Filtrar por Habitaciones"
