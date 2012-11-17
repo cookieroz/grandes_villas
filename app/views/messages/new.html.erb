@@ -1,45 +1,120 @@
 <% provide(:title, t("static_pages.owner.contact")) %>
 
-<h1 class="center"><%= t "static_pages.owner.contact" %></h1>
+<div class="row">
+  <div class="span12">
+    <div class="page-header">
+      <h1><%= t "static_pages.owner.contact" %></h1>
+    </div>
 
-<p>Ut nulla velit, convallis vel mattis sed, tincidunt in ipsum. Morbi
-  eget est in dolor aliquet consectetur lacinia et odio. Aenean a metus
-  feugiat purus accumsan consectetur. Integer eget quam ac nunc eleifend
-  pretium sit amet egestas leo. Phasellus id erat ipsum, at pulvinar tellus.
-  In vestibulum luctus lobortis. Nulla in odio diam, quis suscipit neque.
-  Morbi consequat leo nec est vestibulum cursus.</p>
+    <p> If you've got questions, suggestions or ideas, we'd love
+      to hear from you! <br />
+      Call us now or complete the form below and we will promptly
+      reply to your query. </p>
 
-<%= form_for @message,
-                    :html => { :class => 'form-horizontal contact-form' } do |f| %>
-    <% if @message.errors.any? %>
-        <div class="error_messages">
-          <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
-          <ul>
-            <% @message.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
+    <p><b>Are you around?</b> We would be so pleased to arrange a
+      tour, just let us know when and we will shown you the villas
+      you like.</p>
+
+    <p><b>Propietarios:</b> <br />
+      <b>Tienes una villa de alquiler o está pensando en alquilar?</b>
+      No dude en contactarnos para conocer nuestros servicios.
+      Ofrecemos todos los servicios de mantenimiento del hogar para
+      la zona de la <%= link_to("Costa Tropical", costa_tropicals_path) %>,
+      pero si usted ya lo tiene resulto, nosotros trabajaremos para
+      encontrarle los clientes que su casa necesita.</p>
+
+    <p>Si su villa está en otra zona, Grandes Villas también le puede
+      ayudar a aumentar sus reservas con la ventaja de que si no se
+      producen alquileres, usted no pierden nada.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12 contact-bg">
+    <div class="span5">
+      <h4 class="contact-add">Grandes Villas</h4>
+      <%= link_to("www.grandesvillas.com", root_path) %><br>
+      <address>
+        <br>
+        Phone: +34 958 330 874 <br>
+        Bookings: +34 670 351 054 <br>
+        <a href="mailto:rentals@grandesvillas.com">rentals@grandesvillas.com</a>
+      </address>
+
+      <address>
+        Address:<br>
+        C/ Rector Federico Mayor Zaragoza 5, 4-A<br>
+        Motril 18613 (Granada)<br>
+        España
+      </address>
+    </div>
+    <div class="span5">
+      <%= form_for @message,
+                   :html => { :class => 'form-horizontal contact-form' } do |f| %>
+          <% if @message.errors.any? %>
+              <div class="error_messages">
+                <h2><%= pluralize(@message.errors.count, "error") %> prohibited this message from being saved:</h2>
+                <ul>
+                  <% @message.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                  <% end %>
+                </ul>
+              </div>
+          <% end %>
+          <div class="control-group">
+            <%= f.label :name, t(".name"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :name %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :email, class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :email %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :content, t(".msg"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_area :content, :rows => 5 %>
+            </div>
+          </div>
+          <div class="actions center">
+            <%= f.submit t(".send"), class: "btn btn-primary" %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <ul class="thumbnails thumb-contact home-thumb">
+      <li class="span4">
+        <div class="thumbnail">
+          <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
+          <%= link_to image_tag(Villa.first.photos.first.image.url,
+                                class: 'thumbnail thumb-img-contact'), "#" %>
+          <p><%= raw truncate(Villa.first.content, :length => 180) %></p>
         </div>
-    <% end %>
-    <div class="control-group">
-      <%= f.label :name, t(".name"), class: "control-label" %>
-      <div class="controls">
-          <%= f.text_field :name %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :email, class: "control-label" %>
-      <div class="controls">
-        <%= f.text_field :email %>
-      </div>
-    </div>
-    <div class="control-group">
-      <%= f.label :content, t(".msg"), class: "control-label" %>
-      <div class="controls">
-        <%= f.text_area :content, :rows => 5 %>
-      </div>
-    </div>
-    <div class="actions center">
-      <%= f.submit t(".send"), class: "btn btn-primary" %>
-    </div>
-<% end %>
+      </li>
+
+      <li class="span4">
+        <div class="thumbnail">
+          <h3 class="center"><%= link_to CostaTropical.first.title, "#" %></h3>
+          <%= link_to image_tag(CostaTropical.first.ct_image.url,
+                                class: 'thumbnail thumb-img-contact'), "#" %>
+          <p><%= raw truncate(CostaTropical.first.content, :length => 180) %></p>
+        </div>
+      </li>
+      <li class="span4">
+        <div class="thumbnail">
+          <h3 class="center"><%= link_to CostaTropical.last.title, "#" %></h3>
+          <%= link_to image_tag(CostaTropical.last.ct_image.url,
+                                class: 'thumbnail thumb-img-contact'), "#" %>
+          <p><%= raw truncate(CostaTropical.last.content, :length => 180) %></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

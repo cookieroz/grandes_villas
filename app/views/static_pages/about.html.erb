@@ -1,14 +1,34 @@
 <% provide(:title, t(".about") )%>
 
-<h1 class="center"><%= t ".about" %></h1>
+<div class="page-header">
+  <h1><%= t ".about" %></h1>
+</div>
+<div class="row">
+  <div class="span9">
+    <%= image_tag("grandesvillasviews.jpg", class: "about-img") %>
 
-<p> Aliquam suscipit interdum orci sit amet porttitor. Donec hendrerit
-  pulvinar aliquet. Aenean vestibulum sapien eu diam ultricies in eleifend
-  arcu fringilla. Sed id sodales dolor. Phasellus nibh risus, feugiat quis
-  pellentesque ut, dapibus at est. Nulla sed diam ligula. Nam tincidunt
-  condimentum nisl eu venenatis. Vestibulum neque felis, iaculis eget mollis
-  a, lacinia quis justo. Donec nec neque sed nisl ullamcorper varius quis ut
-  mi. Praesent euismod vulputate turpis tincidunt pulvinar. Vivamus at felis
-  elit. Curabitur accumsan metus a diam pretium feugiat. Cras tristique
-  bibendum odio, sit amet faucibus mauris ornare et. Nunc eu metus id purus
-  venenatis iaculis in eget nisl. In hac habitasse platea dictumst. </p>
+    <p> Grandes Villas es una empresa orientada exclusivamente al
+      alquiler vacacional, en su mayoría de Villas / Chalets. La
+      magnitud de estos enclaves nos permite asegurar unas
+      comodidades que otro tipo de alojamientos no se puede
+      facilitar.</p>
+    <p> Desde que comenzamos en 2010, nuestra gama de productos y
+      servicios ha ido en aumento, con el único objectivo de que
+      nuestro cliente vuelva satisfecho a casa. </p>
+
+    <p class="lead"> Nuestra Misión: </p>
+    <p> Satisfacer las necesidades de nuestros stakeholders, dando
+      un servicio completo que genere valor al cliente final y que
+      maximice los beneficios de los propietarios. </p>
+
+    <p class="lead"> Valores: </p>
+    <h4 class="valores center">Privacidad &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; Seriedad &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Formalidad
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Compromiso con el
+      Cliente </h4>
+  </div>
+  <div class="span3">
+    <%= link_to image_tag("about-side.jpg"), contact_path %>
+  </div>
+</div>
+

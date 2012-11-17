@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  /*background: #f9fdff;*/
 }
 
 section {
@@ -41,6 +42,14 @@ textarea {
 
 h1.center {
   margin-bottom: 10px;
+}
+
+.white-bg {
+  background: #ffffff;
+}
+
+.container {
+  width: 960px
 }
 
 /* Calendar Styles */
@@ -328,6 +337,9 @@ form.contact-form {
 }
 
 /* homepage styles */
+body.homepage {
+  background-image: image-url('beach.jpg');
+}
 .pics {
   height:  291px;
   width:   910px;
@@ -344,6 +356,34 @@ form.contact-form {
 
 .home-thumb > li {
   margin-left: 10px;
+}
+
+/* about styles */
+.valores {
+  text-transform: uppercase;
+}
+
+img.about-img {
+  padding-bottom: 30px;
+}
+
+/* contact styles */
+.contact-bg {
+  background: #f9fdff;
+  border: 1px solid #dcdcdc;
+}
+
+h4.contact-add {
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+
+.thumb-contact {
+  padding-top: 20px;
+}
+
+.thumb-img-contact {
+  width: 96%;
 }
 
 
