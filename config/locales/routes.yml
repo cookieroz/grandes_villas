@@ -1,0 +1,14 @@
+en:
+  routes:
+    # you can leave empty locales, for example the default one
+es:
+  routes:
+    about: sobre-nosotros
+    contact: contacto
+    owner: propietarios
+
+fr:
+  routes:
+    about: sobre-nous
+    contact: contacter
+    owner: propietariers

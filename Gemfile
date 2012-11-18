@@ -22,6 +22,7 @@ gem 'globalize3', '0.2.0'
 #gem 'easy_globalize3_accessors', '1.2.0'
 gem 'friendly_id', '~> 4.0.1'
 gem 'ckeditor', '3.7.3'
+gem 'rails-translate-routes', '0.1.3'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'
