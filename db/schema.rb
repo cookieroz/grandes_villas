@@ -103,9 +103,9 @@ ActiveRecord::Schema.define(:version => 20121116022731) do
   create_table "photos", :force => true do |t|
     t.string   "caption"
     t.integer  "villa_id"
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "image"
   end
 
   create_table "rate_translations", :force => true do |t|
@@ -167,8 +167,6 @@ ActiveRecord::Schema.define(:version => 20121116022731) do
   create_table "villas", :force => true do |t|
     t.string   "name"
     t.text     "content"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
@@ -176,6 +174,8 @@ ActiveRecord::Schema.define(:version => 20121116022731) do
     t.text     "observations"
     t.integer  "sleeps",       :default => 4
     t.integer  "bedrooms",     :default => 2
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.string   "slug"
   end
 

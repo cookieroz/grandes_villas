@@ -87,34 +87,36 @@
   </div>
 </div>
 
-<div class="row">
-  <div class="span12">
-    <ul class="thumbnails thumb-contact home-thumb">
-      <li class="span4">
-        <div class="thumbnail">
-          <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
-          <%= link_to image_tag(Villa.first.photos.first.image.url,
-                                class: 'thumbnail thumb-img-contact'), "#" %>
-          <p><%= raw truncate(Villa.first.content, :length => 180) %></p>
-        </div>
-      </li>
+<% unless no_villa? && no_costa? %>
+    <div class="row">
+      <div class="span12">
+        <ul class="thumbnails thumb-contact home-thumb">
+          <li class="span4">
+            <div class="thumbnail">
+              <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
+              <%= link_to image_tag(Villa.first.photos.first.image.url,
+                                    class: 'thumbnail thumb-img-contact'), "#" %>
+              <p><%= raw truncate(Villa.first.content, :length => 180) %></p>
+            </div>
+          </li>
 
-      <li class="span4">
-        <div class="thumbnail">
-          <h3 class="center"><%= link_to CostaTropical.first.title, "#" %></h3>
-          <%= link_to image_tag(CostaTropical.first.ct_image.url,
-                                class: 'thumbnail thumb-img-contact'), "#" %>
-          <p><%= raw truncate(CostaTropical.first.content, :length => 180) %></p>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <h3 class="center"><%= link_to CostaTropical.last.title, "#" %></h3>
-          <%= link_to image_tag(CostaTropical.last.ct_image.url,
-                                class: 'thumbnail thumb-img-contact'), "#" %>
-          <p><%= raw truncate(CostaTropical.last.content, :length => 180) %></p>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
+          <li class="span4">
+            <div class="thumbnail">
+              <h3 class="center"><%= link_to CostaTropical.first.title, "#" %></h3>
+              <%= link_to image_tag(CostaTropical.first.ct_image.url,
+                                    class: 'thumbnail thumb-img-contact'), "#" %>
+              <p><%= raw truncate(CostaTropical.first.content, :length => 180) %></p>
+            </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail">
+              <h3 class="center"><%= link_to CostaTropical.last.title, "#" %></h3>
+              <%= link_to image_tag(CostaTropical.last.ct_image.url,
+                                    class: 'thumbnail thumb-img-contact'), "#" %>
+              <p><%= raw truncate(CostaTropical.last.content, :length => 180) %></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+<% end %>
