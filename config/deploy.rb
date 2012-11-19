@@ -10,9 +10,6 @@ set :server_name, "grandesvillas.railsplayground.net"
 set :scm_username , "cookieroz"
 set :scm_passphrase, "hoeroz12"
 
-default_run_options[:pty] = true  # Must be set for the password prompt
-# from git to work
-
 # If you are using git, uncomment the following line and comment out the line above.
 set :scm, :git
 

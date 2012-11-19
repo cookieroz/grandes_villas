@@ -16,4 +16,8 @@ module ApplicationHelper
     end
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
+
+  def no_image?
+    !Photo.first
+  end
 end
