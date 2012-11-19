@@ -4,12 +4,11 @@
   <img src="http://www.grandesvillas.com/images/slider_images/slider_image_60.jpg" />
 </div>
 
-<hr />
 <!-- Refactor into a partial -->
 <div class="span12">
-  <div class="row">
+  <div class="row featured-villas">
     <h2 class="pull-left"><%= t ".feature" %></h2>
-    <%= link_to(t(".all"), villas_path, class: 'pull-right') %>
+    <%= link_to(t(".all"), villas_path) %>
   </div>
   <ul class="thumbnails home-thumb">
     <% @villas.each do |villa| %>
@@ -37,4 +36,50 @@
         </li>
     <% end %>
   </ul>
+  <div class="row">
+    <div class="no-left-margin span8 featured-villas">
+      <div class="span4 no-left-margin">
+        <h2 class="pull-left"><%#= t ".feature" %>Services</h2>
+        <%= link_to(t(".all"), "#") %>
+      </div>
+      <div class="span4">
+        <h2 class="pull-left"><%#= t ".feature" %>Activities</h2>
+        <%= link_to(t(".all"), "#") %>
+      </div>
+    </div>
+    <div class="no-left-margin span8 services-wrap">
+      <div class="span4 no-left-margin">
+        <div class="services">
+          <%= link_to image_tag("massage.jpg"), "#" %>
+          <ul class="breadcrumb">
+            <li><%= link_to "Massages", "#" %> <span class="divider">|</span></li>
+            <li><%= link_to "Home Cooking", "#" %> <span class="divider">|</span></li>
+            <li><%= link_to "Laundry", "#" %> <span class="divider">|</span>
+              <%= link_to "...", "#" %> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="span4">
+        <div class="services">
+          <%= link_to image_tag("golf.jpg"), "#" %>
+          <ul class="breadcrumb">
+            <li><%= link_to "Golf", "#" %> <span class="divider">|</span></li>
+            <li><%= link_to "Surfing", "#" %> <span class="divider">|</span></li>
+            <li><%= link_to "Diving", "#" %> <span class="divider">|</span>
+              <%= link_to "...", "#" %> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="span4 car-rental">
+      <%= link_to image_tag("car-rental.jpg"), "#" %>
+    </div>
+  </div>
+  <div class="row special">
+    <div class="home-special">
+      <%= link_to image_tag("paella.jpg"), "#" %>
+      <%= link_to image_tag("paella.jpg"), "#" %>
+      <%= link_to image_tag("paella.jpg"), "#" %>
+    </div>
+  </div>
 </div>

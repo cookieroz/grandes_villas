@@ -12,6 +12,14 @@ $villaBrightBlue: #2F96B4;
 
 $villaDarkBlue: #004151;
 
+$villaBorderBlue: #79bbcb;
+
+$villaBgBlue: #dbf7f8;
+
+$darkGold: #977b32;
+
+$homeTitleBlue: #397d88;
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -171,10 +179,18 @@ header {
   background-image: image-url('main_bg.gif');
   background-repeat: repeat-x;
   height: 136px;
-  #lang {
+  #lang {;
     left: 500px;
-    position: absolute;
+    position: relative;
     top: 50px;
+    ul {
+      list-style-type: none;
+    }
+    li {
+      float: left;
+      list-style-type: none;
+      padding: 5px;
+    }
   }
   .navbar-inner {
     background: none;
@@ -339,23 +355,117 @@ form.contact-form {
 /* homepage styles */
 body.homepage {
   background-image: image-url('beach.jpg');
+  background-repeat: no-repeat;
 }
 .pics {
-  height:  291px;
-  width:   910px;
+  height:  280px;
+  width:   960px;
   padding: 0;
   margin:  0 auto;
    img {
-    border:  1px solid #ccc;
-    width:  900px;
-    height: 279px;
+    width:  960px;
+    height: 280px;
     top:  0;
     left: 0
    }
 }
+#banner {
+  margin-top: -30px;
+  padding: 0 0 40px 10px;
+  position: relative;
+  z-index: 4000;
+  a {
+    background: #ffffff;
+    color: #ffffff;
+    display: block;
+    height: 12px;
+    float: left;
+    font-size: 2px;
+    margin: 3px;
+    opacity: .7;
+    width: 12px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
-.home-thumb > li {
+.home-special {
+  height:  230px;
+  width:   960px;
+  padding: 0;
+  margin:  0 auto;
+  img {
+    width:  960px;
+    height: 230px;
+    top:  0;
+    left: 0
+  }
+}
+
+.featured-villas {
+  background: #ffffff;
+  border-radius: 4px 4px 0px 0px;
+  padding: 10px;
+  h2 {
+    color: $villaBrightBlue;
+    font-weight: normal;
+    margin-right: 10px;
+  }
+  a {
+    color: $darkGold;
+    display: block;
+    font-size: 18px;
+    margin-top: 11px;
+  }
+}
+
+.home-thumb {
+  background: $villaBgBlue;
+  border: 1px solid $villaBorderBlue;
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 10px;
+  ul.thumbnails {
+    width: 100%;
+  }
+  li {
+    margin-left: 10px;
+    li {
+      margin-left: 0px;
+    }
+    .thumbnail {
+      background: #ffffff;
+      border: 1px solid $villaBorderBlue;
+    }
+  }
+}
+
+.services-wrap {
+  background: $villaBgBlue;
+  border: 1px solid $villaBorderBlue;
+  border-radius: 0px 0px 4px 4px;
+  padding: 10px 9px 10px 10px;
+  .breadcrumb {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $villaBorderBlue;
+    font-size: 14px;
+    padding: 0px;
+    a {
+      color: $villaBrightBlue;
+    }
+  }
+}
+
+.car-rental {
   margin-left: 10px;
+  margin-top: -55px;
+}
+
+.special {
+  margin-top: 15px;
+  text-align: center;
 }
 
 /* about styles */
@@ -429,5 +539,9 @@ footer {
 
 .clear {
   clear: both;
+}
+
+.no-left-margin {
+  margin-left: 0px;
 }
 

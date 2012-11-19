@@ -3,4 +3,9 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('.pics').cycle('wipe');
+  $('.pics').after("<div id='banner'>").cycle({
+    fx:     'wipe',
+    timeout: 3000,
+    pager:  '#banner'
+  });
+  $('.home-special').cycle('scrollLeft');
