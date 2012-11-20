@@ -33,15 +33,10 @@ class Villa < ActiveRecord::Base
 
   accepts_nested_attributes_for :categories,  allow_destroy: true
 
-  acts_as_gmappable :latitude => 'latitude', :longitude => 'longitude',
-                    :process_geocoding => :geocode?,
-                    :address => "address",
-                    :normalized_address => "address",
-                    :msg => "Sorry, not even Google could
-                            figure out where that is"
+  acts_as_gmappable
 
-  def geocode?
-    (!address.blank? && (latitude.blank? || longitude.blank?)) || address_changed?
+  def gmaps4rails_address
+    "#{self.latitude}, #{self.longitude}"
   end
 
   #scope :town, lambda {
