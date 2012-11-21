@@ -91,7 +91,7 @@
     <div class="row">
       <div class="span12">
         <ul class="thumbnails thumb-contact home-thumb">
-          <li class="span4">
+          <li class="span4 no-left-margin">
             <div class="thumbnail">
               <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
               <% unless no_image? %>
@@ -100,25 +100,28 @@
               <% else %>
                   <%= link_to image_tag("800x545.gif"), "#" %>
               <% end %>
-              <p><%= raw truncate(Villa.first.content, :length => 180) %></p>
+              <p><%= raw truncate(strip_tags(Villa.first.content),
+                                  :length => 180) %></p>
             </div>
           </li>
 
           <% unless no_costa? %>
-              <li class="span4">
+              <li>
                 <div class="thumbnail">
                   <h3 class="center"><%= link_to CostaTropical.first.title, "#" %></h3>
                   <%= link_to image_tag(CostaTropical.first.ct_image.url,
                                         class: 'thumbnail thumb-img-contact'), "#" %>
-                  <p><%= raw truncate(CostaTropical.first.content, :length => 180) %></p>
+                  <p><%= raw truncate(strip_tags(CostaTropical.first.content),
+                                      :length => 180) %></p>
                 </div>
               </li>
-              <li class="span4">
+              <li>
                 <div class="thumbnail">
                   <h3 class="center"><%= link_to CostaTropical.last.title, "#" %></h3>
                   <%= link_to image_tag(CostaTropical.last.ct_image.url,
                                         class: 'thumbnail thumb-img-contact'), "#" %>
-                  <p><%= raw truncate(CostaTropical.last.content, :length => 180) %></p>
+                  <p><%= raw truncate(strip_tags(CostaTropical.last.content),
+                                      :length => 180) %></p>
                 </div>
               </li>
           <% end %>

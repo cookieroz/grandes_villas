@@ -489,11 +489,16 @@ h4.contact-add {
 }
 
 .thumb-contact {
-  padding-top: 20px;
+  margin: 10px 0 0 0;
+  padding: 20px 2px 0 0;
+  li {
+      width: 300px;
+  }
 }
 
 .thumb-img-contact {
-  width: 96%;
+  text-align: center;
+  width: 280px;
 }
 
 
@@ -520,6 +525,10 @@ footer {
   }
   #footer-logo {
     float: right;
+  }
+  .nav-footer{
+    clear: left;
+    display: block;
   }
 }
 
