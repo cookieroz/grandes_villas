@@ -22,7 +22,7 @@ set :repository, "git@github.com:cookieroz/grandes_villas.git"
 
 set :branch, "master"
 
-#set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 
 
