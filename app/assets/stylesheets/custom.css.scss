@@ -246,89 +246,120 @@ header {
 
 /* Villa Customizations */
 
-h2.villa-h2-bg {
-  background-image: image-url('villa-h2-bg.gif');
-  background-repeat: repeat-x;
-  border: 1px solid #B9DAE2;
+h1.villa-h1-bg {
+  background-color: #dcf5fc;
+  /*background-image: image-url('villa-h2-bg.gif');
+  background-repeat: repeat-x;*/
+  border-left: 1px solid #00738e;
+  border-right: 1px solid #00738e;
+  border-top: 1px solid #00738e;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   color: $villaDarkBlue;
+  font-weight: normal;
   height: 40px;
-  text-align: center;
+  padding: 0 0 0 10px;
+  text-align: left;
 }
 
-.villa-features {
-  div.well {
-    padding: 12px;
-  }
-  ul li {
-    color: $villaDarkBlue;
-    font-size: 14px;
-    padding: 3px 0 3px 0;
-  }
-  .span1 {
-    margin-left: 5px;
-    padding: 3px 0 3px 0;
-    width: 90px;
-  }
-}
-
-.villas-index-list {
-  padding: 10px 0 0 0;
-  h3 {
-    font-size: 24px;
-    padding: 0 0 10px 0;
+.villa-show {
+  border: 1px solid #00738e;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 15px;
+  padding: 0 0 0 10px;
+  .nav-villa {
+    margin: 10px;
+    li.active a {
+      background-color: $infoColorBtn;
+      color: #fff;
+    }
     a {
+      color: $infoColorBtn;
+    }
+    #overview {
+      margin-left: 10px;
+    }
+  }
+  .villa-features {
+    div.well {
+      padding: 12px;
+    }
+    ul li {
       color: $villaDarkBlue;
-      &:hover {
-        color: $villaBrightBlue;
-        text-decoration: none;
+      font-size: 14px;
+      padding: 3px 0 3px 0;
+    }
+    .span1 {
+      margin-left: 5px;
+      padding: 3px 0 3px 0;
+      width: 90px;
+    }
+  }
+  hr {
+    margin-right: 10px;
+  }
+  .villas-index-list {
+    padding: 10px 0 0 0;
+    h3 {
+      font-size: 24px;
+      padding: 0 0 10px 0;
+      a {
+        color: $villaDarkBlue;
+        &:hover {
+          color: $villaBrightBlue;
+          text-decoration: none;
+        }
+      }
+    }
+    h4 {
+      color: $villaBrightBlue;
+      padding: 0 0 10px 0;
+    }
+    ul.amenities-list-info {
+      color: $villaDarkBlue;
+      font-size: 16px;
+      li {
+        padding: 0 0 4px 0;
       }
     }
   }
-  h4 {
-    color: $villaBrightBlue;
-    padding: 0 0 10px 0;
+
+  .villa-form {
+    width: 100%;
+    label {
+      padding: 0 10px 0 0;
+    }
+    .cat-check, .rad-check {
+      height: 15px;
+      padding: 0 0 0 20px;
+      width: 150px;
+    }
+    input[type="checkbox"], input[type="radio"] {
+      clear: left;
+      display: block;
+      float: left;
+    }
+    input[type="file"] {
+      padding: 0 0 10px 150px;
+    }
+    textarea {
+      width: 70%;
+    }
   }
-  ul.amenities-list-info {
-    color: $villaDarkBlue;
+
+  p.meta {
+    color: $villaOrange;
     font-size: 16px;
-    li {
-      padding: 0 0 4px 0;
+    font-style: italic;
+    font-weight: bold;
+    a {
+      color: $villaOrange;
     }
   }
 }
 
-.villa-form {
-  width: 100%;
-  label {
-    padding: 0 10px 0 0;
-  }
-  .cat-check, .rad-check {
-    height: 15px;
-    padding: 0 0 0 20px;
-    width: 150px;
-  }
-  input[type="checkbox"], input[type="radio"] {
-    clear: left;
-    display: block;
-    float: left;
-  }
-  input[type="file"] {
-    padding: 0 0 10px 150px;
-  }
-  textarea {
-    width: 70%;
-  }
-}
 
-p.meta {
-  color: $villaOrange;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: bold;
-  a {
-    color: $villaOrange;
-  }
-}
 
 /* gmaps4rails bootstrap overrides */
 #map img {

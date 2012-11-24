@@ -1,100 +1,110 @@
 <% provide(:title, @villa.name) %>
 
-<h2 class="villa-h2-bg"> <%= @villa.name %> </h2>
+<h1 class="villa-h1-bg"> <%= @villa.name %> </h1>
 
-<!-- Refactor into a partial -->
-<div class="row">
+<div class="villa-show">
+  <!-- Refactor into a partial -->
+  <div class="row">
 
-  <ul class="nav nav-pills">
-    <li id="overview" class="active">
-      <a href="#overview"><%= t ".overview" %></a>
-    </li>
-    <li>
-      <a href="#map-link"><%= t ".map" %></a>
-    </li>
-    <li>
-      <a href="#avail"><%= t ".avail" %></a>
-    </li>
-    <li>
-      <a href="#rates"><%= t ".rates" %></a>
-    </li>
-  </ul>
-
-  <div class="span9">
-    <ul id="gallery">
-      <% @villa.photos.each do |photo| %>
-          <li><%= image_tag(photo.image.url) %> </li>
-      <% end %>
+    <ul class="nav nav-pills nav-villa">
+      <li id="overview" class="active">
+        <a href="#overview"><%= t ".overview" %></a>
+      </li>
+      <li>
+        <a href="#map-link"><%= t ".map" %></a>
+      </li>
+      <li>
+        <a href="#contact"><%= t "layouts.header.contact" %></a>
+      </li>
+      <li>
+        <a href="#avail"><%= t ".avail" %></a>
+      </li>
+      <li>
+        <a href="#rates"><%= t ".rates" %></a>
+      </li>
     </ul>
-  </div>
-  <div class="span3 villa-features">
-    <div class="well">
-      <ul class="unstyled">
-        <% @villa.locations.each do |location| %>
-            <li><%= t ".location" %>: <strong><%= location.place %></strong></li>
+
+    <div class="span9">
+      <ul id="gallery">
+        <% @villa.photos.each do |photo| %>
+            <li><%= image_tag(photo.image.url) %> </li>
         <% end %>
-        <li><%= t ".beds" %>: <strong><%= @villa.bedrooms %></strong></li>
-        <li><%= t ".sleeps" %>: <strong><%= @villa.sleeps %></strong></li>
       </ul>
-      <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
+    </div>
+    <div class="span3 villa-features">
+      <div class="well">
+        <ul class="unstyled">
+          <% @villa.locations.each do |location| %>
+              <li><%= t ".location" %>: <strong><%= location.place %></strong></li>
+          <% end %>
+          <li><%= t ".beds" %>: <strong><%= @villa.bedrooms %></strong></li>
+          <li><%= t ".sleeps" %>: <strong><%= @villa.sleeps %></strong></li>
+        </ul>
+        <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
         <% @villa.categories.each do |category| %>
             <div class="span1 darkBlueText">
               <%= category.name %>
             </div>
         <% end %>
-      <div class="clear"></div>
+        <div class="clear"></div>
+      </div>
     </div>
   </div>
-</div>
 
-<hr />
+  <hr />
 
-<div class="row">
-  <div class="span12">
-    <p class="lead"><%= t ".descript" %> <%= @villa.name %>: </p>
-    <%= raw @villa.content %>
+  <div class="row">
+    <div class="span12">
+      <p class="lead"><%= t ".descript" %> <%= @villa.name %>: </p>
+      <%= raw @villa.content %>
+    </div>
   </div>
-</div>
 
-<hr />
+  <hr />
 
-<div class="row">
-  <ul class="nav nav-pills">
-    <li>
-      <a href="#overview"><%= t ".overview" %></a>
-    </li>
-    <li id="map-link" class="active">
-      <a href="#map-link"><%= t ".map" %></a>
-    </li>
-    <li>
-      <a href="#avail"><%= t ".avail" %></a>
-    </li>
-    <li>
-      <a href="#rates"><%= t ".rates" %></a>
-    </li>
-  </ul>
-  <div class="span7">
-    <%= gmaps(
-                :markers => { :data => @json },
-                :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
-                                  :auto_zoom => false, 	# :auto_zoom defaults to full zoom in, set to false to utilize :zoom
-                                  :zoom => 15 }		# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
-        ) %>
+  <div class="row">
+    <ul class="nav nav-pills nav-villa">
+      <li>
+        <a href="#overview"><%= t ".overview" %></a>
+      </li>
+      <li id="map-link" class="active">
+        <a href="#map-link"><%= t ".map" %></a>
+      </li>
+      <li id="contact" class="active">
+        <a href="#contact"><%= t "layouts.header.contact" %></a>
+      </li>
+      <li>
+        <a href="#avail"><%= t ".avail" %></a>
+      </li>
+      <li>
+        <a href="#rates"><%= t ".rates" %></a>
+      </li>
+    </ul>
+    <div class="span7">
+      <%= gmaps(
+                  :markers => { :data => @json },
+                  :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
+                                    :auto_zoom => false, 	# :auto_zoom defaults to full zoom in, set to false to utilize :zoom
+                                    :zoom => 15 }		# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
+          ) %>
+    </div>
+    <div class="span5">
+      <%= render 'messages/new' %>
+    </div>
   </div>
-  <div class="span5">
-    <%= render 'messages/new' %>
-  </div>
-</div>
 
-<hr />
+  <hr />
 
-<div class="row">
-    <ul class="nav nav-pills">
+  <div class="row">
+    <ul class="nav nav-pills nav-villa">
       <li>
         <a href="#overview"><%= t ".overview" %></a>
       </li>
       <li>
         <a href="#map-link"><%= t ".map" %></a>
+      </li>
+      <li>
+        <a href="#contact"><%= t "layouts.header.contact" %></a>
       </li>
       <li id="avail" class="active">
         <a href="#avail"><%= t ".avail" %></a>
@@ -134,50 +144,52 @@
           <%= date.day %>
       <% end %>
     </div>
-</div>
+  </div>
 
-<hr />
+  <hr />
 
-<div class="row">
-  <ul class="nav nav-pills">
-    <li>
-      <a href="#overview"><%= t ".overview" %></a>
-    </li>
-    <li>
-      <a href="#map-link"><%= t ".map" %></a>
-    </li>
-    <li>
-      <a href="#avail"><%= t ".avail" %></a>
-    </li>
-    <li id="rates" class="active">
-      <a href="#rates"><%= t ".rates" %></a>
-    </li>
-  </ul>
-  <div class="span12">
-    <!-- Refactor into a partial -->
-    <table class="table table-bordered table-hover table-striped">
-      <thead>
+  <div class="row">
+    <ul class="nav nav-pills nav-villa">
+      <li>
+        <a href="#overview"><%= t ".overview" %></a>
+      </li>
+      <li>
+        <a href="#map-link"><%= t ".map" %></a>
+      </li>
+      <li>
+        <a href="#contact"><%= t "layouts.header.contact" %></a>
+      </li>
+      <li>
+        <a href="#avail"><%= t ".avail" %></a>
+      </li>
+      <li id="rates" class="active">
+        <a href="#rates"><%= t ".rates" %></a>
+      </li>
+    </ul>
+    <div class="span12">
+      <!-- Refactor into a partial -->
+      <table class="table table-bordered table-hover table-striped">
+        <thead>
         <tr>
           <th> <%= t ".rental-season" %> </th>
           <th> <%= t ".weekly-rate" %> </th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         <% @villa.rates.each do |rate| %>
-          <tr>
-            <td> <%= rate.price_info %> </td>
-            <td> <%= rate.price %> &euro; </td>
-          </tr>
+            <tr>
+              <td> <%= rate.price_info %> </td>
+              <td> <%= rate.price %> &euro; </td>
+            </tr>
         <% end %>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
 
-    <p><%= t ".observation" %>:</p>
-    <p><%= raw @villa.observations %></p>
+      <p><%= t ".observation" %>:</p>
+      <p><%= raw @villa.observations %></p>
+    </div>
   </div>
 </div>
-
-<hr />
 
 <p>
   <b>Tags:</b>
