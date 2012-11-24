@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-@import "bootstrap-responsive";
+/* @import "bootstrap-responsive";  */
 
 /* mixins, variables, etc. */
 
@@ -19,6 +19,8 @@ $villaBgBlue: #dbf7f8;
 $darkGold: #977b32;
 
 $homeTitleBlue: #397d88;
+
+$infoColorBtn: #2F96B4;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -350,6 +352,37 @@ form.contact-form {
   margin: 0 auto;
   padding: 15px;
   width: 530px;
+}
+
+.contact-villa-form {
+  background: #F7F7F8;
+  border: 1px solid #999;
+  border-radius: 10px;
+  color: #999;
+  margin: 0 auto;
+  padding: 15px;
+  h3 {
+    color: $infoColorBtn;
+    font-weight: normal;
+    margin-top: -10px;
+    padding-bottom: 10px;
+  }
+  form.form-horizontal {
+    color: #999;
+    .control-group {
+      label{
+        color: #666;
+        text-align: left;
+        width: 70px;
+      }
+      .controls {
+        margin-left: 80px;
+        input, textarea {
+          width: 255px;
+        }
+      }
+    }
+  }
 }
 
 /* homepage styles */

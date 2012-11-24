@@ -73,7 +73,7 @@
       <a href="#rates"><%= t ".rates" %></a>
     </li>
   </ul>
-  <div class="span6">
+  <div class="span7">
     <%= gmaps(
                 :markers => { :data => @json },
                 :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
@@ -81,7 +81,7 @@
                                   :zoom => 15 }		# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
         ) %>
   </div>
-  <div class="span6">
+  <div class="span5">
     <%= render 'messages/new' %>
   </div>
 </div>
