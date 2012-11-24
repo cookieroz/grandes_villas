@@ -20,4 +20,8 @@ module ApplicationHelper
   def no_image?
     !Photo.first
   end
+
+  #def javascript(*files)
+  #  content_for(:head) { javascript_include_tag(*files) }
+  #Send
 end
