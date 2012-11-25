@@ -15,13 +15,8 @@ fr:
         contact: "Contact"
         prop: "Louer Vous Villa"
         about: "De Nous"
+        destination: "Destinations"
     footer:
-        home: "Accueil"
-        villa: "Louer une villa"
-        costa: "Costa Tropical"
-        contact: "Contact"
-        prop: "Louer Vous Villa"
-        about: "De Nous"
   home:
       index:
         feature: "Villas Remarquables"
@@ -73,6 +68,13 @@ fr:
         name: "Nom"
         msg: "Message"
         send: "Envoier Message"
+  destinations:
+      index:
+        in: "dans"
+      show:
+        activities: "Activités"
+        beaches: "Plages"
+        restaurants: "Restaurants"
   date:
     formats:
       default: "%d/%m/%Y"

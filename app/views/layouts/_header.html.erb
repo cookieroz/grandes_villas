@@ -1,19 +1,19 @@
 <header class="navbar">
-  <ul id="lang">
-    <li>
-      <%= link_to image_tag("flag-uk.gif"), locale: "en" %>
-    </li>
-    <li>
-      <%= link_to image_tag("flag-es.gif"), locale: "es" %>
-    </li>
-    <li>
-      <%= link_to image_tag("flag-fr.gif"), locale: "fr" %>
-    </li>
-  </ul>
   <div class="navbar-inner">
     <div class="container">
       <%= link_to image_tag("logo-villas.png"), root_path, id: "logo-villas" %>
       <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
+      <ul id="lang">
+        <li>
+          <%= link_to image_tag("flag-uk.gif"), locale: "en" %>
+        </li>
+        <li>
+          <%= link_to image_tag("flag-es.gif"), locale: "es" %>
+        </li>
+        <li>
+          <%= link_to image_tag("flag-fr.gif"), locale: "fr" %>
+        </li>
+      </ul>
       <nav>
         <ul class="nav pull-left">
           <li class="<%= 'active' if current_page?(root_path) %>">
@@ -24,16 +24,16 @@
             <%= link_to(t(".villa"), villas_path) %>
           </li>
           <li class="divider-vertical"></li>
+          <li class="<%= 'active' if current_page?(destinations_path) %>">
+            <%= link_to(t(".destination"), destinations_path) %>
+          </li>
+          <li class="divider-vertical"></li>
           <li class="class="<%= 'active' if current_page?(costa_tropicals_path) %>">
             <%= link_to(t(".costa"), costa_tropicals_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(contact_path) %>">
             <%= link_to(t(".contact"), contact_path) %>
-          </li>
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(owner_path) %>">
-            <%= link_to(t(".prop"), owner_path) %>
           </li>
           <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(about_path) %>">

@@ -191,30 +191,33 @@ header {
   background-image: image-url('main_bg.gif');
   background-repeat: repeat-x;
   height: 136px;
-  #lang {;
-    left: 500px;
-    position: relative;
-    top: 50px;
-    ul {
-      list-style-type: none;
-    }
-    li {
-      float: left;
-      list-style-type: none;
-      padding: 5px;
-    }
-  }
   .navbar-inner {
     background: none;
     box-shadow: none;
     padding-top: 95px;
-    nav ul.nav li {
-      font-size: 1.1em;
-      padding: 0px;
-      text-shadow: none;
-      a {
-      color: #ffffff;
-      &:hover { color: $villaOrange; }
+    #lang {;
+      margin-left: 400px;
+      position: relative;
+      top: -50px;
+      ul {
+        list-style-type: none;
+      }
+      li {
+        float: left;
+        list-style-type: none;
+        padding: 5px;
+      }
+    }
+    nav ul.nav {
+      margin-top: -35px;
+      li {
+        font-size: 1.1em;
+        padding: 0px;
+        text-shadow: none;
+        a {
+          color: #ffffff;
+          &:hover { color: $villaOrange; }
+        }
       }
     }
     nav ul.nav li.active a {
@@ -324,7 +327,10 @@ h1.villa-h1-bg {
       }
     }
   }
-
+  .map_container {
+    height: 500px;
+    width: 525px;
+  }
   .villa-form {
     width: 100%;
     label {
@@ -429,6 +435,7 @@ form.contact-form {
 /* homepage styles */
 body.homepage {
   background-image: image-url('beach.jpg');
+  background-position: center 126px;
   background-repeat: no-repeat;
 }
 .pics {
@@ -579,6 +586,102 @@ h4.contact-add {
 #push {
   clear: both;
   height: 110px;
+}
+
+/* Destination styles */
+.destination-show {
+  background: #ffffff;
+  border: 1px solid $infoColorBtn;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  img.dest-img {
+    height: 200px;
+    width: 960px;
+  }
+  .page-header {
+    margin-right: 15px;
+    h1 {
+      color: $infoColorBtn;
+      font-weight: normal;
+    }
+  }
+  .dest-content {
+    padding: 0 15px 15px 0;
+  }
+  .map_container {
+    clear: both;
+    height: 200px;
+    width: 905px;
+    #map {
+      .gmaps4rails_map {
+        height: 200px;
+        width: 900px;
+      }
+    }
+  }
+  .dest-info-links {
+    clear: both;
+    .span6 {
+      margin-bottom: 15px;
+      .lead {
+        color: $infoColorBtn;
+        margin-bottom: 0px;
+      }
+      li a {
+        color: $darkGold;
+        font-size: 14px;
+      }
+      .btn-info {
+        color: #ffffff;
+        margin: 5px;
+      }
+    }
+  }
+  .bottom-pics {
+    margin-left: 5px;
+    .span4 {
+      margin: 10px 0 0 10px;
+    }
+  }
+}
+
+.destination-index {
+  h1 {
+    color: $villaDarkBlue;
+    margin-bottom: 15px;
+  }
+  ul.thumbnails {
+    .thumbnail {
+      background: #ffffff;
+      border: 1px solid $villaBrightBlue;
+      padding: 10px;
+      img.thumbnail {
+        border: 1px solid #dddddd;
+        padding: 2px;
+        width: 98%;
+      }
+      h2 {
+        color: $homeTitleBlue;
+        font-weight: normal;
+        a {
+          color: $homeTitleBlue;
+        }
+      }
+      .destination-show-link {
+        background: #DCF5FC;
+        border: 1px solid #00738E;
+        border-radius: 10px;
+        padding: 5px;
+        li {
+          padding: 3px 3px 3px 6px;
+          a {
+            color: $darkGold;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* footer */

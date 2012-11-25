@@ -6,6 +6,7 @@ es:
     about: sobre-nosotros
     contact: contacto
     owner: propietarios
+    destinations: destinos
 
 fr:
   routes:

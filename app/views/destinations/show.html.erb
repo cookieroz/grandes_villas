@@ -1,0 +1,62 @@
+<% provide(:title, @destination.name ) %>
+
+<div class="destination-show">
+  <%= image_tag(@destination.dest_image_url, class: 'dest-img') %>
+  <div class="span12">
+    <div class="page-header">
+      <h1> <%= @destination.name %> </h1>
+    </div>
+    <div class="dest-content">
+      <%= raw @destination.content %>
+    </div>
+    <div class="dest-info-links">
+      <div class="span6 no-left-margin">
+        <ul class="unstyled">
+          <li><p class="lead">Info:</p></li>
+          <li><%= link_to( t(".activities"), "#") %></li>
+          <li><%= link_to( t(".beaches"), "#") %></li>
+          <li><%= link_to( t(".restaurants"), "#") %></li>
+        </ul>
+      </div>
+      <div class="span6 no-left-margin">
+        <ul class="unstyled pull-right">
+          <li>
+            <%= link_to "Villas in #{@destination.name}", "#",
+                        class:"btn btn-info pull-right" %>
+          </li>
+          <li>
+            <%= link_to "Services in #{@destination.name}", "#",
+                        class:"btn btn-info pull-right" %>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%= gmaps(
+                :markers => { :data => @json },
+                :map_options => { :auto_adjust => true, # :auto_adjust map to center on location
+                                  :auto_zoom => false, 	# :auto_zoom defaults to full zoom in, set to false to utilize :zoom
+                                  :zoom => 15 }		# :zoom 0 is fully zoomed out (world view), 21 is fully zoomed in (street view)
+        ) %>
+  </div>
+  <div class="bottom-pics">
+    <div class="span4">
+      <%= link_to image_tag("patata.jpg"), "#" %>
+    </div>
+    <div class="span4">
+      <%= link_to image_tag("villa-romantica.jpg"), "#" %>
+    </div>
+    <div class="span4">
+      <%= link_to image_tag("villa-la-torre.jpg"), "#" %>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
+<% if current_user %>
+    <%= link_to 'Edit', edit_destination_path(@destination) %> |
+<% end %>
+<%= link_to(t(".back"), destinations_path) %>
+
+<%= yield :scripts %>
+

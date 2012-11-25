@@ -1,4 +1,6 @@
 GrandesVillas::Application.routes.draw do
+  resources :destinations
+
   mount Ckeditor::Engine => '/ckeditor'
 
   #scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do

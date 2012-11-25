@@ -10,13 +10,8 @@ en:
         contact: "Contact"
         prop: "Rent Your Property"
         about: "About"
+        destination: "Destinations"
     footer:
-        home: "Home"
-        villa: "Rent a Villa"
-        costa: "Costa Tropical"
-        contact: "Contact"
-        prop: "Rent Your Property"
-        about: "About"
   home:
     index:
       feature: "Featured Villas"
@@ -69,6 +64,13 @@ en:
       name: "Name"
       msg: "Message"
       send: "Send Message"
+  destinations:
+    index:
+      in: "in"
+    show:
+      activities: "Activities"
+      beaches: "Beaches"
+      restaurants: "Restaurants"
   simple_form:
       labels:
         costa_tropicals:

@@ -7,13 +7,8 @@ es:
         contact: "Contacto"
         prop: "Alquile su Propiedad"
         about: "Sobre Nosotros"
+        destination: "Destinos"
     footer:
-        home: "Inicio"
-        villa: "Alquiler de Villas"
-        costa: "Costa Tropical"
-        contact: "Contacto"
-        prop: "Alquile su Propiedad"
-        about: "Sobre Nosotros"
   home:
       index:
         feature: "Villas Descatadas"
@@ -67,6 +62,13 @@ es:
         name: "Nombre"
         msg: "Mensaje"
         send: "Enviar Mensaje"
+  destinations:
+      index:
+        in: "en"
+      show:
+        activities: "Actividades"
+        beaches: "Playas"
+        restaurants: "Restaurantes"
   simple_form:
     labels:
       costa_tropicals:

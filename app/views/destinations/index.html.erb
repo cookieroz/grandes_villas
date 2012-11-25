@@ -1,0 +1,43 @@
+<% provide(:title, t("layouts.header.destination")) %>
+
+<div class="destination-index">
+  <h1><%= t "layouts.header.destination" %></h1>
+
+  <ul class="thumbnails">
+    <% @destinations.each do |dest| %>
+        <li class="span4">
+          <div class="thumbnail">
+            <% unless no_image? %>
+                <%= link_to image_tag(dest.dest_image.url,
+                                      class: 'thumbnail'), dest %>
+            <% else %>
+                <%= link_to image_tag("800x545.gif"), dest %>
+            <% end %>
+            <h2><%= link_to dest.name, dest %></h2>
+            <div class="destination-show-link">
+              <ul class="unstyled">
+                <li><%= link_to "Info #{dest.name}", dest %></li>
+                <li><%= link_to "Villas in #{dest.name}", "#" %></li>
+              </ul>
+            </div>
+            <% if current_user %>
+                <br />
+                <br />
+                <%= link_to 'Edit', edit_destination_path(dest),
+                            class: 'btn btn-primary btn-large' %>
+                <%= link_to 'Delete', dest,
+                            method: :delete, data: { confirm: 'Are you sure?' },
+                            class: 'btn btn-danger btn-large' %>
+            <% end %>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+
+  <% if current_user %>
+      <%= link_to 'New Destination', new_destination_path,
+                  class: 'btn btn-warning btn-large' %>
+  <% end %>
+</div>
+
+

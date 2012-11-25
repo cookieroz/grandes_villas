@@ -2,12 +2,13 @@
   <div class="container">
     <nav>
       <ul class="nav nav-pills pull-left">
-        <li><%= link_to(t(".home"), root_path) %></li>
-        <li><%= link_to(t(".villa"), villas_path) %></li>
-        <li><%= link_to(t(".costa"), costa_tropicals_path) %></li>
-        <li><%= link_to(t(".contact"), contact_path) %></li>
-        <li><%= link_to(t(".prop"), owner_path) %></li>
-        <li><%= link_to(t(".about"), about_path) %></li>
+        <li><%= link_to(t("layouts.header.home"), root_path) %></li>
+        <li><%= link_to(t("layouts.header.villa"), villas_path) %></li>
+        <li><%= link_to(t("layouts.header.destination"), destinations_path) %></li>
+        <li><%= link_to(t("layouts.header.costa"), costa_tropicals_path) %></li>
+        <li><%= link_to(t("layouts.header.contact"), contact_path) %></li>
+        <li><%= link_to(t("layouts.header.prop"), owner_path) %></li>
+        <li><%= link_to(t("layouts.header.about"), about_path) %></li>
       </ul>
     </nav>
     <%= link_to image_tag("footer_logo.gif"), root_path, id: "footer-logo" %>

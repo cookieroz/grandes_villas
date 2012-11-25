@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116022731) do
+ActiveRecord::Schema.define(:version => 20121124212100) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -79,6 +79,33 @@ ActiveRecord::Schema.define(:version => 20121116022731) do
   end
 
   add_index "costa_tropicals", ["slug"], :name => "index_costa_tropicals_on_slug"
+
+  create_table "destination_translations", :force => true do |t|
+    t.integer  "destination_id"
+    t.string   "locale"
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "destination_translations", ["destination_id"], :name => "index_destination_translations_on_destination_id"
+  add_index "destination_translations", ["locale"], :name => "index_destination_translations_on_locale"
+
+  create_table "destinations", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+    t.string   "address"
+    t.string   "dest_image"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "slug"
+  end
+
+  add_index "destinations", ["slug"], :name => "index_destinations_on_slug"
 
   create_table "friendly_id_slugs", :force => true do |t|
     t.string   "slug",                         :null => false
