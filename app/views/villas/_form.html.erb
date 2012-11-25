@@ -18,49 +18,19 @@
       <%= villa_form.text_field :name %>
     </div>
 
-    <!-- Refactor into a partial -->
     <div class="control-group">
-    <%= villa_form.fields_for :photos do |photo| %>
-        <% if photo.object.new_record? %>
-            <%= photo.file_field :image %>
-        <% else %>
-            <label class="checkbox">
-                <%= image_tag(photo.object.image.url(:thumb)) %>
-                <%= photo.check_box :_destroy %>
-            </label>
-        <% end %>
-    <% end %>
-    </div>
-
-    <div class="control-group">
-      <%= villa_form.label :bedrooms, class: "control-label" %>
+      <%= villa_form.label :bedrooms, t("villas.show.beds"), class: "control-label" %>
       <%= villa_form.text_field :bedrooms %>
     </div>
 
     <div class="control-group">
-      <%= villa_form.label :sleeps, class: "control-label" %>
+      <%= villa_form.label :sleeps, t("villas.show.sleeps"), class: "control-label" %>
       <%= villa_form.text_field :sleeps %>
     </div>
 
-    <!--Refactor into a partial -->
     <div class="control-group">
-      <div class="controls">
-      <%= hidden_field_tag "villa[location_ids][]", nil%>
-      <% Location.all.each do |location| %>
-          <%= radio_button_tag "villa[location_ids][]",
-                               location.id,
-                               @villa.location_ids.include?(location.id),
-                               id: dom_id(location)%>
-          <%= label_tag dom_id(location), location.place,
-                        class: "rad-check radio" %>
-      <% end %>
-        <%= link_to_add_fields "Add Location", villa_form, :locations %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= villa_form.label :address, class: "control-label" %>
-      <%= villa_form.text_field :address %>
+      <%= villa_form.label :bathroom, t("villas.show.bath"), class: "control-label" %>
+      <%= villa_form.text_field :bathroom %>
     </div>
 
     <div class="control-group">
@@ -73,48 +43,88 @@
       <%= villa_form.text_field :longitude %>
     </div>
 
+    <!-- Refactor into a partial -->
     <div class="control-group">
-      <%= villa_form.label :content, class: "control-label" %>
-      <%= villa_form.cktext_area :content %>
+      <h3>Upload Villa Photos</h3>
+      <%= villa_form.fields_for :photos do |photo| %>
+          <% if photo.object.new_record? %>
+              <%= photo.file_field :image %>
+          <% else %>
+              <label class="checkbox">
+                <%= image_tag(photo.object.image.url(:thumb)) %>
+                <%= photo.check_box :_destroy %>
+              </label>
+          <% end %>
+      <% end %>
+    </div>
+
+    <div class="control-group ckeditor optional">
+      <div class="controls">
+        <h3><%= t "villas.show.descript" %> Villa</h3>
+        <%= villa_form.cktext_area :content %>
+      </div>
     </div>
 
     <!--Refactor into a partial -->
     <div class="control-group">
+      <h3>Choose Location</h3>
+      <div class="controls">
+        <%= hidden_field_tag "villa[location_ids][]", nil%>
+        <% Location.all.each do |location| %>
+            <%= radio_button_tag "villa[location_ids][]",
+                                 location.id,
+                                 @villa.location_ids.include?(location.id),
+                                 id: dom_id(location)%>
+            <%= label_tag dom_id(location), location.place,
+                          class: "rad-check radio" %>
+        <% end %>
+        <%= link_to_add_fields "Add Location", villa_form, :locations %>
+      </div>
+    </div>
+
+    <!--Refactor into a partial -->
+    <div class="control-group">
+      <h3>Villa <%= t ".cat" %></h3>
       <div class="controls">
         <%= hidden_field_tag "villa[category_ids][]", nil%>
         <% Category.all.each do |category| %>
+          <% unless category.name.blank? %>
+          <div class="cat-text-field">
             <%= check_box_tag "villa[category_ids][]",
                               category.id,
                               @villa.category_ids.include?(category.id),
                               id: dom_id(category)%>
-            <%= label_tag dom_id(category), category.name, class: "cat-check" %>
+            <%= text_field_tag dom_id(category), category.name, class: "cat-check" %>
+          </div>
+          <% end %>
         <% end %>
+        <%= link_to_add_fields "Add Category", villa_form, :categories %>
       </div>
     </div>
-
-    <%= link_to_add_fields "Add Category", villa_form, :categories %>
 
 
     <!--Refactor into a partial -->
     <div class="control-group">
+      <h3><%= t "villas.show.rates" %></h3>
         <%= villa_form.fields_for :rates do |builder| %>
-          <%= render 'rate_fields', villa_form: builder %>
+          <div class="controls rates-form">
+            <%= render 'rate_fields', villa_form: builder %>
+          </div>
         <% end %>
-      <div class="controls">
+      <div class="controls rates-form">
         <%= link_to_add_fields "Add Rates", villa_form, :rates %>
       </div>
     </div>
 
-    <div class="control-group">
-      <%= villa_form.label :observations,
-                           "Please insert any observations
-                               here" %>
-      <%= villa_form.cktext_area :observations %>
+    <div class="control-group ckeditor optional">
+      <div class="controls">
+        <h3>Villa Rate <%= t "villas.show.observation" %></h3>
+        <%= villa_form.cktext_area :observations %>
+      </div>
     </div>
 
-
-
-    <h2>Tags</h2>
+    <h3>Tags</h3>
+    <p><%= t ".lang" %></p>
     <%= render :partial => 'tags/form',
                :locals => {:form => villa_form} %>
     <div class="actions">

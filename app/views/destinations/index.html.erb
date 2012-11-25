@@ -7,11 +7,9 @@
     <% @destinations.each do |dest| %>
         <li class="span4">
           <div class="thumbnail">
-            <% unless no_image? %>
+            <% unless dest.dest_image.nil? %>
                 <%= link_to image_tag(dest.dest_image.url,
                                       class: 'thumbnail'), dest %>
-            <% else %>
-                <%= link_to image_tag("800x545.gif"), dest %>
             <% end %>
             <h2><%= link_to dest.name, dest %></h2>
             <div class="destination-show-link">

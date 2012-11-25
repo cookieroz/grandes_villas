@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121124212100) do
+ActiveRecord::Schema.define(:version => 20121125161017) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,17 @@ ActiveRecord::Schema.define(:version => 20121124212100) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "category_translations", :force => true do |t|
+    t.integer  "category_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "category_translations", ["category_id"], :name => "index_category_translations_on_category_id"
+  add_index "category_translations", ["locale"], :name => "index_category_translations_on_locale"
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -156,6 +167,17 @@ ActiveRecord::Schema.define(:version => 20121124212100) do
 
   add_index "rates", ["villa_id"], :name => "index_rates_on_villa_id"
 
+  create_table "tag_translations", :force => true do |t|
+    t.integer  "tag_id"
+    t.string   "locale"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "tag_translations", ["locale"], :name => "index_tag_translations_on_locale"
+  add_index "tag_translations", ["tag_id"], :name => "index_tag_translations_on_tag_id"
+
   create_table "tags", :force => true do |t|
     t.string   "name"
     t.integer  "villa_id"
@@ -199,11 +221,13 @@ ActiveRecord::Schema.define(:version => 20121124212100) do
     t.boolean  "gmaps"
     t.string   "address"
     t.text     "observations"
-    t.integer  "sleeps",       :default => 4
-    t.integer  "bedrooms",     :default => 2
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.integer  "sleeps",         :default => 4
+    t.integer  "bedrooms",       :default => 2
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "slug"
+    t.float    "bathroom"
+    t.integer  "destination_id"
   end
 
   add_index "villas", ["slug"], :name => "index_villas_on_slug"

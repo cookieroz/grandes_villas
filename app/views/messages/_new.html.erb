@@ -1,9 +1,9 @@
 <div class="contact-villa-form">
-  <h3>Inquire about <%= @villa.name %> today!</h3>
+  <h3><%= t ".inquire" %> <%= @villa.name %></h3>
   <%= form_for  :messages,
                 :html => { :class => 'form-horizontal' } do |f| %>
       <div class="control-group">
-        <%= f.label :name, class: "control-label" %>
+        <%= f.label :name, t(".name"), class: "control-label" %>
         <div class="controls">
           <%= f.text_field :name %>
         </div>
@@ -21,31 +21,31 @@
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :dates, class: "control-label" %>
+        <%= f.label :dates, t(".dates"), class: "control-label" %>
         <div class="controls">
           <%= f.text_field :dates %>
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :adults, class: "control-label" %>
+        <%= f.label :adults, t(".adults"), class: "control-label" %>
         <div class="controls">
           <%= f.text_field :adults %>
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :kids, class: "control-label" %>
+        <%= f.label :kids, t(".kids"), class: "control-label" %>
         <div class="controls">
           <%= f.text_field :kids %>
         </div>
       </div>
       <div class="control-group">
-        <%= f.label :content, "Message", class: "control-label" %>
+        <%= f.label :content, t(".msg"), class: "control-label" %>
         <div class="controls">
           <%= f.text_area :content, :rows => 5 %>
         </div>
       </div>
       <div class="actions center">
-        <%= f.submit "Send Message", class: "btn btn-info" %>
+        <%= f.submit t(".send"), class: "btn btn-info" %>
       </div>
   <% end %>
 </div>

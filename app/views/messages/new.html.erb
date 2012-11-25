@@ -74,6 +74,24 @@
             </div>
           </div>
           <div class="control-group">
+            <%= f.label :dates, t(".dates"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :dates %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :adults, t(".adults"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :adults %>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= f.label :kids, t(".kids"), class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :kids %>
+            </div>
+          </div>
+          <div class="control-group">
             <%= f.label :content, t(".msg"), class: "control-label" %>
             <div class="controls">
               <%= f.text_area :content, :rows => 5 %>
@@ -94,37 +112,44 @@
           <li class="span4 no-left-margin">
             <div class="thumbnail">
               <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
-              <% unless no_image? %>
+              <% if Villa.first.photos.first.image.nil? %>
+                <%= link_to image_tag("800x545.gif"), "#" %>
+              <% else %>
                   <%= link_to image_tag(Villa.first.photos.first.image.url,
                                         class: 'thumbnail thumb-img-contact'), "#" %>
-              <% else %>
-                  <%= link_to image_tag("800x545.gif"), "#" %>
               <% end %>
               <p><%= raw truncate(strip_tags(Villa.first.content),
                                   :length => 180) %></p>
             </div>
           </li>
-
-          <% unless no_costa? %>
-              <li>
-                <div class="thumbnail">
-                  <h3 class="center"><%= link_to CostaTropical.first.title, "#" %></h3>
-                  <%= link_to image_tag(CostaTropical.first.ct_image.url,
+    <% unless no_dest? %>
+          <li>
+            <div class="thumbnail">
+              <h3 class="center"><%= link_to Destination.first.name, "#" %></h3>
+              <% if Destination.first.dest_image.nil? %>
+                  <%= link_to image_tag("800x545.gif"), "#" %>
+              <% else %>
+                  <%= link_to image_tag(Destination.first.dest_image.url,
                                         class: 'thumbnail thumb-img-contact'), "#" %>
-                  <p><%= raw truncate(strip_tags(CostaTropical.first.content),
-                                      :length => 180) %></p>
-                </div>
-              </li>
-              <li>
-                <div class="thumbnail">
-                  <h3 class="center"><%= link_to CostaTropical.last.title, "#" %></h3>
-                  <%= link_to image_tag(CostaTropical.last.ct_image.url,
+              <% end %>
+              <p><%= raw truncate(strip_tags(Destination.first.content),
+                                  :length => 180) %></p>
+            </div>
+          </li>
+          <li>
+            <div class="thumbnail">
+              <h3 class="center"><%= link_to Destination.last.name, "#" %></h3>
+              <% if Destination.last.dest_image.nil? %>
+                  <%= link_to image_tag("800x545.gif"), "#" %>
+              <% else %>
+                  <%= link_to image_tag(Destination.last.dest_image.url,
                                         class: 'thumbnail thumb-img-contact'), "#" %>
-                  <p><%= raw truncate(strip_tags(CostaTropical.last.content),
-                                      :length => 180) %></p>
-                </div>
-              </li>
-          <% end %>
+              <% end %>
+              <p><%= raw truncate(strip_tags(Destination.last.content),
+                                  :length => 180) %></p>
+            </div>
+          </li>
+    <% end %>
         </ul>
       </div>
     </div>

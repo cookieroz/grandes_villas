@@ -27,7 +27,9 @@
     <div class="span9">
       <ul id="gallery">
         <% @villa.photos.each do |photo| %>
-            <li><%= image_tag(photo.image.url) %> </li>
+            <% unless photo.image.nil? %>
+                <li><%= image_tag(photo.image.url) %> </li>
+            <% end %>
         <% end %>
       </ul>
     </div>
@@ -39,12 +41,15 @@
           <% end %>
           <li><%= t ".beds" %>: <strong><%= @villa.bedrooms %></strong></li>
           <li><%= t ".sleeps" %>: <strong><%= @villa.sleeps %></strong></li>
+          <li><%#= t ".sleeps" %>Bathrooms: <strong><%= @villa.bathroom %></strong></li>
         </ul>
         <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
         <% @villa.categories.each do |category| %>
-            <div class="span1 darkBlueText">
-              <%= category.name %>
-            </div>
+            <% unless category.name.blank? %>
+                <div class="span1 darkBlueText">
+                  <%= category.name %>
+                </div>
+            <% end %>
         <% end %>
         <div class="clear"></div>
       </div>
@@ -204,7 +209,7 @@
 <br /> -->
 
 <% if current_user %>
-  <%= link_to 'Edit', edit_villa_path(@villa) %> |
+  <%= link_to (t("villas.form.edit"), edit_villa_path(@villa)) %> |
 <% end %>
 <%= link_to(t(".back"), villas_path) %>
 

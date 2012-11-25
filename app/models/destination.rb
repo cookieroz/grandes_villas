@@ -4,7 +4,9 @@ class Destination < ActiveRecord::Base
 
   mount_uploader :dest_image
 
-  translates :content, :name
+  has_many :villas
+
+  translates :content
 
   extend FriendlyId
   friendly_id :name, use: [:slugged, :history]
@@ -13,6 +15,8 @@ class Destination < ActiveRecord::Base
                     :process_geocoding => :geocode?,
                     :address => "address", :normalized_address => "address",
                     :msg => "Sorry, not even Google could figure out where that is"
+
+  accepts_nested_attributes_for :villas
 
   def geocode?
     (!address.blank? && (latitude.blank? || longitude.blank?)) || address_changed?

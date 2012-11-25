@@ -265,6 +265,100 @@ h1.villa-h1-bg {
   text-align: left;
 }
 
+/* for villa edit form */
+.villa-form {
+  width: 100%;
+  h3 {
+    color: $villaDarkBlue;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 20px 0 10px 0;
+  }
+  label {
+    font-weight: bold;
+    padding: 0 10px 0 0;
+  }
+  .rad-check {
+    font-weight: normal;
+    height: 15px;
+    padding: 0 0 0 20px;
+    width: 150px;
+  }
+  .cat-check {
+    margin-left: 5px;
+  }
+  input[type="checkbox"].tag-remove {
+    clear: none;
+    float: left;
+    margin: 8px 0 0 5px;
+  }
+  input.tag-input {
+    display: block;
+    float: left;
+  }
+  .cat-text-field {
+    display: block;
+    margin: 5px 0;
+  }
+  .control-group {
+    .width50 {
+      font-weight: normal;
+      width: 60px;
+    }
+    .control-lable {
+     width: 100px;
+    }
+    .rates-form {
+      margin: 0 0 0 80px;
+      .rates-partial {
+        border: 1px solid $villaDarkBlue;
+        color: $villaDarkBlue;
+        clear: both;
+        margin: 10px;
+        padding: 10px;
+        width: 600px;
+        .lead {
+          margin-bottom: 3px;
+        }
+        .price-form {
+          clear: both;
+          padding: 5px;
+          label {
+            float: left;
+            font-weight: normal;
+            width: 150px;
+          }
+          input {
+            float: left;
+          }
+        }
+        .rate-destroy {
+          margin: -25px 0 0 420px;
+          input[type="checkbox"]{
+            margin: -45px 0 0 -20px;
+          }
+        }
+      }
+    }
+  }
+  .ckeditor {
+    .controls {
+      margin-left: 0;
+    }
+  }
+  input[type="checkbox"], input[type="radio"] {
+    clear: left;
+    display: block;
+    float: left;
+  }
+  input[type="file"] {
+    padding: 0 0 10px 150px;
+  }
+  textarea {
+    width: 70%;
+  }
+}
+
 .villa-show {
   border: 1px solid #00738e;
   border-bottom-left-radius: 10px;
@@ -302,66 +396,45 @@ h1.villa-h1-bg {
   hr {
     margin-right: 10px;
   }
-  .villas-index-list {
-    padding: 10px 0 0 0;
-    h3 {
-      font-size: 24px;
-      padding: 0 0 10px 0;
-      a {
-        color: $villaDarkBlue;
-        &:hover {
-          color: $villaBrightBlue;
-          text-decoration: none;
-        }
-      }
-    }
-    h4 {
-      color: $villaBrightBlue;
-      padding: 0 0 10px 0;
-    }
-    ul.amenities-list-info {
-      color: $villaDarkBlue;
-      font-size: 16px;
-      li {
-        padding: 0 0 4px 0;
-      }
-    }
-  }
-  .map_container {
-    height: 500px;
-    width: 525px;
-  }
-  .villa-form {
-    width: 100%;
-    label {
-      padding: 0 10px 0 0;
-    }
-    .cat-check, .rad-check {
-      height: 15px;
-      padding: 0 0 0 20px;
-      width: 150px;
-    }
-    input[type="checkbox"], input[type="radio"] {
-      clear: left;
-      display: block;
-      float: left;
-    }
-    input[type="file"] {
-      padding: 0 0 10px 150px;
-    }
-    textarea {
-      width: 70%;
-    }
-  }
+}
 
-  p.meta {
-    color: $villaOrange;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: bold;
+.villas-index-list {
+  padding: 10px 0 0 0;
+  h3 {
+    font-size: 24px;
+    padding: 0 0 10px 0;
     a {
-      color: $villaOrange;
+      color: $villaDarkBlue;
+      &:hover {
+        color: $villaBrightBlue;
+        text-decoration: none;
+      }
     }
+  }
+  h4 {
+    color: $villaBrightBlue;
+    padding: 0 0 10px 0;
+  }
+  ul.amenities-list-info {
+    color: $villaDarkBlue;
+    font-size: 16px;
+    li {
+      padding: 0 0 4px 0;
+    }
+  }
+}
+.map_container {
+  height: 500px;
+  width: 525px;
+}
+
+p.meta {
+  color: $villaOrange;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: bold;
+  a {
+    color: $villaOrange;
   }
 }
 

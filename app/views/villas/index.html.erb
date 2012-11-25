@@ -56,11 +56,11 @@
      <div class="villas-index-list thumbnails">
        <div class="row">
          <div class="span3 pull-left">
-           <% unless no_image? %>
-             <%= link_to image_tag(villa.photos.first.image.url(:thumb),
-                                   class: 'thumbnail'), villa %>
-           <% else %>
+           <% if villa.photos.first.image.nil? %>
                <%= link_to image_tag("800x545.gif"), villa %>
+           <% else %>
+               <%= link_to image_tag(villa.photos.first.image.url(:thumb),
+                                     class: 'thumbnail'), villa %>
            <% end %>
          </div>
          <div class="span6">
@@ -79,6 +79,7 @@
                <% end %>
                <li><%= t ".beds" %>: <strong><%= villa.bedrooms %></strong></li>
                <li><%= t ".sleeps" %>: <strong><%= villa.sleeps %></strong></li>
+               <li><%#= t ".sleeps" %>Bathrooms: <strong><%= villa.bathroom %></strong></li>
              </ul>
              <% if current_user %>
                  <%= link_to 'Edit', edit_villa_path(villa),

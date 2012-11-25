@@ -19,23 +19,19 @@
           <li class="<%= 'active' if current_page?(root_path) %>">
             <%= link_to(t(".home"), root_path) %>
           </li>
-          <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(villas_path) %>">
             <%= link_to(t(".villa"), villas_path) %>
           </li>
-          <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(destinations_path) %>">
             <%= link_to(t(".destination"), destinations_path) %>
           </li>
-          <li class="divider-vertical"></li>
           <li class="class="<%= 'active' if current_page?(costa_tropicals_path) %>">
             <%= link_to(t(".costa"), costa_tropicals_path) %>
           </li>
-          <li class="divider-vertical"></li>
           <li class="<%= 'active' if current_page?(contact_path) %>">
             <%= link_to(t(".contact"), contact_path) %>
           </li>
-          <li class="divider-vertical"></li>
+          <!--<li class="divider-vertical"></li> -->
           <li class="<%= 'active' if current_page?(about_path) %>">
             <%= link_to(t(".about"), about_path) %>
           </li>

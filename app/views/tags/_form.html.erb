@@ -1,13 +1,11 @@
 <%= form.fields_for :tags do |tag_form| %>
     <div class="control-group">
       <%= tag_form.label :name, 'Tag:', class: "control-label" %>
-      <%= tag_form.text_field :name %>
+      <%= tag_form.text_field :name, class: "tag-input" %>
+        <% unless tag_form.object.nil? || tag_form.object.new_record? %>
+          <%= tag_form.check_box :_destroy, class: "tag-remove" %>
+          <%= tag_form.label :_destroy, 'Remove',
+                             class: "width50" %>
+        <% end %>
     </div>
-    <% unless tag_form.object.nil? || tag_form.object.new_record? %>
-        <div class="control-group">
-          <%= tag_form.label :_destroy, 'Remove:',
-                             class: "checkbox" %>
-          <%= tag_form.check_box :_destroy %>
-        </div>
-    <% end %>
 <% end %>

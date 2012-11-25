@@ -46,6 +46,11 @@ fr:
         weekly-rate: "Villa Prix pour Semain"
         observation: "Observation Additionel"
         back: "Retourne"
+        bath: "Toilettes"
+      form:
+        edit: "Éditer"
+        cat: "Categories"
+        lang: "Français"
   costa_tropicals:
         index:
           h1: "Découvrir La Costa Tropical"
@@ -66,8 +71,12 @@ fr:
   messages:
       new:
         name: "Nom"
+        dates: "Dates"
+        adults: "Adultes"
+        kids: "Enfants"
         msg: "Message"
-        send: "Envoier Message"
+        send: "Envoyer Message"
+        inquire: "Se Renseigner pour"
   destinations:
       index:
         in: "dans"

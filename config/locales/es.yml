@@ -24,7 +24,6 @@ es:
       selectsleep: "Filtrar por Capacidad"
       selectbed: "Filtrar por Habitaciones"
       readmore: "Leer más sobre esta Villa"
-
     show:
       overview: "Overview"
       map: "Mapa"
@@ -39,7 +38,11 @@ es:
       weekly-rate: "Villa Precio por Semana"
       observation: "Observaciones Adicionales"
       back: "Volver"
-
+      bath: "Servicios"
+    form:
+      edit: "Editar"
+      cat: "Categorias"
+      lang: "Español"
   costa_tropicals:
       index:
         h1: "Descubre La Costa Tropical"
@@ -60,8 +63,12 @@ es:
   messages:
       new:
         name: "Nombre"
+        dates: "Fechas"
+        adults: "Adultos"
+        kids: "Niños"
         msg: "Mensaje"
         send: "Enviar Mensaje"
+        inquire: "Preguntar por"
   destinations:
       index:
         in: "en"

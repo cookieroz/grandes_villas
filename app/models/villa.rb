@@ -1,7 +1,7 @@
 class Villa < ActiveRecord::Base
   attr_accessible :content, :name, :address, :latitude, :category_ids,
                   :longitude, :location_ids, :observations, :sleeps,
-                  :bedrooms,
+                  :bedrooms, :bathroom, :destination_id,
                   :tags_attributes, :photos_attributes,
                   :categories_attributes, :locations_attributes,
                   :rates_attributes
@@ -17,10 +17,12 @@ class Villa < ActiveRecord::Base
   has_many :tags
   has_many :photos, :dependent => :destroy
   has_many :categorizations
-  has_many :categories, through: :categorizations
+  has_many :categories, through: :categorizations, :dependent => :destroy
   has_many :villalocations
-  has_many :locations, through: :villalocations
+  has_many :locations, through: :villalocations, :dependent => :destroy
   has_many :rates
+
+  belongs_to :destination
 
   accepts_nested_attributes_for :tags, allow_destroy: true,
           :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }

@@ -17,8 +17,8 @@ module ApplicationHelper
     link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
 
-  def no_image?
-    !Photo.first
+  def no_dest?
+    !Destination.first
   end
 
   #def javascript(*files)

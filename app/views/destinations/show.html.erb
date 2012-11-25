@@ -1,7 +1,9 @@
 <% provide(:title, @destination.name ) %>
 
 <div class="destination-show">
-  <%= image_tag(@destination.dest_image_url, class: 'dest-img') %>
+  <% unless @destination.dest_image.nil? %>
+      <%= image_tag(@destination.dest_image.url, class: 'dest-img') %>
+  <% end %>
   <div class="span12">
     <div class="page-header">
       <h1> <%= @destination.name %> </h1>
