@@ -11,6 +11,7 @@ en:
         prop: "Rent Your Property"
         about: "About"
         destination: "Destinations"
+        services: "Services"
     footer:
   home:
     index:

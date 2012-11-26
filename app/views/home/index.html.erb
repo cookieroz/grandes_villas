@@ -3,7 +3,29 @@
   <img src="http://www.grandesvillas.com/images/slider_images/slider_image_66.jpg" />
   <img src="http://www.grandesvillas.com/images/slider_images/slider_image_60.jpg" />
 </div>
-
+<div class="row">
+    <div class="villa-home-filter">
+      <p class="lead">Search Villas</p>
+      <%= form_tag(villas_path,
+                   :method => :get) do %>
+          <%= select_tag("location_id",
+                         options_from_collection_for_select(Location.all, :id, :place),
+                         {:prompt => t("villas.index.selecttown"), :onchange => 'submit()'}) %>
+      <% end %>
+      <%= form_tag(villas_path,
+                   :method => :get) do %>
+          <%= select(:sleeps, :num, Villa.pluck(:sleeps).uniq,
+                     {:prompt => t("villas.index.selectsleep")},
+                     {:onchange => 'submit()'}) %>
+      <% end %>
+      <%= form_tag(villas_path,
+                   :method => :get) do %>
+          <%= select(:bedrooms, :num, Villa.pluck(:bedrooms).uniq,
+                     {:prompt => t("villas.index.selectbed")},
+                     {:onchange => 'submit()'}) %>
+      <% end %>
+    </div>
+</div>
 <!-- Refactor into a partial -->
 <div class="span12">
   <div class="row featured-villas">

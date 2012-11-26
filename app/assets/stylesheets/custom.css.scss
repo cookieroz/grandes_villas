@@ -542,6 +542,22 @@ body.homepage {
   }
 }
 
+.villa-home-filter {
+  background: #ffffff;
+  border: 1px solid $darkGold;
+  margin: -280px 0 0 30px;
+  padding: 15px;
+  position: relative;
+  width: 220px;
+  z-index: 100;
+  form {
+    margin-bottom: 10px;
+  }
+  .lead {
+    color: $darkGold;
+  }
+}
+
 .featured-villas {
   background: #ffffff;
   border-radius: 4px 4px 0px 0px;

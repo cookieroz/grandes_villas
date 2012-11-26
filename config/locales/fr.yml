@@ -16,6 +16,7 @@ fr:
         prop: "Louer Vous Villa"
         about: "De Nous"
         destination: "Destinations"
+        services: "Services"
     footer:
   home:
       index:

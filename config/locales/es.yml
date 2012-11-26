@@ -8,6 +8,7 @@ es:
         prop: "Alquile su Propiedad"
         about: "Sobre Nosotros"
         destination: "Destinos"
+        services: "Servicios"
     footer:
   home:
       index:
