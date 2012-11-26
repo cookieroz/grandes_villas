@@ -86,20 +86,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="29" selection-start="426" selection-end="446" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="es.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/locales/es.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="10" column="28" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1353927741000" expanded="true" signature="19:276" placeholder="header:" />
+                <marker date="1353927741000" expanded="true" signature="6882:6931" placeholder="activerecord:" />
+                <marker date="1353927741000" expanded="true" signature="6902:6931" placeholder="errors:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +103,11 @@
         <entry file="file://$PROJECT_DIR$/config/locales/fr.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="18" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1353927741000" expanded="true" signature="370:616" placeholder="header:" />
+                <marker date="1353927741000" expanded="true" signature="7579:7628" placeholder="activerecord:" />
+                <marker date="1353927741000" expanded="true" signature="7599:7628" placeholder="errors:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_fileupload.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
@@ -139,6 +137,7 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121124212100_create_destination_translations.rb" />
       </list>
     </option>
   </component>
@@ -1019,13 +1018,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="60" selection-start="481" selection-end="481" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/static_pages_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1064,14 +1056,22 @@
     <entry file="file://$PROJECT_DIR$/config/locales/es.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="28" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1353927741000" expanded="true" signature="19:276" placeholder="header:" />
+            <marker date="1353927741000" expanded="true" signature="6882:6931" placeholder="activerecord:" />
+            <marker date="1353927741000" expanded="true" signature="6902:6931" placeholder="errors:" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/locales/fr.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1353927741000" expanded="true" signature="370:616" placeholder="header:" />
+            <marker date="1353927741000" expanded="true" signature="7579:7628" placeholder="activerecord:" />
+            <marker date="1353927741000" expanded="true" signature="7599:7628" placeholder="errors:" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1120,6 +1120,13 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="12" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121124212100_create_destination_translations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="43" selection-start="114" selection-end="114" vertical-scroll-proportion="0.052910052">
           <folding />
         </state>
       </provider>
