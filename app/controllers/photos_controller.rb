@@ -1,13 +1,17 @@
 class PhotosController < ApplicationController
-  
-  respond_to :js, :html, :json
-  
-  before_filter :load_villa
   # GET /pictures
   # GET /pictures.json
   def index
+
+    @villa = Villa.find(params[:villa_id])
+
     @photos = @villa.photos
     render :json => @photos.collect { |p| p.to_jq_upload }.to_json
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @photos }
+    end
   end
 
   # GET /pictures/1
@@ -44,20 +48,17 @@ class PhotosController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    logger = Logger.new('log/debug.log')
-    logger.info('-------Log for create image-------')
-    #logger.info(params[:picture].to_s)
-    @photo = @villa.photos.new
-    
-    @photo.image = params[:photo][:path].shift
+    #p_attr = params[:photo]
+    # p_attr[:image] = params[:photo][:image].first if params[:photo][:image].class == Array
+
+    @photo = Photo.new(params[:photo])
+
     if @photo.save
-      logger.info('Saved')
-      logger.info(@photo.image.url.to_s)
       respond_to do |format|
-        format.html { #(html response is for browsers using iframe sollution)
+        format.html {
           render :json => [@photo.to_jq_upload].to_json,
-          :content_type => 'text/html',
-          :layout => false
+                 :content_type => 'text/html',
+                 :layout => false
         }
         format.json {
           render :json => [@photo.to_jq_upload].to_json
@@ -78,7 +79,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.update_attributes(params[:photo])
-        format.html { redirect_to villa_path(@villa), notice: 'Photo was successfully updated.' }
+        format.html { redirect_to apt_path(@villa), notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -90,27 +91,22 @@ class PhotosController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.json
   def destroy
+    #@villa = Villa.find(params[:villa_id])
     @photo = Photo.find(params[:id])
     @photo.destroy
-    render :json => true
+
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js { render :json => true }
+    end
   end
 
   def make_default
     @photo = Photo.find(params[:id])
     @villa = Villa.find(params[:villa_id])
 
-    @villa.cover = @photo.id
-    @villa.save
-
     respond_to do |format|
       format.js
     end
   end
-  
-  private
-  
-    def load_villa
-      @villa = Villa.find(params[:apt_id])
-    end
-  
 end

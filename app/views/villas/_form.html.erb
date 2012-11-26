@@ -1,7 +1,8 @@
 <% @villa.tags.build %>
 <%= form_for @villa,
-             :html => {:multipart => true, :id => "fileupload",
+             :html => {:multipart => true,
                        :class =>"form-horizontal villa-form" }  do |villa_form| %>
+    <%= villa_form.hidden_field :photo_ids, value: "" %>
     <% if @villa.errors.any? %>
         <div id="errorExplanation">
           <h2><%= pluralize(@villa.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -43,20 +44,20 @@
       <%= villa_form.text_field :longitude %>
     </div>
 
-    <!-- Refactor into a partial -->
+    <!-- Refactor into a partial
     <div class="control-group">
       <h3>Upload Villa Photos</h3>
-      <%= villa_form.fields_for :photos do |photo| %>
-          <% if photo.object.new_record? %>
-              <%= photo.file_field :image %>
-          <% else %>
+      <%#= villa_form.fields_for :photos do |photo| %>
+          <%# if photo.object.new_record? %>
+              <%#= photo.file_field :image %>
+          <%# else %>
               <label class="checkbox">
-                <%= image_tag(photo.object.image.url(:thumb)) %>
-                <%= photo.check_box :_destroy %>
+                <%#= image_tag(photo.object.image.url(:thumb)) %>
+                <%#= photo.check_box :_destroy %>
               </label>
-          <% end %>
-      <% end %>
-    </div>
+          <%# end %>
+      <%# end %>
+    </div> -->
 
     <div class="control-group ckeditor optional">
       <div class="controls">
@@ -140,7 +141,15 @@
     <p><%= t ".lang" %></p>
     <%= render :partial => 'tags/form',
                :locals => {:form => villa_form} %>
+
     <div class="actions">
       <%= villa_form.submit %>
     </div>
 <% end %>
+
+<% @villa.photos.each do |pic| %>
+    <%= image_tag pic.image.url(:thumb) %>
+    <%= link_to "x", photo_path(pic), method: :delete %>
+<% end %>
+
+<%= render "shared/fileupload" %>

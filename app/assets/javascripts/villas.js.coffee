@@ -3,10 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('#fileupload').fileupload
-
   $('.start_date, .end_date').datepicker({
-    format: 'mm-dd-yyyy'
+    dateFormat: 'mm-dd-yyyy'
   });
 
   $(document).on("focus", "[data-behaviour~='datepicker']", (event) =>

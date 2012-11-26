@@ -9,7 +9,9 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'json', '1.7.5'
 
 gem 'jquery-rails', '2.1.3'
+#gem 'jquery-ui-bootstrap-rails', '0.0.2'
 gem 'jquery-ui-rails', '1.1.0'
+#gem 'bootstrap-datepicker-rails'
 
 #gem 'rmagick', '2.13.1'
 gem 'mini_magick', '3.4'
@@ -29,6 +31,8 @@ group :development, :test do
   gem 'annotate', '~> 2.4.1.beta'
   gem 'letter_opener', '0.1.0'
   gem 'capistrano', '2.13.5'
+  gem "launchy"
+  gem "pry"
 end
 
 # Bundle edge Rails instead:
@@ -44,7 +48,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'jquery-fileupload-rails', '0.3.4'
   gem 'bootstrap-sass', '2.0.0'
-  gem 'bootstrap-datepicker-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

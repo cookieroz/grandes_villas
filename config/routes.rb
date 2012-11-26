@@ -10,17 +10,12 @@ GrandesVillas::Application.routes.draw do
     match '/contact', to: 'messages#new'
     match '/owner', to: 'static_pages#owner'
 
-    resources :villas do
-      resources :comments
-    end
+    resources :villas
+  resources :photos
+
+  resources :shared
 
     resources :messages
-
-    get "photos/index"
-
-    get "photos/show"
-
-    get "home/index"
 
     root :to => 'home#index'
 
