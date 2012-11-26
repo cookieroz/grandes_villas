@@ -1,6 +1,6 @@
 <div class="contact-villa-form">
   <h3><%= t ".inquire" %> <%= @villa.name %></h3>
-  <%= form_for  :messages,
+  <%= form_for  @message,
                 :html => { :class => 'form-horizontal' } do |f| %>
       <div class="control-group">
         <%= f.label :name, t(".name"), class: "control-label" %>

@@ -147,9 +147,12 @@
     </div>
 <% end %>
 
-<% @villa.photos.each do |pic| %>
-    <%= image_tag pic.image.url(:thumb) %>
-    <%= link_to "x", photo_path(pic), method: :delete %>
-<% end %>
+<div class="villa-img-form">
+  <% @villa.photos.each do |pic| %>
+      <%= image_tag pic.image.url(:thumb) %>
+      <%= link_to "x", photo_path(pic), method: :delete %>
+  <% end %>
+</div>
+
 
 <%= render "shared/fileupload" %>

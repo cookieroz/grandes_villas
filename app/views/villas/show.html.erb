@@ -41,7 +41,7 @@
           <% end %>
           <li><%= t ".beds" %>: <strong><%= @villa.bedrooms %></strong></li>
           <li><%= t ".sleeps" %>: <strong><%= @villa.sleeps %></strong></li>
-          <li><%#= t ".sleeps" %>Bathrooms: <strong><%= @villa.bathroom %></strong></li>
+          <li><%= t ".bath" %>: <strong><%= @villa.bathroom %></strong></li>
         </ul>
         <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
         <% @villa.categories.each do |category| %>

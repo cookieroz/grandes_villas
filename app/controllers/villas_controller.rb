@@ -33,6 +33,7 @@ class VillasController < ApplicationController
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @json = @villa.to_gmaps4rails
     @rates = @villa.rates.scoped.order("created_at ASC")
+    @message = Message.new
 
     @res_by_start = @villa.reservations.group_by(&:start_date)
 
