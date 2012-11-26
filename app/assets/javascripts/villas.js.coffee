@@ -5,6 +5,13 @@
 jQuery ->
   $('#fileupload').fileupload
 
+  $('.start_date, .end_date').datepicker({
+    format: 'mm-dd-yyyy'
+  });
+
+  $(document).on("focus", "[data-behaviour~='datepicker']", (event) =>
+    $(@).datepicker({"format": "yyyy-mm-dd"}))
+
   $('#gallery').galleryView()
 
   $('form').on 'click', '.remove_fields', (event) ->

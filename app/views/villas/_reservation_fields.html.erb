@@ -1,0 +1,21 @@
+<div class="rates-partial">
+  <p class="lead">Reservation Dates</p>
+  <div class="price-form">
+    <%= villa_form.label :start_date %>
+    <%= villa_form.text_field :start_date,
+                              placeholder: "yyyy-mm-dd",
+                              'data-behaviour' => 'datepicker',
+                              class: "start_date" %>
+  </div>
+  <div class="price-form">
+    <%= villa_form.label :end_date %>
+    <%= villa_form.text_field :end_date,
+                              placeholder: "yyyy-mm-dd",
+                              'data-behaviour' => 'datepicker',
+                              class: "end_date" %>
+  </div>
+  <div class="rate-destroy">
+    <%= villa_form.check_box :_destroy %> Remove All Reservation Info
+  </div>
+  <div class="clear"></div>
+</div>

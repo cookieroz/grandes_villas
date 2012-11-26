@@ -1,9 +1,9 @@
 module CalendarHelper
-  def calendar(date = Date.today, &block)
-    Calendar.new(self, date, block).table
+  def calendar(date = Date.today, reservations, &block)
+    Calendar.new(self, date, reservations, block).table
   end
 
-  class Calendar < Struct.new(:view, :date, :callback)
+  class Calendar < Struct.new(:view, :date, :reservations, :callback)
     HEADER = %w[Mon Tue Wed Thu Fri Sat Sun]
     START_DAY = :monday
 
@@ -24,19 +24,25 @@ module CalendarHelper
     def week_rows
       weeks.map do |week|
         content_tag :tr do
-          week.map { |day| day_cell(day) }.join.html_safe
+          week.map { |day| day_cell(day, reservations) }.join.html_safe
         end
       end.join.html_safe
     end
 
-    def day_cell(day)
-      content_tag :td, view.capture(day, &callback), class: day_classes(day)
+    def day_cell(day, reservations)
+      content_tag :td, view.capture(day, &callback),
+                  class: day_classes(day, reservations)
     end
 
-    def day_classes(day)
+    def day_classes(day, reservations)
       classes = []
       classes << "today" if day == Date.today
       classes << "notmonth" if day.month != date.month
+      reserved = false
+      reservations.each do |r|
+        reserved = true if day >= r.start_date && day <= r.end_date
+      end
+      classes << "reserved" if reserved
       classes.empty? ? nil : classes.join(" ")
     end
 

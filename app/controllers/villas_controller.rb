@@ -1,5 +1,6 @@
 class VillasController < ApplicationController
   before_filter :authorize, only: [:edit, :update]
+  require 'date'
   # GET /villas
   # GET /villas.json
 
@@ -29,6 +30,14 @@ class VillasController < ApplicationController
     @images = @villa.photos
     @date = params[:date] ? Date.parse(params[:date]) : Date.today
     @json = @villa.to_gmaps4rails
+    @rates = @villa.rates.scoped.order("created_at ASC")
+
+    @res_by_start = @villa.reservations.group_by(&:start_date)
+
+    unless @villa.reservations.first.nil?
+      first = @villa.reservations.first.start_date.beginning_of_month.beginning_of_week(:monday)
+      @reservations = @villa.reservations.where("start_date > ?", first)
+    end
 
     respond_to do |format|
       format.html # show.html.erb

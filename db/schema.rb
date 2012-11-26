@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121125161017) do
+ActiveRecord::Schema.define(:version => 20121126015034) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -144,6 +144,10 @@ ActiveRecord::Schema.define(:version => 20121125161017) do
     t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "image_uid"
+    t.string   "image_name"
+    t.string   "path"
+    t.string   "name"
   end
 
   create_table "rate_translations", :force => true do |t|
@@ -166,6 +170,14 @@ ActiveRecord::Schema.define(:version => 20121125161017) do
   end
 
   add_index "rates", ["villa_id"], :name => "index_rates_on_villa_id"
+
+  create_table "reservations", :force => true do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "villa_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tag_translations", :force => true do |t|
     t.integer  "tag_id"

@@ -124,20 +124,26 @@
         <%= link_to "<", date: @date.months_ago(4) %>
         <%= @date.strftime("%B %Y") %>
       </h2>
-      <%= calendar do |date| %>
-          <%= date.day %>
+      <% unless @reservations.nil? %>
+          <%= calendar @date, @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
       <% end %>
     </div>
     <div class="span3">
       <h2 class="month"><%= @date.months_since(1).strftime("%B %Y") %></h2>
-      <%= calendar @date.months_since(1) do |date| %>
-          <%= date.day %>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(1), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
       <% end %>
     </div>
     <div class="span3">
       <h2 class="month"><%= @date.months_since(2).strftime("%B %Y") %></h2>
-      <%= calendar @date.months_since(2) do |date| %>
-          <%= date.day %>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(2), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
       <% end %>
     </div>
     <div class="span3">
@@ -145,8 +151,10 @@
         <%= @date.months_since(3).strftime("%B %Y") %>
         <%= link_to ">", date: @date.months_since(4) %>
       </h2>
-      <%= calendar @date.months_since(3) do |date| %>
-          <%= date.day %>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(3), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
       <% end %>
     </div>
   </div>
@@ -181,7 +189,7 @@
         </tr>
         </thead>
         <tbody>
-        <% @villa.rates.each do |rate| %>
+        <% @rates.each do |rate| %>
             <tr>
               <td> <%= rate.price_info %> </td>
               <td> <%= rate.price %> &euro; </td>
@@ -209,7 +217,7 @@
 <br /> -->
 
 <% if current_user %>
-  <%= link_to (t("villas.form.edit"), edit_villa_path(@villa)) %> |
+  <%= link_to(t("villas.form.edit"), edit_villa_path(@villa)) %> |
 <% end %>
 <%= link_to(t(".back"), villas_path) %>
 

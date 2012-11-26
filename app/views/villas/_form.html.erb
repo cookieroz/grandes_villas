@@ -102,6 +102,19 @@
       </div>
     </div>
 
+    <!--Refactor into a partial -->
+    <div class="control-group">
+      <h3>Reservations</h3>
+      <%= villa_form.fields_for :reservations do |builder| %>
+          <div class="controls rates-form">
+            <%= render 'reservation_fields', villa_form: builder %>
+          </div>
+      <% end %>
+      <div class="controls rates-form">
+        <%= link_to_add_fields "Add Reservation Dates",
+                               villa_form, :reservations %>
+      </div>
+    </div>
 
     <!--Refactor into a partial -->
     <div class="control-group">

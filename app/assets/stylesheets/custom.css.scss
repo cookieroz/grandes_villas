@@ -100,8 +100,15 @@ h1.center {
     font-size: 1em;
   }
 
-  .notmonth, .notmonth a { color: #CCC; }
+  .notmonth, .notmonth a {
+    background: #ffffff !important;
+    color: #CCC !important;
+  }
   .today { background-color: #D7F2FF; }
+  .reserved {
+    background-color: #8b0000;
+    color: #ffffff;
+  }
 }
 
 h2.month {
@@ -130,29 +137,6 @@ h2.month {
   width: 100%;
   margin-top: 5px;
   @include box_sizing;
-}
-
-/* sidebar */
-aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.6em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-    }
-  }
 }
 
 #errorExplanation {

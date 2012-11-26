@@ -4,7 +4,7 @@ class Villa < ActiveRecord::Base
                   :bedrooms, :bathroom, :destination_id,
                   :tags_attributes, :photos_attributes,
                   :categories_attributes, :locations_attributes,
-                  :rates_attributes
+                  :rates_attributes, :reservations_attributes
 
   translates :content, :observations
 
@@ -21,19 +21,17 @@ class Villa < ActiveRecord::Base
   has_many :villalocations
   has_many :locations, through: :villalocations, :dependent => :destroy
   has_many :rates
+  has_many :reservations, :dependent => :destroy
 
   belongs_to :destination
 
   accepts_nested_attributes_for :tags, allow_destroy: true,
           :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
-
   accepts_nested_attributes_for :locations, allow_destroy: true
-
   accepts_nested_attributes_for :rates, allow_destroy: true
-
   accepts_nested_attributes_for :photos, allow_destroy: true
-
   accepts_nested_attributes_for :categories,  allow_destroy: true
+  accepts_nested_attributes_for :reservations, allow_destroy: true
 
   acts_as_gmappable
 
