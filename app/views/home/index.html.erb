@@ -33,7 +33,7 @@
     <%= link_to(t(".all"), villas_path) %>
   </div>
   <ul class="thumbnails home-thumb">
-    <% @villas.each do |villa| %>
+    <% @villasf.each do |villa| %>
         <li class="span3">
           <div class="thumbnail">
             <% if villa.photos.first.image.nil? %>
