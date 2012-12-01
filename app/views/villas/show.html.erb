@@ -121,7 +121,7 @@
     <!-- Refactor into a partial -->
     <div class="span3">
       <h2 class="month" class="center">
-        <%= link_to "<", date: @date.months_ago(4) %>
+        <%= link_to "<", date: @date.months_ago(8) %>
         <%= @date.strftime("%B %Y") %>
       </h2>
       <% unless @reservations.nil? %>
@@ -147,12 +147,46 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month">
-        <%= @date.months_since(3).strftime("%B %Y") %>
-        <%= link_to ">", date: @date.months_since(4) %>
-      </h2>
+      <h2 class="month"><%= @date.months_since(3).strftime("%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(3), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+    <!-- second month row -->
+    <div class="span3">
+      <h2 class="month"><%= @date.months_since(4).strftime("%B %Y") %></h2>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(4), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="span3">
+      <h2 class="month"><%= @date.months_since(5).strftime("%B %Y") %></h2>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(5), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="span3">
+      <h2 class="month"><%= @date.months_since(6).strftime("%B %Y") %></h2>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(6), @reservations do |date| %>
+              <%= date.day %>
+          <% end %>
+      <% end %>
+    </div>
+    <div class="span3">
+      <h2 class="month">
+        <%= @date.months_since(7).strftime("%B %Y") %>
+        <%= link_to ">", date: @date.months_since(8) %>
+      </h2>
+      <% unless @reservations.nil? %>
+          <%= calendar @date.months_since(7), @reservations do |date| %>
               <%= date.day %>
           <% end %>
       <% end %>

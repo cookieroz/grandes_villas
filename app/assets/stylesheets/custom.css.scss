@@ -112,15 +112,15 @@ h1.center {
 }
 
 h2.month {
+  color: $villaBrightBlue;
+  font-size: 1.3em;
   margin: 0;
   padding-bottom: 0px;
   text-align: center;
-  font-size: 1.3em;
-  text-align: center;
   a {
-    text-decoration: none;
+    color: $villaOrange;
     padding: 0 10px;
-    color: #999;
+    text-decoration: none;
   }
 }
 
