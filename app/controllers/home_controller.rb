@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @villasf = Villa.scoped.limit(4).order("created_at DESC")
+    @villasf = Villa.scoped.limit(4).order("RANDOM()")
     @home_page = true
 
     if params[:location_id]
