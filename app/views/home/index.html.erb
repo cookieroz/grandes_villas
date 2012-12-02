@@ -6,24 +6,7 @@
 <div class="row">
     <div class="villa-home-filter">
       <p class="lead">Search Villas</p>
-      <%= form_tag(villas_path,
-                   :method => :get) do %>
-          <%= select_tag("location_id",
-                         options_from_collection_for_select(Location.all, :id, :place),
-                         {:prompt => t("villas.index.selecttown"), :onchange => 'submit()'}) %>
-      <% end %>
-      <%= form_tag(villas_path,
-                   :method => :get) do %>
-          <%= select(:sleeps, :num, Villa.pluck(:sleeps).uniq,
-                     {:prompt => t("villas.index.selectsleep")},
-                     {:onchange => 'submit()'}) %>
-      <% end %>
-      <%= form_tag(villas_path,
-                   :method => :get) do %>
-          <%= select(:bedrooms, :num, Villa.pluck(:bedrooms).uniq,
-                     {:prompt => t("villas.index.selectbed")},
-                     {:onchange => 'submit()'}) %>
-      <% end %>
+      <%= render 'villas/search_form' %>
     </div>
 </div>
 <!-- Refactor into a partial -->
@@ -36,12 +19,6 @@
     <% @villasf.each do |villa| %>
         <li class="span3">
           <div class="thumbnail">
-            <% if villa.photos.first.image.nil? %>
-                <%= link_to image_tag("800x545.gif"), villa %>
-            <% else %>
-                <%= link_to image_tag(villa.photos.first.image.url(:thumb),
-                                      class: 'thumbnail'), villa %>
-            <% end %>
             <h3><%= link_to villa.name, villa %></h3>
             <ul class="unstyled">
               <% villa.locations.each do |location| %>

@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   def index
     @villasf = Villa.scoped.limit(4).order("RANDOM()")
     @home_page = true
+    @search = Villa.search params[:q]
 
     if params[:location_id]
       @locations = Location.all
