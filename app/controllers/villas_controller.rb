@@ -5,17 +5,8 @@ class VillasController < ApplicationController
   # GET /villas.json
 
   def index
-
-    if params[:location_id]
-      @locations = Location.all
-      @villas = Villa.by_locations(params[:location_id])
-    elsif params[:sleeps]
-      @villas = Villa.find_all_by_sleeps(params[:sleeps][:num])
-    elsif params[:bedrooms]
-      @villas = Villa.find_all_by_bedrooms(params[:bedrooms][:num])
-    else
-      @villas = Villa.all
-    end
+    @search = Villa.search params[:q]
+    @villas = @search.result
 
     @photos = Photo.all
 

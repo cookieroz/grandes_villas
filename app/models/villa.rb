@@ -45,10 +45,6 @@ class Villa < ActiveRecord::Base
   #  group("villas.id")
   #}
 
-  def self.by_locations(location)
-    joins(:locations).where('location_id = ?', location.to_i)
-  end
-
   def self.by_sleeps(sleeps)
     where('sleeps = ?', sleeps.to_i)
   end
