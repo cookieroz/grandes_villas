@@ -50,7 +50,7 @@
                <% end %>
                <li><%= t ".beds" %>: <strong><%= villa.bedrooms %></strong></li>
                <li><%= t ".sleeps" %>: <strong><%= villa.sleeps %></strong></li>
-               <li><%#= t ".sleeps" %>Bathrooms: <strong><%= villa.bathroom %></strong></li>
+               <li><%= t "villas.show.bath" %>: <strong><%= villa.bathroom %></strong></li>
              </ul>
              <% if current_user %>
                  <%= link_to 'Edit', edit_villa_path(villa),

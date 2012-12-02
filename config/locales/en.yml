@@ -9,7 +9,7 @@ en:
         costa: "Costa Tropical"
         contact: "Contact"
         prop: "Rent Your Property"
-        about: "About"
+        about: "About Us"
         destination: "Destinations"
         services: "Services"
     footer:
@@ -64,6 +64,27 @@ en:
       contact: "Contact Us"
     about:
       about: "About Grandes Villas"
+      aboutintro: |
+        is a company exclusively focused on holiday rentals, mostly offering Villas.
+        Thanks to the magnitude of these enclaves, we can assure certain facilities that
+        others simply cannot provide.
+      aboutbody: |
+        Nevertheless, our business objectives are focused on making Grandes Villas a way
+        to travel, an experience for the guest, rather than offering accommodation. Since
+        we started up in 2010, our range of products and services have been increasing,
+        with the only purpose of satisfying your needs and making you experience the
+        feeling of traveling with Grandes Villas.
+      ourmission: "Our Mission:"
+      satisfy: |
+        Satisfy the needs of our stakeholders (individuals that have, fully or partly,
+        interests in this activity). In order to accomplish our mission, we do our best to
+        provide a complete service to our guests, as well as optimize all resources in
+        order to maximize profits to the owner.
+      corpv: "Corporate Values:"
+      privacy: "Privacy"
+      respon: "Responsibility"
+      rely: "Reliability"
+      compromise: "Compromise with the client"
   messages:
     new:
       name: "Name"
@@ -73,6 +94,24 @@ en:
       msg: "Message"
       send: "Send Message"
       inquire: "Inquire about"
+      gotq: "If you've got questions, suggestions or ideas, we'd love to hear from you!"
+      callus: |
+        Call us now or complete the form below and we will
+        promptly reply to your query.
+      arebold:  "Are you in the area?"
+      pleased: |
+        We would be pleased to arrange a tour, just let us know when and we
+        will show you the villas you like.
+      homeownerbold:  "Homeowners:"
+      gotbold: "Got a holiday villa or thinking about renting your villa?"
+      ownerservice: |
+        Please, do not hesitate to contact us to find out more about our services.
+        We offer all types of home maintenance services for villas located
+        on the Costa Tropical.  If you already have this arranged, we will work to find
+        those renters you are looking for.
+      tolose: |
+        If your villa is not in the area, Grandes Villas can also help to increase your
+        bookings. Our advantage is that if there are no rentals, you have nothing to lose.
   destinations:
     index:
       in: "in"
@@ -87,4 +126,6 @@ en:
           city: "City"
           activity: "Activity"
           content: "Content"
+  date:
+    calendarhead: "Mon Tue Wed Thu Fri Sat Sun"
 

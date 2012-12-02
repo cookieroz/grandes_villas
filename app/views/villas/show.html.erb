@@ -122,7 +122,7 @@
     <div class="span3">
       <h2 class="month" class="center">
         <%= link_to "<", date: @date.months_ago(8) %>
-        <%= @date.strftime("%B %Y") %>
+        <%= l(@date, :format => "%B %Y") %>
       </h2>
       <% unless @reservations.nil? %>
           <%= calendar @date, @reservations do |date| %>
@@ -131,7 +131,7 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(1).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(1), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(1), @reservations do |date| %>
               <%= date.day %>
@@ -139,7 +139,7 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(2).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(2), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(2), @reservations do |date| %>
               <%= date.day %>
@@ -147,7 +147,7 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(3).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(3), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(3), @reservations do |date| %>
               <%= date.day %>
@@ -157,7 +157,7 @@
     <div class="clear"></div>
     <!-- second month row -->
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(4).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(4), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(4), @reservations do |date| %>
               <%= date.day %>
@@ -165,7 +165,7 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(5).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(5), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(5), @reservations do |date| %>
               <%= date.day %>
@@ -173,7 +173,7 @@
       <% end %>
     </div>
     <div class="span3">
-      <h2 class="month"><%= @date.months_since(6).strftime("%B %Y") %></h2>
+      <h2 class="month"><%= l(@date.months_since(6), :format => "%B %Y") %></h2>
       <% unless @reservations.nil? %>
           <%= calendar @date.months_since(6), @reservations do |date| %>
               <%= date.day %>
@@ -182,7 +182,7 @@
     </div>
     <div class="span3">
       <h2 class="month">
-        <%= @date.months_since(7).strftime("%B %Y") %>
+        <%= l(@date.months_since(7), :format => "%B %Y") %>
         <%= link_to ">", date: @date.months_since(8) %>
       </h2>
       <% unless @reservations.nil? %>

@@ -6,26 +6,14 @@
       <h1><%= t "static_pages.owner.contact" %></h1>
     </div>
 
-    <p> If you've got questions, suggestions or ideas, we'd love
-      to hear from you! <br />
-      Call us now or complete the form below and we will promptly
-      reply to your query. </p>
-
-    <p><b>Are you around?</b> We would be so pleased to arrange a
-      tour, just let us know when and we will shown you the villas
-      you like.</p>
-
-    <p><b>Propietarios:</b> <br />
-      <b>Tienes una villa de alquiler o está pensando en alquilar?</b>
-      No dude en contactarnos para conocer nuestros servicios.
-      Ofrecemos todos los servicios de mantenimiento del hogar para
-      la zona de la <%= link_to("Costa Tropical", costa_tropicals_path) %>,
-      pero si usted ya lo tiene resulto, nosotros trabajaremos para
-      encontrarle los clientes que su casa necesita.</p>
-
-    <p>Si su villa está en otra zona, Grandes Villas también le puede
-      ayudar a aumentar sus reservas con la ventaja de que si no se
-      producen alquileres, usted no pierden nada.</p>
+    <p> <%= t ".gotq" %> <br>
+        <%= t ".callus" %>
+    </p>
+    <p> <strong><%= t ".arebold" %></strong> <%= t ".pleased" %></p>
+    <p> <strong><%= t ".homeownerbold" %></strong><br>
+      <strong><%= t ".gotbold" %></strong> <%= t ".ownerservice" %>
+    </p>
+    <p> <%= t ".tolose" %></p>
   </div>
 </div>
 

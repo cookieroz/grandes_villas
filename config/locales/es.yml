@@ -19,7 +19,7 @@ es:
       h1: "Nuestras Villas de Alquiler"
       location: "Ubicación"
       beds: "Habitaciones"
-      sleeps: "Duerme"
+      sleeps: "Capacidad"
       filter: "Filtrar Villas"
       selecttown: "Filtrar por Pueblo"
       selectsleep: "Filtrar por Capacidad"
@@ -39,7 +39,7 @@ es:
       weekly-rate: "Villa Precio por Semana"
       observation: "Observaciones Adicionales"
       back: "Volver"
-      bath: "Servicios"
+      bath: "Baños"
     form:
       edit: "Editar"
       cat: "Categorias"
@@ -60,7 +60,29 @@ es:
         rent: "Alquile su Propiedad con Grandes Villas"
         contact: "Contáctenos"
       about:
-            about: "Conoce Grandes Villas"
+        about: "Sobre Nosotros"
+        aboutintro: |
+          es una empresa orientada exclusivamente al alquiler vacacional, en su mayoría de
+          Villas / Chalets. La magnitud de estos enclaves nos permite asegurar unas
+          comodidades que otro tipo de alojamientos no se puede facilitar.
+        aboutbody: |
+          No obstante, nuestro modelo de negocio está más enfocado en conseguir de Grandes
+          Villas una forma de viajar, una experiencia para el huésped, más que en
+          simplemente ofrecer alojamiento.  Desde que comenzamos en 2010, nuestra gama de
+          productos y servicios ha ido en aumento, con el único objetivo de que nuestro
+          cliente vuelva satisfecho después de haber experimentado la sensación de viajar
+          con Grandes Villas.
+        ourmission: "Nuestra Misón:"
+        satisfy: |
+          Satisfacer las necesidades de nuestros stakeholders, (personas que directamente
+          o indirectamente tienen intereses en nuestra actividad),
+          dando un servicio completo que genere valor al cliente final y que maximice los
+          beneficios de los propietarios.
+        corpv: "Valores:"
+        privacy: "Prvacidad"
+        respon: "Seriedad"
+        rely: "Formalidad"
+        compromise: "Compromiso con el cliente"
   messages:
       new:
         name: "Nombre"
@@ -70,6 +92,25 @@ es:
         msg: "Mensaje"
         send: "Enviar Mensaje"
         inquire: "Preguntar por"
+        gotq: "Si tiene alguna consulta, sugerencia o idea, nos encantaría que nos la hiciese llegar."
+        callus: |
+          Llámenos ahora o complete el formulario que se presenta abajo, y le
+          responderemos a la mayor brevedad.
+        arebold:  "¿Está por la zona?"
+        pleased: |
+          Estaremos encantados de organizar un tour. Simplemente, dinos cuando, y le
+          mostraremos aquellas villas que puedan satisfacer sus requisitos.
+        homeownerbold:  "Propietarios:"
+        gotbold: "¿Tiene una villa de alquiler o está pensando en alquilar?"
+        ownerservice: |
+          No dude en contactarnos para conocer nuestros servicios. Ofrecemos todos los
+          servicios de mantenimiento del hogar para la zona de la Costa Tropical, pero si
+          usted ya lo tiene resulto, nosotros trabajaremos para encontrarle los clientes
+          que su casa necesita.
+        tolose: |
+          Si su villa está en otra zona, Grandes Villas también le puede ayudar a aumentar
+          sus reservas con la ventaja de que si no se producen alquileres, usted no pierden
+          nada.
   destinations:
       index:
         in: "en"
@@ -85,6 +126,7 @@ es:
         activity: "Actividad"
         content: "Contenido"
   date:
+    calendarhead: "lun mar mié jue vie sab dom"
     abbr_day_names:
     - dom
     - lun
@@ -120,7 +162,7 @@ es:
       long: ! '%d de %B de %Y'
       short: ! '%d de %b'
     month_names:
-    -
+    - ~
     - enero
     - febrero
     - marzo

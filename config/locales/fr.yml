@@ -14,7 +14,7 @@ fr:
         costa: "Costa Tropical"
         contact: "Contact"
         prop: "Louer Vous Villa"
-        about: "De Nous"
+        about: "À propos de Grandes Villas"
         destination: "Destinations"
         services: "Services"
     footer:
@@ -27,7 +27,7 @@ fr:
         h1: "Louer Villas"
         location: "Ville"
         beds: "Chambres"
-        sleeps: "Person"
+        sleeps: "Personnes"
         filter: "Filter Villas"
         selecttown: "Filter by Ville"
         selectsleep: "Filter by Persons"
@@ -47,7 +47,7 @@ fr:
         weekly-rate: "Villa Prix pour Semain"
         observation: "Observation Additionel"
         back: "Retourne"
-        bath: "Toilettes"
+        bath: "Salles de bains"
       form:
         edit: "Éditer"
         cat: "Categories"
@@ -68,7 +68,29 @@ fr:
         rent: "Louer Vous Villa avec Grandes Villas"
         contact: "Nous Contacter"
       about:
-            about: "Coniu Grandes Villas"
+        about: "Coniu Grandes Villas"
+        aboutintro: |
+          est une société exclusivement centrée sur les locations de vacances, la plupart
+          offrant Villas/Chalets. Merci à l'ampleur de ces enclaves, nous pouvons assurer
+          certaines installations et conforts que les autres simplement ne peuvent pas.
+        aboutbody: |
+          Néanmoins, nos objectifs commerciaux visent à faire Villas Grandes une façon de
+          voyager, une expérience pour le client, plutôt que d'offrir un hébergement.
+          Depuis que nous avons commencé en 2010, notre gamme de produits et de services
+          ont augmenté, dans le seul but de satisfaire vos besoins et vous faire éprouver
+          le sentiment de voyager avec Villas Grandes.
+        ourmission: "Notre Mission:"
+        satisfy: |
+          Satisfaire les besoins de nos intervenants (individus qui ont, en tout ou en
+          partie, des intérêts dans cette activité). Pour accomplir notre mission, nous
+          faisons de notre mieux pour fournir un service complet à nos clients, ainsi que
+          d'optimiser toutes les ressources afin de maximiser les profits pour le
+          propriétaire.
+        corpv: "Valeurs de l'entreprise:"
+        privacy: "Confidentialité"
+        respon: "Responsabilité"
+        rely: "Fiabilité"
+        compromise: "Responsabilité avec le client"
   messages:
       new:
         name: "Nom"
@@ -78,6 +100,25 @@ fr:
         msg: "Message"
         send: "Envoyer Message"
         inquire: "Se Renseigner pour"
+        gotq: "Si vous avez des questions, des suggestions ou des idées, nous serions ravis de vous entendre!"
+        callus: |
+          Appelez-nous ou remplissez le formulaire ci-dessous et nous allons
+          rapidement répondre à votre requête.
+        arebold:  "Êtes-vous là?"
+        pleased: |
+          Nous serions très heureux d'organiser une visite.  N'hésitez pas à nous
+          le faire savoir quand et nous allons vous montrer les villas que vous aimez.
+        homeownerbold:  "Propriétaires:"
+        gotbold: "Vous avez une villa de vacances ou pensez à la location de votre villa?"
+        ownerservice: |
+          S'il vous plaît, n'hésitez pas à nous contacter pour en savoir plus sur nos
+          services. Nous offrons tous les services pour le maintien des villas situées sur
+          la Costa Tropical, mais si vous avez ces services arrangé, nous vous efforcerons
+          de trouver les locataires que vous recherchez.
+        tolose: |
+          Si votre maison n'est pas ici, Villas Grandes peuvent aussi aider à augmenter
+          vos réservations avec l'avantage que s'il n'y a pas de location, vous n'avez
+          rien à perdre.
   destinations:
       index:
         in: "dans"
@@ -86,6 +127,7 @@ fr:
         beaches: "Plages"
         restaurants: "Restaurants"
   date:
+    calendarhead: "lun mar mer jeu ven sam dim"
     formats:
       default: "%d/%m/%Y"
       short: "%e %b"

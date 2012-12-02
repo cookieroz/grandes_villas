@@ -1,31 +1,22 @@
 <% provide(:title, t(".about") )%>
 
 <div class="page-header">
-  <h1><%= t ".about" %></h1>
+  <h1><%= t "layouts.header.about" %></h1>
 </div>
 <div class="row">
   <div class="span9">
     <%= image_tag("grandesvillasviews.jpg", class: "about-img") %>
 
-    <p> Grandes Villas es una empresa orientada exclusivamente al
-      alquiler vacacional, en su mayoría de Villas / Chalets. La
-      magnitud de estos enclaves nos permite asegurar unas
-      comodidades que otro tipo de alojamientos no se puede
-      facilitar.</p>
-    <p> Desde que comenzamos en 2010, nuestra gama de productos y
-      servicios ha ido en aumento, con el único objectivo de que
-      nuestro cliente vuelva satisfecho a casa. </p>
+    <p> <strong>Grandes Villas</strong> <%= t ".aboutintro" %></p>
+    <p> <%= t ".aboutbody" %> </p>
 
-    <p class="lead"> Nuestra Misión: </p>
-    <p> Satisfacer las necesidades de nuestros stakeholders, dando
-      un servicio completo que genere valor al cliente final y que
-      maximice los beneficios de los propietarios. </p>
+    <p class="lead"> <%= t ".ourmission" %> </p>
+    <p> <%= t ".satisfy" %></p>
 
-    <p class="lead"> Valores: </p>
-    <h4 class="valores center">Privacidad &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-      &nbsp; Seriedad &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Formalidad
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Compromiso con el
-      Cliente </h4>
+    <p class="lead"> <%= t ".corpv" %> </p>
+    <h4 class="valores center"><%= t ".privacy" %> &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; <%= t ".respon" %> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <%= t ".rely" %>
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <%= t ".compromise" %> </h4>
   </div>
   <div class="span3">
     <%= link_to image_tag("about-side.jpg"), contact_path %>
