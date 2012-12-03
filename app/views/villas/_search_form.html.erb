@@ -13,7 +13,7 @@
 
   <%= f.select(
     :locations_id_eq,
-    options_from_collection_for_select(Location.all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
+    options_from_collection_for_select(Location.order(:place).all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
     { :include_blank => t("villas.index.selecttown") }) %>
 
   <%= f.submit "Search", class: "btn" %>
