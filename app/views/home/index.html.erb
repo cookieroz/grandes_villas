@@ -19,6 +19,12 @@
     <% @villasf.each do |villa| %>
         <li class="span3">
           <div class="thumbnail">
+            <% if villa.photos.first.image.nil? %>
+                <%= link_to image_tag("800x545.gif"), villa %>
+            <% else %>
+                <%= link_to image_tag(villa.photos.first.image.url(:thumb),
+                                      class: 'thumbnail'), villa %>
+            <% end %>
             <h3><%= link_to villa.name, villa %></h3>
             <ul class="unstyled">
               <% villa.locations.each do |location| %>
