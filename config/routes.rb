@@ -11,7 +11,9 @@ GrandesVillas::Application.routes.draw do
     match '/owner', to: 'static_pages#owner'
   match '/services', to: 'static_pages#services'
 
-    resources :villas
+    resources :villas do
+      member { post :sort_photos }
+    end
   resources :photos
 
   resources :shared

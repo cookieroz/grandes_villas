@@ -15,7 +15,7 @@ class Villa < ActiveRecord::Base
 
   has_many :comments, :dependent => :destroy
   has_many :tags
-  has_many :photos, :dependent => :destroy
+  has_many :photos, :dependent => :destroy, :order => :position
   has_many :categorizations
   has_many :categories, through: :categorizations, :dependent => :destroy
   has_many :villalocations

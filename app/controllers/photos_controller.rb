@@ -2,15 +2,12 @@ class PhotosController < ApplicationController
   # GET /pictures
   # GET /pictures.json
   def index
-
     @villa = Villa.find(params[:villa_id])
-
-    @photos = @villa.photos
-    render :json => @photos.collect { |p| p.to_jq_upload }.to_json
+    @photos = @villa.photos.order(:position)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @photos }
+      format.json { render :json => @photos.collect { |p| p.to_jq_upload }.to_json }
     end
   end
 

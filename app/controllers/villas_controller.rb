@@ -115,6 +115,14 @@ class VillasController < ApplicationController
     end
   end
 
+  def sort_photos
+    params[:photos].each_with_index do |id, index|
+      Photo.update_all({position: index+1}, {id: id})
+    end
+
+    render nothing: true
+  end
+
   private
     def update_photos_with_villa_id photo_ids, villa
       photo_ids.split(',').each do |id|
