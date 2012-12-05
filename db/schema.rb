@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126015034) do
+ActiveRecord::Schema.define(:version => 20121205023722) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(:version => 20121126015034) do
     t.string   "image_name"
     t.string   "path"
     t.string   "name"
+    t.integer  "position"
   end
 
   create_table "rate_translations", :force => true do |t|
