@@ -16,7 +16,7 @@ en:
   home:
     index:
       feature: "Featured Villas"
-      all: "See all villas"
+      all: "See all"
   villas:
       index:
         h1: "Our Holiday Villa Rentals"

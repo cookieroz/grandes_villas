@@ -21,7 +21,7 @@ fr:
   home:
       index:
         feature: "Villas Remarquables"
-        all: "Voir tout les villas"
+        all: "Voir tout"
   villas:
       index:
         h1: "Louer Villas"
