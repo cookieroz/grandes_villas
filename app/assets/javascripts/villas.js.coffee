@@ -7,7 +7,7 @@ jQuery ->
     dateFormat: 'mm-dd-yyyy'
   });
 
-  $(document).on("focus", "[data-behaviour~='datepicker']", (event) =>
+  $(document).on("focus", "[data-behaviour~='datepicker']", (event) ->
     $(@).datepicker({"format": "yyyy-mm-dd"}))
 
   $('#gallery').galleryView()
