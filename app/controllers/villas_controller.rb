@@ -7,6 +7,7 @@ class VillasController < ApplicationController
   def index
     @search = Villa.search params[:q]
     @villas = @search.result
+    @villas = @villas.joins(:reservations).where("start_date < ? AND end_date > ?", params[:date], params[:date]) if params[:date].present?
 
     @photos = Photo.all
 
