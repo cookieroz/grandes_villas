@@ -34,9 +34,9 @@
               <li><%= t "villas.index.beds" %>: <strong><%= villa.bedrooms %></strong></li>
               <li><%= t "villas.index.sleeps" %>: <strong><%= villa.sleeps %></strong></li>
             </ul>
-            <p><%= raw truncate(strip_tags(villa.content), :length => 80) %></p>
-            <%= link_to( t("villas.index.readmore"), villa,
-                        class: 'btn btn-info') %>
+            <!--<p><%#= raw truncate(strip_tags(villa.content), :length => 80) %></p>
+            <%#= link_to( t("villas.index.readmore"), villa,
+                        class: 'btn btn-info') %> -->
           </div>
         </li>
     <% end %>
