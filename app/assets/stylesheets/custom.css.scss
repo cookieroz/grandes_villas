@@ -178,7 +178,7 @@ header {
   .navbar-inner {
     background: none;
     box-shadow: none;
-    padding-top: 95px;
+    padding-top: 93px;
     #lang {;
       margin-left: 400px;
       position: relative;
@@ -196,21 +196,39 @@ header {
       margin: -10px 0 0 -350px;
       li {
         font-size: 1.1em;
+        height: 44px;
         padding: 0px;
         text-shadow: none;
+        &:hover {
+          background: $villaBorderBlue;
+        /* Fallback for web browsers that doesn't support RGBa
+          background: rgb(255, 255, 255);
+          /* RGBa with 0.6 opacity
+          background: rgba(255, 255, 255, 0.6);
+          /* For IE 5.5 - 7
+          filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF);
+          /* For IE 8
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF)";
+          */
+        }
         a {
           color: #ffffff;
-          &:hover { color: $villaOrange; }
+          &:hover {
+            color: $villaDarkBlue;
+          }
         }
       }
     }
     nav ul.nav li.active a {
       background: none;
-      color: $villaOrange;
+      color: $villaDarkBlue;
       &:hover {
         background: none;
-        color: $villaOrange;
+        color: $villaDarkBlue;
       }
+    }
+    li.active {
+      background: $villaBorderBlue;
     }
     #logo {
       float: left;
@@ -229,6 +247,11 @@ header {
       margin-top: -60px;
     }
   }
+}
+.navbar .divider-vertical {
+  background-color: $grayMediumLight;
+  border-right: $grayMediumLight;
+  margin: 0;
 }
 
 /* Villa Customizations */
@@ -508,9 +531,10 @@ body.homepage {
     left: 0
    }
 }
+
 #banner {
   margin-top: -30px;
-  padding: 0 0 40px 10px;
+  padding: 0 0 40px 870px;
   position: relative;
   z-index: 4000;
   a {
@@ -545,7 +569,7 @@ body.homepage {
 .villa-home-filter {
   background: #ffffff;
   border: 1px solid $darkGold;
-  margin: -280px 0 0 30px;
+  margin: -285px 0 0 30px;
   padding: 15px;
   position: relative;
   width: 220px;
