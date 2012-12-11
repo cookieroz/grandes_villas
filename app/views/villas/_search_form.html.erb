@@ -15,7 +15,9 @@
     :locations_id_eq,
     options_from_collection_for_select(Location.order(:place).all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
     { :include_blank => t("villas.index.selecttown") }) %>
-  <%= text_field_tag "date", params[:date], "data-behaviour" => "datepicker" %>
+
+  <%= text_field_tag "start_date", params[:start_date], class: "span2", "data-behaviour" => "datepicker" %>
+  <%= text_field_tag "end_date", params[:end_date], class: "span2", "data-behaviour" => "datepicker" %>
 
   <%= f.submit "Search", class: "btn" %>
 <% end %>
