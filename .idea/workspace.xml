@@ -23,19 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="en.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/locales/en.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="38" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="664" column="18" selection-start="11162" selection-end="11162" vertical-scroll-proportion="0.15641476">
+            <state line="438" column="17" selection-start="7565" selection-end="7565" vertical-scroll-proportion="0.73434854">
               <folding />
             </state>
           </provider>
@@ -48,15 +39,6 @@
               <folding>
                 <element signature="e#1923#2021#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="61" selection-start="738" selection-end="738" vertical-scroll-proportion="-12.5">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -79,52 +61,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="villas_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/villas_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="79" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="83" selection-start="507" selection-end="507" vertical-scroll-proportion="-10.0">
-              <folding>
-                <marker date="1354560971000" expanded="true" signature="57:124" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="143:264" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="165:226" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="792:2733" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="874:2709" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="899:2683" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="938:1245" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="1274:1554" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="1583:2669" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="1613:2653" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="1701:2144" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="2921:3232" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="2944:3214" placeholder="..." />
-                <marker date="1354560971000" expanded="true" signature="3217:3222" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_index_search.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/villas/_index_search.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="70" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.0">
+            <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <file leaf-file-name="_search_form.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/villas/_search_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="45" selection-start="1525" selection-end="1525" vertical-scroll-proportion="0.0">
+            <state line="29" column="24" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-14.875">
               <folding />
             </state>
           </provider>
@@ -140,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
         <option value="$PROJECT_DIR$/config/locales/routes.yml" />
         <option value="$PROJECT_DIR$/app/controllers/villas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/villas/show.html.erb" />
@@ -151,10 +99,11 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
         <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/villas/_search_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/villas/_index_search.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/villas/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/villas/_search_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       </list>
     </option>
@@ -812,45 +761,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/_search_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="0" selection-end="882" vertical-scroll-proportion="0.28680688">
+        <state line="20" column="61" selection-start="738" selection-end="738" vertical-scroll-proportion="-12.5">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="83" selection-start="507" selection-end="507" vertical-scroll-proportion="-10.0">
-          <folding>
-            <marker date="1354560971000" expanded="true" signature="57:124" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="143:264" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="165:226" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="792:2733" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="874:2709" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="899:2683" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="938:1245" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="1274:1554" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="1583:2669" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="1613:2653" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="1701:2144" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="2921:3232" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="2944:3214" placeholder="..." />
-            <marker date="1354560971000" expanded="true" signature="3217:3222" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/villas/_index_search.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="70" selection-start="742" selection-end="742" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="738" selection-end="738" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
@@ -864,9 +784,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/_search_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="24" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-14.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="664" column="18" selection-start="11162" selection-end="11162" vertical-scroll-proportion="0.15641476">
+        <state line="438" column="17" selection-start="7565" selection-end="7565" vertical-scroll-proportion="0.73434854">
           <folding />
         </state>
       </provider>
