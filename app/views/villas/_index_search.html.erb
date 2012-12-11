@@ -1,0 +1,20 @@
+<%= search_form_for @search do |f| %>
+    <%= f.select(
+                :sleeps_gteq,
+                %w[+2 +4 +6 +8 +10],
+                { :include_blank => t("villas.index.selectsleep"), selected: params.try(:[], :q).try(:[], :sleeps_gteq) }
+        ) %>
+
+    <%= f.select(
+                :bedrooms_gteq,
+                %w[1 2 3 4 5 +6],
+                { :include_blank => t("villas.index.selectbed"), selected: params.try(:[], :q).try(:[], :bedrooms_gteq) }
+        ) %>
+
+    <%= f.select(
+                :locations_id_eq,
+                options_from_collection_for_select(Location.order(:place).all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
+                { :include_blank => t("villas.index.selecttown") }) %>
+
+    <%= f.submit "Search", class: "btn" %>
+<% end %>

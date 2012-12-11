@@ -518,6 +518,11 @@ body.homepage {
   background-position: center 126px;
   background-repeat: no-repeat;
 }
+
+.homepage-wrap {
+  background: #ffffff;
+  border: 1px solid $villaBorderBlue;
+}
 .pics {
   height:  280px;
   width:   960px;
@@ -602,16 +607,17 @@ body.homepage {
   }
 }
 
+ul.thumbnails {
+  margin-left: 0;
+}
+
 .home-thumb {
   background: $villaBgBlue;
   border: 1px solid $villaBorderBlue;
   border-radius: 0px 0px 4px 4px;
   padding-top: 10px;
-  ul.thumbnails {
-    width: 100%;
-  }
   li {
-    margin-left: 10px;
+    margin-left: 6px;
     li {
       margin-left: 0px;
     }
@@ -622,10 +628,47 @@ body.homepage {
   }
 }
 
+.suggestions{
+  border: 1px solid $villaBorderBlue;
+  border-radius: 4px;
+  padding: 5px;
+  .featured-villas {
+    border-bottom: 1px solid $villaBorderBlue;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 4px;
+  }
+  h4 {
+    font-weight: 500;
+    padding: 5px 0;
+  }
+}
+
+
+.home-cook {
+  background: $villaDarkBlue;
+  border: 1px solid $villaDarkBlue;
+  color: #ffffff;
+  margin-left: 18px;
+  h3 {
+    color: #fff;
+    font-weight: normal;
+    padding: 5px;
+  }
+  p {
+    padding: 0 5px 0 5px;
+  }
+}
+
+.services-row {
+  margin-top: 10px;
+}
 .services-wrap {
   background: $villaBgBlue;
   border: 1px solid $villaBorderBlue;
   border-radius: 0px 0px 4px 4px;
+  margin-left: 5px;
   padding: 10px 9px 10px 10px;
   .breadcrumb {
     background: none;
@@ -827,6 +870,10 @@ footer {
   color: $villaDarkBlue;
 }
 
+.goldText {
+  color: $darkGold;
+}
+
 .clear {
   clear: both;
 }
@@ -835,3 +882,14 @@ footer {
   margin-left: 0px;
 }
 
+.minus-20-left-margin {
+  margin-left: -20px;
+}
+
+.left-10-margin {
+  margin-left: 10px;
+}
+
+.left-5-margin {
+  margin-left: 5px;
+}

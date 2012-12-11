@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @villasf = Villa.scoped.limit(4).order("RANDOM()")
+    @villasf = Villa.scoped.limit(2).order("RANDOM()")
     @home_page = true
     @search = Villa.search params[:q]
 
