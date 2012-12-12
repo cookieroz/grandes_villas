@@ -1,5 +1,5 @@
 source :rubygems
-ruby '1.9.2'
+ruby '1.9.3'
 
 gem 'rails', '3.2.8'
 gem 'bcrypt-ruby', '3.0.1'
@@ -51,7 +51,7 @@ group :assets do
   gem 'bootstrap-sass', '2.0.0'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem "therubyracer", :require => 'v8'
 
   gem 'uglifier', '>= 1.0.3'
 end
