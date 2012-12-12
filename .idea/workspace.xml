@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="42" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.32994923">
+            <state line="174" column="42" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="48" column="20" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.82615894">
               <folding />
             </state>
           </provider>
@@ -74,7 +74,15 @@
         <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.875">
-              <folding />
+              <folding>
+                <marker date="1355245575000" expanded="true" signature="817:2725" placeholder="do ... end" />
+                <marker date="1355245575000" expanded="true" signature="957:1230" placeholder="if ... end" />
+                <marker date="1355245575000" expanded="true" signature="1367:1458" placeholder="do ... end" />
+                <marker date="1355245575000" expanded="true" signature="1745:1872" placeholder="do ... end" />
+                <marker date="1355245575000" expanded="true" signature="2165:2636" placeholder="if ... end" />
+                <marker date="1355245575000" expanded="true" signature="2752:2883" placeholder="if ... end" />
+                <marker date="1355245575000" expanded="true" signature="2891:3243" placeholder="if ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +91,9 @@
         <entry file="file://$PROJECT_DIR$/app/views/villas/_search_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="29" column="24" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-14.875">
-              <folding />
+              <folding>
+                <marker date="1355245575000" expanded="true" signature="28:1318" placeholder="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/locales/routes.yml" />
         <option value="$PROJECT_DIR$/app/controllers/villas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/villas/show.html.erb" />
         <option value="$PROJECT_DIR$/app/helpers/calendar_helper.rb" />
@@ -114,6 +123,7 @@
         <option value="$PROJECT_DIR$/app/views/villas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/villas/_search_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -803,27 +813,37 @@
     <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="-6.875">
-          <folding />
+          <folding>
+            <marker date="1355245575000" expanded="true" signature="817:2725" placeholder="do ... end" />
+            <marker date="1355245575000" expanded="true" signature="957:1230" placeholder="if ... end" />
+            <marker date="1355245575000" expanded="true" signature="1367:1458" placeholder="do ... end" />
+            <marker date="1355245575000" expanded="true" signature="1745:1872" placeholder="do ... end" />
+            <marker date="1355245575000" expanded="true" signature="2165:2636" placeholder="if ... end" />
+            <marker date="1355245575000" expanded="true" signature="2752:2883" placeholder="if ... end" />
+            <marker date="1355245575000" expanded="true" signature="2891:3243" placeholder="if ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/villas/_search_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="24" selection-start="1046" selection-end="1046" vertical-scroll-proportion="-14.875">
+          <folding>
+            <marker date="1355245575000" expanded="true" signature="28:1318" placeholder="do ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="42" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="42" selection-start="2399" selection-end="2399" vertical-scroll-proportion="0.32994923">
+        <state line="48" column="20" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.82615894">
           <folding />
         </state>
       </provider>
