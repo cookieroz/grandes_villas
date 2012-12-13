@@ -7,12 +7,12 @@ class VillasController < ApplicationController
   def index
     @search = Villa.search params[:q]
     @villas = @search.result
-    if params[:start_date].present?
+    if params[:start_date].present? && params[:end_date].present? && params[:start_date].length > 0 && params[:end_date].length > 0
       overlaped_villas = Villa.
         joins(:reservations).
         where("start_date <= ? AND end_date >= ?", params[:end_date], params[:start_date])
 
-      @villas = @villas.where("villas.id not in (?)", overlaped_villas)
+      @villas = @villas.where("villas.id not in (?)", overlaped_villas) if overlaped_villas.any?
     end
 
     @photos = Photo.all
