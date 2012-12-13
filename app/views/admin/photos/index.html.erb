@@ -1,0 +1,43 @@
+<h1>Listing top photos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @top_photos.each do |photo| %>
+  <tr>
+    <td><%= image_tag photo.image.url %></td>
+    <td><%= photo.caption %></td>
+    <td><%= link_to 'Destroy', admin_photo_path(photo), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Top Photo', new_admin_photo_path(nil, :imageable_type => "TopPhoto") %>
+
+<h1>Listing bottom photos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bottom_photos.each do |photo| %>
+  <tr>
+    <td><%= image_tag photo.image.url %></td>
+    <td><%= photo.caption %></td>
+    <td><%= link_to 'Destroy', admin_photo_path(photo), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bottom Photo', new_admin_photo_path(nil, :imageable_type => "BottomPhoto") %>

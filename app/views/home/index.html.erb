@@ -1,10 +1,7 @@
 <div class="pics">
-  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_67.jpg"
-       alt="Salobreña" />
-  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_66.jpg"
-       alt="Romantica" />
-  <img src="http://www.grandesvillas.com/images/slider_images/slider_image_60.jpg"
-       alt="New Luxury" />
+  <% Photo.where(imageable_type: "TopPhoto").each do |photo| %>
+    <%= image_tag photo.url, alt: photo.caption %>
+  <% end %>
 </div>
 <div id="nav"></div>
 <div class="caption"></div>
@@ -89,9 +86,9 @@
   </div>
   <div class="row special">
     <div class="home-special">
-      <%= link_to image_tag("paella.jpg"), "#" %>
-      <%= link_to image_tag("paella.jpg"), "#" %>
-      <%= link_to image_tag("paella.jpg"), "#" %>
+      <% Photo.where(imageable_type: "BottomPhoto").each do |photo| %>
+        <%= link_to image_tag(photo.url, alt: photo.caption), "#" %>
+      <% end %>
     </div>
   </div>
 </div>

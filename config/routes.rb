@@ -1,4 +1,8 @@
 GrandesVillas::Application.routes.draw do
+  namespace :admin do
+    resources :photos
+  end
+
   resources :destinations
 
   mount Ckeditor::Engine => '/ckeditor'

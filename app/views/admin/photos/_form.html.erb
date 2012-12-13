@@ -1,0 +1,13 @@
+<%= simple_form_for(@admin_photo, :url => admin_photos_path) do |f| %>
+  <%= f.error_notification %>
+  <%= hidden_field_tag "imageable_type", params[:imageable_type] %>
+
+  <div class="form-inputs">
+    <%= f.file_field :image, class: 'controls' %>
+    <%= f.input :caption %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
