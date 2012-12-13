@@ -7,7 +7,9 @@
     <%= f.input :city %>
     <%#= f.input :category %>
     <%= f.input :activity %>
-    <%= f.file_field :ct_image, class: 'controls' %>
+    <%= f.simple_fields_for :ct_image do |ff| %>
+      <%= ff.file_field :image, class: 'controls' %>
+    <% end %>
     <%= f.input :content, :as => :ckeditor,
                 :label => false, :input_html => { :toolbar => 'Full' } %>
   </div>

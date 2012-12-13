@@ -1,8 +1,9 @@
 class CostaTropical < ActiveRecord::Base
-  attr_accessible :title, :content, :category, :ct_image,
+  attr_accessible :title, :content, :category, :ct_image_attributes,
                   :activity, :city
 
-  mount_uploader :ct_image, CtImageUploader
+  has_one :ct_image, as: :imageable, class_name: "Photo"
+  accepts_nested_attributes_for :ct_image
 
   translates :content, :activity, :city, :title
 
