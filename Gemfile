@@ -31,7 +31,7 @@ group :development, :test do
   gem 'rspec-rails', '2.8.1'
   gem 'annotate', '~> 2.4.1.beta'
   gem 'letter_opener', '0.1.0'
-  gem 'capistrano', '2.13.5'
+  #gem 'capistrano', '2.13.5'
   gem "launchy"
   gem "pry"
 end
@@ -66,10 +66,10 @@ end
 #  gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+ gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano', '2.13.5'
 
 # To use debugger
 # gem 'debugger'

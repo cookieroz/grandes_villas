@@ -4,7 +4,7 @@
 
 jQuery ->
   $(".pics").after("<div id=\"banner\">").cycle
-    fx: "scrollLeft",
+    fx: "fade",
     timeout: 5000,
     speed:   3000,
     pager:  "#banner",
