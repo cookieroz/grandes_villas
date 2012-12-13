@@ -36,24 +36,38 @@
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="75" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1355400288000" expanded="true" signature="290:349" placeholder="#..." />
+                <marker date="1355400288000" expanded="true" signature="871:957" placeholder="#..." />
+                <marker date="1355400288000" expanded="true" signature="980:1065" placeholder="#..." />
+                <marker date="1355400288000" expanded="true" signature="1494:1581" placeholder="#..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="deploy.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="84" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.5529801">
+            <state line="43" column="90" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unicorn.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="53" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unicorn.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="91" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+            <state line="8" column="91" selection-start="248" selection-end="248" vertical-scroll-proportion="0.1986755">
               <folding />
             </state>
           </provider>
@@ -124,13 +138,13 @@
         <option value="$PROJECT_DIR$/app/views/villas/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/villas/_search_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/unicorn.rb" />
         <option value="$PROJECT_DIR$/config/unicorn_init.sh" />
         <option value="$PROJECT_DIR$/config/database.example.yml" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
       </list>
     </option>
   </component>
@@ -661,27 +675,18 @@
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="75" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1355400288000" expanded="true" signature="290:349" placeholder="#..." />
+            <marker date="1355400288000" expanded="true" signature="871:957" placeholder="#..." />
+            <marker date="1355400288000" expanded="true" signature="980:1065" placeholder="#..." />
+            <marker date="1355400288000" expanded="true" signature="1494:1581" placeholder="#..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/unicorn_init.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="43" selection-start="481" selection-end="481" vertical-scroll-proportion="0.34768212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="91" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="19" selection-start="0" selection-end="1409" vertical-scroll-proportion="0.54810995">
           <folding />
         </state>
       </provider>
@@ -702,7 +707,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="84" selection-start="1314" selection-end="1314" vertical-scroll-proportion="0.5529801">
+        <state line="43" column="90" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="53" selection-start="517" selection-end="517" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/unicorn.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="91" selection-start="248" selection-end="248" vertical-scroll-proportion="0.1986755">
           <folding />
         </state>
       </provider>
