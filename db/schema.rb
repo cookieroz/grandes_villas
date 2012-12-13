@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121205023722) do
+ActiveRecord::Schema.define(:version => 20121213133116) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -142,13 +142,15 @@ ActiveRecord::Schema.define(:version => 20121205023722) do
     t.string   "caption"
     t.integer  "villa_id"
     t.string   "image"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.integer  "image_uid"
     t.string   "image_name"
     t.string   "path"
     t.string   "name"
     t.integer  "position"
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
   end
 
   create_table "rate_translations", :force => true do |t|
@@ -178,6 +180,27 @@ ActiveRecord::Schema.define(:version => 20121205023722) do
     t.integer  "villa_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "static_page_translations", :force => true do |t|
+    t.integer  "static_page_id"
+    t.string   "locale"
+    t.text     "about_content"
+    t.text     "home_content"
+    t.text     "contact_content"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "static_page_translations", ["locale"], :name => "index_static_page_translations_on_locale"
+  add_index "static_page_translations", ["static_page_id"], :name => "index_static_page_translations_on_static_page_id"
+
+  create_table "static_pages", :force => true do |t|
+    t.text     "about_content"
+    t.text     "home_content"
+    t.text     "contact_content"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "tag_translations", :force => true do |t|
