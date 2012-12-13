@@ -1,8 +1,9 @@
 class Destination < ActiveRecord::Base
   attr_accessible :name, :content, :content, :address,
-                  :latitude, :longitude, :dest_image
+                  :latitude, :longitude, :dest_image_attributes
 
-  mount_uploader :dest_image
+  has_one :dest_image, as: :imageable, class_name: "Photo"
+  accepts_nested_attributes_for :dest_image
 
   has_many :villas
 
