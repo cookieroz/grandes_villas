@@ -33,10 +33,10 @@
      <div class="villas-index-list thumbnails">
        <div class="row">
          <div class="span3 pull-left">
-           <% if villa.photos.first.image.nil? %>
+           <% if villa.photos.first.nil? %>
              <%= link_to image_tag("800x545.gif"), villa %>
            <% else %>
-             <%= link_to image_tag(villa.photos.first.image.url(:thumb),
+             <%= link_to image_tag(villa.photos.first.url(:thumb),
                                    class: 'thumbnail'), villa %>
            <% end %>
          </div>

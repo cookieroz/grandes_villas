@@ -637,6 +637,7 @@ ul.thumbnails {
   background: $villaBgBlue;
   border: 1px solid $villaBorderBlue;
   border-radius: 0px 0px 4px 4px;
+  height: 269px;
   padding-top: 10px;
   li {
     margin-left: 6px;
@@ -677,14 +678,14 @@ ul.thumbnails {
     }
   }
   .sug-slideshow {
-    height:  294px;
+    height:  319px;
     width:   235px;
     padding: 5px;
     margin:  0 auto;
     overflow: hidden;
     .sug-slide {
       width:  245px;
-      height: 294px;
+      height: 319px;
       top:  0;
       left: 0;
       .featured-villas {
@@ -692,18 +693,21 @@ ul.thumbnails {
         border-left: none;
         border-right: none;
         border-top: none;
-        padding: 4px;
+        padding: 7px 6px 6px 6px;
         width: 237px;
       }
       h4 {
         font-weight: 500;
-        padding: 5px 0;
-        width: 235px;
+        padding: 5px;
+        width: 225px;
       }
       img {
         margin: 0 auto;
         text-align: center;
         width: 200px;
+      }
+      p {
+        padding: 0 5px 0 5px;
       }
     }
   }
@@ -713,6 +717,7 @@ ul.thumbnails {
   background: $villaDarkBlue;
   border: 1px solid $villaDarkBlue;
   color: #ffffff;
+  height: 329px;
   margin-left: 5px;
   h3 {
     color: #fff;
