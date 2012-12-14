@@ -134,7 +134,10 @@ class VillasController < ApplicationController
     def update_photos_with_villa_id photo_ids, villa
       photo_ids.split(',').each do |id|
         photo = Photo.where(id: id).first
-        photo.update_attributes(villa_id: villa.id) if photo.present?
+        if photo.present?
+          photo.imageable = villa
+          photo.save
+        end
       end
     end
 end
