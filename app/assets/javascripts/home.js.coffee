@@ -7,7 +7,6 @@ jQuery ->
     fx: "fade",
     timeout: 5000,
     speed:   3000,
-    pager:  "#banner",
     after: ->
       $(".caption p").html @alt
   $('.home-special').cycle('scrollLeft');

@@ -564,6 +564,11 @@ body.homepage {
   padding: 0 0 40px 870px;
   position: relative;
   z-index: 4000;
+  .activeSlide {
+    height: 15px;
+    margin-top: 0;
+    width: 15px;
+  }
   a {
     background: #ffffff;
     color: #ffffff;
