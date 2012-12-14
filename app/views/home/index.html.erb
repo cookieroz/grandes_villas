@@ -1,10 +1,13 @@
 <div class="pics">
   <% Photo.where(imageable_type: "TopPhoto").each do |photo| %>
-    <%= image_tag photo.url, alt: photo.caption %>
+      <%= image_tag photo.url, alt: photo.caption %>
   <% end %>
 </div>
-<div id="nav"></div>
-<div class="caption"></div>
+<div class="caption">
+  <p></p>
+  <!--<p>Magnificent villas with stunning sea views in
+    <span class="orangeText">Almuñécar, Salobreña, Motril and Morocco</span></p>-->
+</div>
 <div class="row">
     <div class="villa-home-filter">
       <p class="lead">Search Villas</p>
@@ -47,13 +50,39 @@
       </ul>
     </div>
     <div class="span3 suggestions">
-      <div class="featured-villas">
-        <h2><%#= t ".feature" %>Our Suggestions</h2>
+      <div class="sug-nav">
+        <a id="prev1" class="pull-left" href="#">&laquo;</a>
+        <a id="next1" class="pull-right" href="#">&raquo;</a>
       </div>
-      <h4>Romantic Pack testing</h4>
-      <%= image_tag("800x545.gif") %>
-      <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
-        aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+      <div class="sug-slideshow">
+        <div class="sug-slide">
+          <div class="featured-villas">
+            <h2><%#= t ".feature" %>Our Suggestions</h2>
+          </div>
+          <h4>Romantic Pack testing</h4>
+          <div class="center"> <%= image_tag("800x545.gif") %></div>
+          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+        </div>
+        <div class="sug-slide">
+          <div class="featured-villas">
+            <h2><%#= t ".feature" %>Our Suggestions 1</h2>
+          </div>
+          <h4>Romantic Pack testing</h4>
+          <div class="center"> <%= image_tag("800x545.gif") %></div>
+          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+        </div>
+        <div class="sug-slide">
+          <div class="featured-villas">
+            <h2><%#= t ".feature" %>Our Suggestions 2</h2>
+          </div>
+          <h4>Romantic Pack testing</h4>
+          <div class="center"> <%= image_tag("800x545.gif") %></div>
+          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
+        </div>
+      </div>
     </div>
     <div class="span3 home-cook">
       <h3>Homecooking Experience</h3>

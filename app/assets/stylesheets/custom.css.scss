@@ -196,7 +196,7 @@ header {
       margin: -10px 0 0 -350px;
       li {
         font-size: 1.1em;
-        height: 44px;
+        height: 36px;
         padding: 0px;
         text-shadow: none;
         &:hover {
@@ -533,21 +533,34 @@ body.homepage {
   border: 1px solid $villaBorderBlue;
 }
 .pics {
-  height:  280px;
+  height:  350px;
   width:   960px;
   padding: 0;
   margin:  0 auto;
   overflow: hidden;
    img {
     width:  960px;
-    height: 280px;
+    height: 350px;
     top:  0;
     left: 0
    }
 }
 
+.caption {
+  background: $homeTitleBlue;
+  margin: 0 0 10px 0;
+  padding: 5px 10px 5px 10px;
+  p {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px 0 5px 0;
+    text-align: right;
+  }
+}
+
 #banner {
-  margin-top: -30px;
+  margin-top: -40px;
   padding: 0 0 40px 870px;
   position: relative;
   z-index: 4000;
@@ -583,7 +596,7 @@ body.homepage {
 .villa-home-filter {
   background: #ffffff;
   border: 1px solid $darkGold;
-  margin: -285px 0 0 30px;
+  margin: -335px 0 0 50px;
   padding: 15px;
   position: relative;
   width: 220px;
@@ -640,26 +653,67 @@ ul.thumbnails {
 .suggestions{
   border: 1px solid $villaBorderBlue;
   border-radius: 4px;
-  padding: 5px;
-  .featured-villas {
-    border-bottom: 1px solid $villaBorderBlue;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    padding: 4px;
+  margin-left: 5px;
+  width: 245px;
+  .sug-nav {
+    padding: 0;
+    position: absolute;
+    margin-top: 128px;
+    z-index: 4000;
+    a {
+      color: $homeTitleBlue;
+      display: block;
+      font-size: 60px;
+      &:hover {
+        color: $villaOrange;
+        text-decoration: none;
+      }
+    }
+    #prev1 {
+      margin-left: -3px;
+    }
+    #next1 {
+     margin-left: 196px;
+    }
   }
-  h4 {
-    font-weight: 500;
-    padding: 5px 0;
+  .sug-slideshow {
+    height:  294px;
+    width:   235px;
+    padding: 5px;
+    margin:  0 auto;
+    overflow: hidden;
+    .sug-slide {
+      width:  245px;
+      height: 294px;
+      top:  0;
+      left: 0;
+      .featured-villas {
+        border-bottom: 1px solid $villaBorderBlue;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        padding: 4px;
+        width: 237px;
+      }
+      h4 {
+        font-weight: 500;
+        padding: 5px 0;
+        width: 235px;
+      }
+      img {
+        margin: 0 auto;
+        text-align: center;
+        width: 200px;
+      }
+    }
   }
 }
-
 
 .home-cook {
   background: $villaDarkBlue;
   border: 1px solid $villaDarkBlue;
   color: #ffffff;
-  margin-left: 18px;
+  margin-left: 5px;
   h3 {
     color: #fff;
     font-weight: normal;

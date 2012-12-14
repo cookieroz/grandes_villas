@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $(".pics").after("<div id=\"banner\">").cycle
+  $(".pics").cycle
     fx: "fade",
     timeout: 5000,
     speed:   3000,
@@ -11,3 +11,9 @@ jQuery ->
     after: ->
       $("#caption").html @alt
   $('.home-special').cycle('scrollLeft');
+  $(".sug-slideshow").cycle
+    fx:     'scrollHorz',
+    prev:   '#prev1',
+    next:   '#next1',
+    nowrap:  1,
+    timeout: 0
