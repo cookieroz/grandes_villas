@@ -9,7 +9,7 @@ jQuery ->
     speed:   3000,
     pager:  "#banner",
     after: ->
-      $("#caption").html @alt
+      $(".caption p").html @alt
   $('.home-special').cycle('scrollLeft');
   $(".sug-slideshow").cycle
     fx:     'scrollHorz',
