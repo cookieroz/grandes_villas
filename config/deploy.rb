@@ -11,6 +11,7 @@ set :use_sudo, false
 set :scm, "git"
 set :repository, "git@github.com:cookieroz/#{application}.git"
 set :branch, "master"
+set :shared_children, shared_children + %w{public/uploads}
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
