@@ -547,7 +547,7 @@ body.homepage {
 }
 
 .caption {
-  background: $homeTitleBlue;
+  background: #015368;
   margin: 0 0 10px 0;
   padding: 5px 10px 5px 10px;
   p {
@@ -600,17 +600,26 @@ body.homepage {
 
 .villa-home-filter {
   background: #ffffff;
-  border: 1px solid $darkGold;
+  border: 1px solid $villaDarkBlue;
+  height: 180px;
   margin: -335px 0 0 50px;
   padding: 15px;
   position: relative;
-  width: 220px;
+  width: 380px;
   z-index: 100;
   form {
     margin-bottom: 10px;
   }
   .lead {
-    color: $darkGold;
+    color: $villaDarkBlue;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  hr {
+    border-color: $villaDarkBlue;
+    box-shadow: 3px 3px 3px #888888;
+    margin: 5px 0 25px 0;
   }
 }
 
