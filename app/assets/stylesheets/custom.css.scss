@@ -605,7 +605,7 @@ body.homepage {
   margin: -335px 0 0 50px;
   padding: 15px;
   position: relative;
-  width: 380px;
+  width: 390px;
   z-index: 100;
   form {
     margin-bottom: 10px;
@@ -620,6 +620,29 @@ body.homepage {
     border-color: $villaDarkBlue;
     box-shadow: 3px 3px 3px #888888;
     margin: 5px 0 25px 0;
+  }
+  form {
+    position: relative;
+    .span3 {
+      display: inline-block;
+      float: none;
+    }
+    .span2 {
+      display: inline-block;
+      float: none;
+    }
+    .input-append {
+      margin-bottom: 0;
+    }
+    .add-on {
+      margin-bottom: -30px;
+      margin-left: 118px;
+      position: relative;
+      z-index: 200;
+    }
+    #start_date, #end_date {
+      width: 120px;
+    }
   }
 }
 

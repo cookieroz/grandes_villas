@@ -19,12 +19,18 @@
                   { :include_blank => t("villas.index.selecttown") }) %>
     </div>
     <div class="span2">
-      <%= text_field_tag "start_date", params[:start_date],
-                         class: "span2", "data-behaviour" => "datepicker",
-                         placeholder: "Check-in" %>
-      <%= text_field_tag "end_date", params[:end_date],
-                         class: "span2", "data-behaviour" => "datepicker",
-                         placeholder: "Check-out" %>
-      <%= f.submit "Search", class: "btn" %>
+      <div class="input-append">
+        <span class="add-on"><i class="icon-calendar"></i></span>
+        <%= text_field_tag "start_date", params[:start_date],
+                           "data-behaviour" => "datepicker",
+                           placeholder: "Check-in" %>
+      </div>
+      <div class="input-append">
+        <span class="add-on"><i class="icon-calendar"></i></span>
+        <%= text_field_tag "end_date", params[:end_date],
+                           "data-behaviour" => "datepicker",
+                           placeholder: "Check-out" %>
+      </div>
+      <%= f.submit "Search", class: "btn btn-info" %>
     </div>
 <% end %>
