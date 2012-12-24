@@ -1,4 +1,8 @@
 <% provide(:title, @villa.name) %>
+<% if current_user %>
+    <%= link_to(t("villas.form.edit"), edit_villa_path(@villa), class: 'btn btn-primary') %> |
+<% end %>
+<%= link_to(t(".back"), villas_path, class: 'btn') %>
 
 <h1 class="villa-h1-bg"> <%= @villa.name %> </h1>
 
@@ -251,8 +255,8 @@
 <br /> -->
 
 <% if current_user %>
-  <%= link_to(t("villas.form.edit"), edit_villa_path(@villa)) %> |
+    <%= link_to(t("villas.form.edit"), edit_villa_path(@villa), class: 'btn btn-primary') %> |
 <% end %>
-<%= link_to(t(".back"), villas_path) %>
+<%= link_to(t(".back"), villas_path, class: 'btn') %>
 
 <%= yield :scripts %>

@@ -1,4 +1,6 @@
 GrandesVillas::Application.routes.draw do
+  resources :services
+
   namespace :admin do
     resources :photos
   end
@@ -13,7 +15,6 @@ GrandesVillas::Application.routes.draw do
     match '/about',   to: 'static_pages#about'
     match '/contact', to: 'messages#new'
     match '/owner', to: 'static_pages#owner'
-  match '/services', to: 'static_pages#services'
 
     resources :villas do
       collection { post :sort_photos }

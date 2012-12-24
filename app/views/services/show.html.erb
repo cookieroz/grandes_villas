@@ -1,0 +1,14 @@
+<% provide(:title, @service.title) %>
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <h1><%= @service.title %></h1>
+</div>
+
+<%= raw @service.content %>
+
+<% if current_user %>
+    <%= link_to 'Edit', edit_service_path(@service), class: 'btn btn-primary' %> |
+<% end %>
+<%= link_to(t("villas.show.back"), services_path, class: 'btn') %>
+

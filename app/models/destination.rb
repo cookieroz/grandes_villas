@@ -1,5 +1,5 @@
 class Destination < ActiveRecord::Base
-  attr_accessible :name, :content, :content, :address,
+  attr_accessible :name, :content, :address,
                   :latitude, :longitude, :dest_image_attributes
 
   has_one :dest_image, as: :imageable, class_name: "Photo"

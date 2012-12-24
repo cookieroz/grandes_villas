@@ -22,6 +22,8 @@ $homeTitleBlue: #397d88;
 
 $infoColorBtn: #2F96B4;
 
+$captionBlue: #015368;
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -547,7 +549,7 @@ body.homepage {
 }
 
 .caption {
-  background: #015368;
+  background: $captionBlue;
   margin: 0 0 10px 0;
   padding: 5px 10px 5px 10px;
   p {
@@ -751,8 +753,8 @@ ul.thumbnails {
 }
 
 .home-cook {
-  background: $villaDarkBlue;
-  border: 1px solid $villaDarkBlue;
+  background: $captionBlue;
+  border: 1px solid $captionBlue;
   color: #ffffff;
   height: 329px;
   margin-left: 5px;
@@ -927,6 +929,48 @@ h4.contact-add {
             font-size: 16px;
           }
         }
+      }
+    }
+  }
+}
+
+/* Services Customizations */
+.services-index {
+  .contact-service-form {
+    background: $villaBgBlue;
+    border: 1px solid $villaBorderBlue;
+    border-radius: 10px;
+    color: #999;
+    margin: 0 auto;
+    padding: 15px;
+    h3 {
+      color: $infoColorBtn;
+      font-weight: normal;
+      margin-top: -10px;
+      padding-bottom: 10px;
+    }
+    form.form-horizontal {
+      color: #999;
+      .control-group {
+        label{
+          color: #666;
+          text-align: left;
+          width: 80px;
+        }
+        .controls {
+          margin-left: 80px;
+          input, textarea {
+            width: 175px;
+          }
+        }
+      }
+    }
+  }
+  .service-list-index {
+    li {
+      margin-bottom: 20px;
+      a {
+        color: #000000;
       }
     }
   }

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121213133116) do
+ActiveRecord::Schema.define(:version => 20121224050202) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -181,6 +181,28 @@ ActiveRecord::Schema.define(:version => 20121213133116) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "service_translations", :force => true do |t|
+    t.integer  "service_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "service_translations", ["locale"], :name => "index_service_translations_on_locale"
+  add_index "service_translations", ["service_id"], :name => "index_service_translations_on_service_id"
+
+  create_table "services", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "slug"
+  end
+
+  add_index "services", ["slug"], :name => "index_services_on_slug"
 
   create_table "static_page_translations", :force => true do |t|
     t.integer  "static_page_id"

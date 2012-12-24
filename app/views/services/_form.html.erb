@@ -1,0 +1,14 @@
+<%= simple_form_for @service,
+                    :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs control-group">
+    <%= f.input :title %>
+    <%= f.input :content, :as => :ckeditor,
+                :label => false, :input_html => { :toolbar => 'Full' } %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
