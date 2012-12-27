@@ -6,7 +6,7 @@ class VillasController < ApplicationController
 
   def index
     @search = Villa.search params[:q]
-    @villas = @search.result
+    @villas = @search.result.order("sleeps DESC")
     if params[:start_date].present? && params[:end_date].present? && params[:start_date].length > 0 && params[:end_date].length > 0
       overlaped_villas = Villa.
         joins(:reservations).
