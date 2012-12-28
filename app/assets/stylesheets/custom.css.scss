@@ -369,6 +369,7 @@ h1.villa-h1-bg {
 }
 
 .villa-show {
+  background: image-url('villa-shadow.jpg') repeat-x;
   border: 1px solid #00738e;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -382,6 +383,10 @@ h1.villa-h1-bg {
     }
     a {
       color: $infoColorBtn;
+      font-weight: bold;
+    }
+    a.dark-green {
+      color: #006400;
     }
     #overview {
       margin-left: 10px;
@@ -430,6 +435,33 @@ h1.villa-h1-bg {
     li {
       padding: 0 0 4px 0;
     }
+  }
+}
+
+.villa-index-filter-form {
+  background: image-url('filter-villa-bg.jpg') repeat-x;
+  margin-left: 0;
+  padding: 4px 0 3px 0;
+  .lead {
+    color: #ffffff;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  select {
+    width: 150px;
+  }
+  .input-append {
+    margin-left: 3px;
+    width: 130px;
+    input {
+      width: 110px;
+    }
+  }
+  .add-on {
+    margin-bottom: -30px;
+    margin-left: 100px;
+    position: relative;
+    z-index: 10;
   }
 }
 

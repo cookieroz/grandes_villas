@@ -1,37 +1,33 @@
 <%= search_form_for @search do |f| %>
-    <div class="span3">
-      <%= f.select(
-         :sleeps_gteq,
-         %w[+2 +4 +6 +8 +10],
-         { :include_blank => t("villas.index.selectsleep"), selected: params.try(:[], :q).try(:[], :sleeps_gteq) }
-          ) %>
-    </div>
-
-    <div class="span3">
-      <%= f.select(
-        :bedrooms_gteq,
-        %w[1 2 3 4 5 +6],
-        { :include_blank => t("villas.index.selectbed"), selected: params.try(:[], :q).try(:[], :bedrooms_gteq) }
-      ) %>
-    </div>
-
-    <div class="span3">
-      <%= f.select(
-        :locations_id_eq,
-        options_from_collection_for_select(Location.order(:place).all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
-        { :include_blank => t("villas.index.selecttown") }) %>
-    </div>
-    <div class="span2">
-      <p class="res-date">Start Date</p>
+  <div class="span6 no-left-margin">
+    <%= f.select(
+       :sleeps_gteq,
+       %w[+2 +4 +6 +8 +10],
+       { :include_blank => t("villas.index.selectsleep"), selected: params.try(:[], :q).try(:[], :sleeps_gteq) }
+    ) %>
+    <%= f.select(
+      :bedrooms_gteq,
+      %w[1 2 3 4 5 +6],
+      { :include_blank => t("villas.index.selectbed"), selected: params.try(:[], :q).try(:[], :bedrooms_gteq) }
+    ) %>
+    <%= f.select(
+      :locations_id_eq,
+      options_from_collection_for_select(Location.order(:place).all, :id, :place, params.try(:[], :q).try(:[], :locations_id_eq)),
+      { :include_blank => t("villas.index.selecttown") }) %>
+  </div>
+    <div class="input-append pull-left">
+      <span class="add-on"><i class="icon-calendar"></i></span>
       <%= text_field_tag "start_date", params[:start_date],
-                         class: "span2", "data-behaviour" => "datepicker" %>
+                         "data-behaviour" => "datepicker",
+                         placeholder: "Check-in" %>
     </div>
-    <div class="span2">
-      <p class="res-date">End Date</p>
+    <div class="input-append pull-left">
+      <span class="add-on"><i class="icon-calendar"></i></span>
       <%= text_field_tag "end_date", params[:end_date],
-                         class: "span2", "data-behaviour" => "datepicker" %>
+                         "data-behaviour" => "datepicker",
+                         placeholder: "Check-out" %>
     </div>
-    <div class="span2">
-      <%= f.submit "Search", class: "btn btn-villa-search btn-large" %>
-    </div>
+  <div class="span1">
+    <%= f.submit "Search", class: "btn btn-info" %>
+  </div>
 <% end %>

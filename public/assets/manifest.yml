@@ -8,6 +8,7 @@ bg.jpg: bg-0404983368356e974a2ddeb451ce9955.jpg
 car-rental.jpg: car-rental-59b43a85a5893859a9aab16614cb9f92.jpg
 cook.jpg: cook-0ea95505283147b2070bdae05002a160.jpg
 fallback/800x545.gif: fallback/800x545-12a7b60250611fe84ae51874248c9a62.gif
+filter-villa-bg.jpg: filter-villa-bg-3e2988172d4a43ef4eb9634c89a54e9a.jpg
 flag-es.gif: flag-es-54c1fe910b7db5ecd3fb77457db78d45.gif
 flag-fr.gif: flag-fr-987901b0516868f5fcc626fed1be5e31.gif
 flag-uk.gif: flag-uk-86e1d2bee374e57c0019d3f76fefbbed.gif
@@ -35,8 +36,9 @@ servicesimg.jpg: servicesimg-f1ed8e9f6c14ca5169878128b8b0286a.jpg
 villa-h2-bg.gif: villa-h2-bg-c962379f71059b0fcbe65d0b15a00228.gif
 villa-la-torre.jpg: villa-la-torre-936b19d8f52cb8747944d78e605efbce.jpg
 villa-romantica.jpg: villa-romantica-c17a240ffde51d49077f8b6892fa7124.jpg
+villa-shadow.jpg: villa-shadow-108559b7f35d00c698e9c9228efeddb7.jpg
 application.js: application-dc230fd885dc018a271d02ac4c73cced.js
-application.css: application-1b29d370d8ee05ddf4c57c7fb49a84ac.css
+application.css: application-6521835069f9bb7d49bd8181e2ec9838.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-ef3d5b8d6a297804352b4a46fdb5466d.png
 glyphicons-halflings.png: glyphicons-halflings-0e7ff93d8f48fe1f5f762e4312e78da7.png
 loading.gif: loading-c811d47aa4e029305c67d71fe56dff4e.gif
