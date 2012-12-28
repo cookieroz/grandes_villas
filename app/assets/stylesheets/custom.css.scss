@@ -1015,7 +1015,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
-  height: 110px;
+  height: 250px;
   a {
     color: #ffffff;
     &:hover {
@@ -1034,6 +1034,9 @@ footer {
   .nav-footer{
     clear: left;
     display: block;
+  }
+  .footer-villa-links {
+    margin-top: -30px;
   }
 }
 

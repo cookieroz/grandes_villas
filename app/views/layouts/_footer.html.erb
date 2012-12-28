@@ -1,22 +1,65 @@
 <footer class="footer">
   <div class="container">
-    <nav>
-      <ul class="nav nav-pills pull-left">
-        <li><%= link_to(t("layouts.header.home"), root_path) %></li>
-        <li><%= link_to(t("layouts.header.villa"), villas_path) %></li>
-        <li><%= link_to(t("layouts.header.destination"), destinations_path) %></li>
-        <li><%= link_to(t("layouts.header.services"), services_path) %></li>
-        <li><%= link_to(t("layouts.header.contact"), contact_path) %></li>
-        <li><%= link_to(t("layouts.header.about"), about_path) %></li>
-      </ul>
-    </nav>
-    <%= link_to image_tag("footer_logo.gif"), root_path, id: "footer-logo" %>
-    <small>
-      Use of this Web site constitutes acceptance of the GrandesVillas.com
-      Terms & Conditions and Privacy Policy.
-      <br />
-      © Copyright 2012 -Present GrandesVillas. All rights reserved.
-    </small>
+    <div class="row">
+      <nav>
+        <ul class="nav nav-pills pull-left">
+          <li><%= link_to(t("layouts.header.home"), root_path) %></li>
+          <li><%= link_to(t("layouts.header.villa"), villas_path) %></li>
+          <li><%= link_to(t("layouts.header.destination"), destinations_path) %></li>
+          <li><%= link_to(t("layouts.header.services"), services_path) %></li>
+          <li><%= link_to(t("layouts.header.contact"), contact_path) %></li>
+          <li><%= link_to(t("layouts.header.about"), about_path) %></li>
+        </ul>
+      </nav>
+      <%= link_to image_tag("footer_logo.gif"), root_path, id: "footer-logo" %>
+    </div>
 
+    <div class="row footer-villa-links">
+      <div class="span3 no-left-margin">
+        <ul class="unstyled">
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=&q%5Blocations_id_eq%5D=1&start_date=&end_date=&commit=Search">
+            Villas in Almunecar</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=&q%5Blocations_id_eq%5D=5&start_date=&end_date=&commit=Search">
+            Villas in La Herradura</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=&q%5Blocations_id_eq%5D=3&start_date=&end_date=&commit=Search">
+            Villas in Las Alpujarras</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=&q%5Blocations_id_eq%5D=4&start_date=&end_date=&commit=Search">
+            Villas in Motril</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=&q%5Blocations_id_eq%5D=2&start_date=&end_date=&commit=Search">
+            Villas in Salobrena</a></li>
+        </ul>
+      </div>
+      <div class="span3 no-left-margin">
+        <ul class="unstyled">
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=%2B6&q%5Blocations_id_eq%5D=&start_date=&end_date=&commit=Search">
+            6+ Bedroom Villas</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=5&q%5Blocations_id_eq%5D=&start_date=&end_date=&commit=Search">
+            5+ Bedroom Villas</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=4&q%5Blocations_id_eq%5D=&start_date=&end_date=&commit=Search">
+            4+ Bedroom Villas</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=3&q%5Blocations_id_eq%5D=&start_date=&end_date=&commit=Search">
+            3+ Bedroom Villas</a></li>
+          <li><a href="http://grandesvillas.com/villas?utf8=%E2%9C%93&q%5Bsleeps_gteq%5D=&q%5Bbedrooms_gteq%5D=2&q%5Blocations_id_eq%5D=&start_date=&end_date=&commit=Search">
+            2+ Bedroom Villas</a></li>
+        </ul>
+      </div>
+      <div class="span3 no-left-margin">
+        <ul class="unstyled">
+          <li><%= link_to("Discover the Costa Tropical", destinations_path) %></li>
+          <li><a href="http://grandesvillas.com/destinations/salobrena">Discover Salobreña</a></li>
+          <li><a href="http://grandesvillas.com/destinations/motril">Discover Motril</a></li>
+          <li><a href="http://grandesvillas.com/destinations/almunecar">Discover Almuñécar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <small>
+        Use of this Web site constitutes acceptance of the GrandesVillas.com
+        Terms & Conditions and Privacy Policy.
+        <br />
+        © Copyright 2012 -Present GrandesVillas. All rights reserved.
+      </small>
+    </div>
   </div>
 </footer>
