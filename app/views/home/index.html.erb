@@ -57,27 +57,19 @@
         <a id="next1" class="pull-right" href="#">&raquo;</a>
       </div>
       <div class="sug-slideshow">
-        <div class="sug-slide">
-          <div class="featured-villas">
-            <h2><%#= t ".feature" %>Our Suggestions</h2>
+        <% Photo.where(imageable_type: "SugPhoto").each do |photo| %>
+          <div class="sug-slide">
+            <div class="featured-villas">
+              <h2><%#= t ".feature" %>Our Suggestions</h2>
+            </div>
+            <h4><%= photo.caption %></h4>
+              <div class="center"><%= image_tag(photo.url) %></div>
+              <p><%= photo.sug_text %></p>
           </div>
-          <h4>Romantic Pack testing</h4>
-          <div class="center"> <%= image_tag("800x545.gif") %></div>
-          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-        </div>
+        <% end %>
         <div class="sug-slide">
           <div class="featured-villas">
             <h2><%#= t ".feature" %>Our Suggestions 1</h2>
-          </div>
-          <h4>Romantic Pack testing</h4>
-          <div class="center"> <%= image_tag("800x545.gif") %></div>
-          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-        </div>
-        <div class="sug-slide">
-          <div class="featured-villas">
-            <h2><%#= t ".feature" %>Our Suggestions 2</h2>
           </div>
           <h4>Romantic Pack testing</h4>
           <div class="center"> <%= image_tag("800x545.gif") %></div>

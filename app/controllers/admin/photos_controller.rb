@@ -5,6 +5,7 @@ class Admin::PhotosController < ApplicationController
   # GET /admin/photos.json
   def index
     @top_photos = Photo.where(:imageable_type => "TopPhoto")
+    @sug_photos = Photo.where(:imageable_type => "SugPhoto")
     @bottom_photos = Photo.where(:imageable_type => "BottomPhoto")
   end
 
@@ -25,7 +26,7 @@ class Admin::PhotosController < ApplicationController
     @admin_photo = Photo.new(params[:photo])
 
     p params[:imageable_type]
-    if ["TopPhoto", "BottomPhoto"].include?(params[:imageable_type])
+    if ["TopPhoto", "BottomPhoto", "SugPhoto"].include?(params[:imageable_type])
       @admin_photo.imageable_type = params[:imageable_type]
     end
 
