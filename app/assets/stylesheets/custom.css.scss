@@ -855,8 +855,23 @@ h4.contact-add {
 .thumb-contact {
   margin: 10px 0 0 0;
   padding: 20px 2px 0 0;
+  background: $villaBgBlue;
+  border: 1px solid $villaBorderBlue;
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 10px;
   li {
-      width: 300px;
+    margin-left: 6px;
+    width: 300px;
+    li {
+      margin-left: 0px;
+    }
+    .thumbnail {
+      background: #ffffff;
+      border: 1px solid $villaBorderBlue;
+    }
+  }
+  .span4 {
+    margin-left: 13px;
   }
 }
 
@@ -928,11 +943,14 @@ h4.contact-add {
 }
 
 .destination-index {
+  padding: 0 10px 10px 10px;
   h1 {
-    color: $villaDarkBlue;
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
   ul.thumbnails {
+    .span4 {
+      margin-left: 10px;
+    }
     .thumbnail {
       background: #ffffff;
       border: 1px solid $villaBrightBlue;

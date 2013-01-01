@@ -1,7 +1,9 @@
 <% provide(:title, t("layouts.header.destination")) %>
 
 <div class="destination-index">
-  <h1><%= t "layouts.header.destination" %></h1>
+  <div class="page-header">
+    <h1><%= t "layouts.header.destination" %></h1>
+  </div>
 
   <ul class="thumbnails">
     <% @destinations.each do |dest| %>

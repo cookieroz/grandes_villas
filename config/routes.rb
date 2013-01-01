@@ -9,6 +9,11 @@ GrandesVillas::Application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
 
+  namespace :ckeditor, :only => [:index, :create, :destroy] do
+    resources :pictures
+    resources :attachment_files
+  end
+
   #scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     resources :costa_tropicals
 

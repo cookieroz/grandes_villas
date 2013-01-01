@@ -96,11 +96,11 @@
 <% unless no_villa? %>
     <div class="row">
       <div class="span12">
-        <ul class="thumbnails thumb-contact home-thumb">
-          <li class="span4 no-left-margin">
+        <ul class="thumbnails thumb-contact">
+          <li class="span4">
             <div class="thumbnail">
               <h3 class="center"><%= link_to Villa.first.name, "#" %></h3>
-              <% if Villa.first.photos.first.image.nil? %>
+              <% if Villa.first.photos.first.nil? %>
                 <%= link_to image_tag("800x545.gif"), "#" %>
               <% else %>
                   <%= link_to image_tag(Villa.first.photos.first.image.url,
