@@ -36,8 +36,7 @@ class VillasController < ApplicationController
     @res_by_start = @villa.reservations.group_by(&:start_date)
 
     unless @villa.reservations.first.nil?
-      first = @villa.reservations.first.start_date.beginning_of_month.beginning_of_week(:monday)
-      @reservations = @villa.reservations.where("start_date > ?", first)
+      @reservations = @villa.reservations
     end
 
     @photo = @villa.photos.build
