@@ -50,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact_mailer.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="contact_mailer.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="4" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
+            <state line="35" column="70" selection-start="961" selection-end="961" vertical-scroll-proportion="0.7764901">
               <folding />
             </state>
           </provider>
@@ -86,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="messages_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="messages_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="47" selection-start="278" selection-end="278" vertical-scroll-proportion="0.22350994">
+            <state line="9" column="47" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -119,8 +119,8 @@
         <option value="$PROJECT_DIR$/app/views/villas/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contact_mailer/inquery.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contact_mailer/inquiry.html.erb" />
-        <option value="$PROJECT_DIR$/app/mailers/contact_mailer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/contact_mailer.rb" />
       </list>
     </option>
   </component>
@@ -883,13 +883,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="970" selection-end="970" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/message.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="44" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
@@ -899,7 +892,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/messages_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="47" selection-start="278" selection-end="278" vertical-scroll-proportion="0.22350994">
+        <state line="9" column="47" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/contact_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="70" selection-start="961" selection-end="961" vertical-scroll-proportion="0.7764901">
           <folding />
         </state>
       </provider>

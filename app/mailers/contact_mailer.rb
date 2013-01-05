@@ -33,6 +33,6 @@ class ContactMailer < ActionMailer::Base
   def inquiry(message)
     @message = message
 
-    mail to: "cookieroz@gmail.com", subject: "Grandes Villas Request"
+    mail to: "carlosdiezvillar@gmail.com", subject: "New Inquiry from GrandesVillas.com"
   end
 end
