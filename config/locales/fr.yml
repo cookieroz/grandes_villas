@@ -22,6 +22,13 @@ fr:
       index:
         feature: "Villas Remarquables"
         all: "Voir tout"
+        cook: "Homecooking"
+        homecook: "Fatigué pour vos vacances?"
+        cooktext: |
+          Grandes Villas crée la plus haute qualité de la restauration, ce qui permettra
+          d'améliorer votre expérience. Afin de nous pour atteindre nos objectifs, nous
+          avons préparé trois menus différents ...
+        findvilla: "Encontre ton villa"
   villas:
       index:
         h1: "Louer Villas"

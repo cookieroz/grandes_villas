@@ -14,6 +14,13 @@ es:
       index:
         feature: "Villas Descatadas"
         all: "Ver todo"
+        cook: "Servicio de cocina"
+        homecook: "¿Cansado de cocinar durante tus vacaciones?"
+        cooktext: |
+          Proporcinamos una alta calidad en nuestro servicio de catering, el cual mejorará
+          tu experiencia con Grandes Villas. Para poder cumplir con nuestros objetivos,
+          hemos ...
+        findvilla: "Encuentra tu villa"
   villas:
     index:
       h1: "Nuestras Villas de Alquiler"

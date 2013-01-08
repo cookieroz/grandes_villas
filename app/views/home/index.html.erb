@@ -11,7 +11,7 @@
 </div>
 <div class="row">
     <div class="villa-home-filter">
-      <p class="lead">Find Your Villa</p>
+      <p class="lead"><%= t ".findvilla" %></p>
       <hr />
       <%= render 'villas/index_search' %>
     </div>
@@ -67,29 +67,18 @@
               <p><%= photo.sug_text %></p>
           </div>
         <% end %>
-        <div class="sug-slide">
-          <div class="featured-villas">
-            <h2><%#= t ".feature" %>Our Suggestions 1</h2>
-          </div>
-          <h4>Romantic Pack testing</h4>
-          <div class="center"> <%= image_tag("800x545.gif") %></div>
-          <p>Discover the benefits Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-        </div>
       </div>
     </div>
     <div class="span3 home-cook">
-      <h3>Homecooking Experience</h3>
-      <%= image_tag("cook.jpg") %>
-      <p class="orangeText">Tired of cooking on your holidays?</p>
-      <p>Discover our set of meals and specialities.</p>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-        doloremque.</p>
+      <h3><%= t ".cook" %></h3>
+      <%= link_to(image_tag("cook.jpg"), "http://grandesvillas.com/services/servicio-de-cocina") %>
+      <p class="orangeText"><%= t ".homecook" %></p>
+      <p><%= t ".cooktext" %></p>
     </div>
   </div>
   <div class="row services-row">
     <div class="left-5-margin span8 featured-villas">
-        <h2 class="pull-left"><%#= t ".feature" %>Services</h2>
+        <h2 class="pull-left"><%= t "layouts.header.services" %></h2>
         <%= link_to(t(".all"), "#") %>
     </div>
     <div class="span8 services-wrap">
