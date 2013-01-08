@@ -12,26 +12,17 @@
       <%= raw @destination.content %>
     </div>
     <div class="dest-info-links">
-      <div class="span6 no-left-margin">
         <ul class="unstyled">
-          <li><p class="lead">Info:</p></li>
-          <li><%= link_to( t(".activities"), "#") %></li>
-          <li><%= link_to( t(".beaches"), "#") %></li>
-          <li><%= link_to( t(".restaurants"), "#") %></li>
-        </ul>
-      </div>
-      <div class="span6 no-left-margin">
-        <ul class="unstyled pull-right">
-          <li>
-            <%= link_to "Villas in #{@destination.name}", "#",
+          <li class="pull-left">
+            <%= link_to "Villas in #{@destination.name}", villas_path,
                         class:"btn btn-info pull-right" %>
           </li>
-          <li>
-            <%= link_to "Services in #{@destination.name}", "#",
+          <li class="pull-right">
+            <%= link_to "Services in #{@destination.name}", services_path,
                         class:"btn btn-info pull-right" %>
           </li>
         </ul>
-      </div>
+      <div class="clear"></div>
     </div>
     <%= gmaps(
                 :markers => { :data => @json },
@@ -42,13 +33,13 @@
   </div>
   <div class="bottom-pics">
     <div class="span4">
-      <%= link_to image_tag("patata.jpg"), "#" %>
+      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
     </div>
     <div class="span4">
-      <%= link_to image_tag("villa-romantica.jpg"), "#" %>
+      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
     </div>
     <div class="span4">
-      <%= link_to image_tag("villa-la-torre.jpg"), "#" %>
+      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
     </div>
   </div>
   <div class="clear"></div>

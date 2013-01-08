@@ -18,6 +18,11 @@ class DestinationsController < ApplicationController
     @json = @destination.to_gmaps4rails
     @home_page = true
 
+    @img_array = "villadarkamus.jpg", "villahelga.jpg", "villalatorre.jpg",
+                  "villaleticia.jpg", "villaloasis.jpg", "villalujan.jpg", "villamava.jpg",
+                  "villanammusia.jpg", "villaromantica.jpg"
+
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @destination }
