@@ -1,6 +1,9 @@
 class MessagesController < ApplicationController
   def new
     @message = Message.new
+    @almunecar = Destination.find(2)
+    @motril = Destination.find(3)
+    @salobrena = Destination.find(4)
   end
 
   def create
