@@ -7,9 +7,11 @@ es:
     contact: contacto
     owner: propietarios
     destinations: destinos
+    services: servicios
 
 fr:
   routes:
     about: a-propos-de-grandes-villas
     contact: contacter
     owner: propietariers
+    services: servicies

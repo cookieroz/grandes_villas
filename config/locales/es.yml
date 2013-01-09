@@ -21,6 +21,8 @@ es:
           tu experiencia con Grandes Villas. Para poder cumplir con nuestros objetivos,
           hemos ...
         findvilla: "Encuentra tu villa"
+        massages: "Masajes"
+        suggestions: "Nuestras Sugerencias"
   villas:
     index:
       h1: "Nuestras Villas de Alquiler"

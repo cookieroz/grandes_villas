@@ -24,6 +24,8 @@ en:
         experience.  In order for us to accomplish our objectives, we have prepared three
         different menus with a wide range of set ...
       findvilla: "Find your villa"
+      massages: "Massages"
+      suggestions: "Our Suggestions"
   villas:
       index:
         h1: "Our Holiday Villa Rentals"

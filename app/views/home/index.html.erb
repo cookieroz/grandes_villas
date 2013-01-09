@@ -60,7 +60,7 @@
         <% Photo.where(imageable_type: "SugPhoto").each do |photo| %>
           <div class="sug-slide">
             <div class="featured-villas">
-              <h2><%#= t ".feature" %>Our Suggestions</h2>
+              <h2><%= t ".suggestions" %></h2>
             </div>
             <h4><%= photo.caption %></h4>
               <div class="center"><%= image_tag(photo.url) %></div>
@@ -85,10 +85,15 @@
         <div class="services">
           <%= link_to image_tag("services.jpg"), "#" %>
           <ul class="breadcrumb">
-            <li><%= link_to "Massages", "#" %> <span class="divider">|</span></li>
-            <li><%= link_to "Home Cooking", "#" %> <span class="divider">|</span></li>
-            <li><%= link_to "Laundry", "#" %> <span class="divider">|</span>
-              <%= link_to "...", "#" %> </li>
+            <li><%= link_to(t(".massages"),
+                            "http://grandesvillas.com/services/spa-massages") %>
+              <span class="divider">|</span></li>
+            <li><%= link_to "Surf",
+                            "http://grandesvillas.com/services/surf" %>
+              <span class="divider">|</span></li>
+            <li><%= link_to "Golf", "http://grandesvillas.com/services/golf" %>
+              <span class="divider">|</span>
+              <%= link_to "...", services_path %> </li>
           </ul>
         </div>
     </div>
