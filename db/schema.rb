@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121231234653) do
+ActiveRecord::Schema.define(:version => 20130110194532) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -152,6 +152,7 @@ ActiveRecord::Schema.define(:version => 20121231234653) do
     t.integer  "imageable_id"
     t.string   "imageable_type"
     t.text     "sug_text"
+    t.string   "photo_link"
   end
 
   create_table "rate_translations", :force => true do |t|

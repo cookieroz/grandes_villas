@@ -3,13 +3,18 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $(".pics").cycle
+  $("#home-slideshow").cycle
     fx: "fade",
     timeout: 5000,
     speed:   3000,
     pager: '#banner',
+    pagerAnchorBuilder: (idx, slide) ->
+
+      # return sel string for existing anchor
+      "#banner a(" + (idx) + ")"
     after: ->
-      $(".caption p").html @alt
+      title = $('img', this).attr("alt")
+      $(".caption p").html title
   $('.home-special').cycle('scrollLeft');
   $(".sug-slideshow").cycle
     fx:     'scrollHorz',

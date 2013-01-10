@@ -7,23 +7,30 @@
     <h2>Listing top photos</h2>
     <ul class="unstyled">
       <li>
-        <div class="span6 no-left-margin">
+        <div class="span5 no-left-margin">
           <p class="lead">Photo</p>
         </div>
-        <div class="span5">
+        <div class="span4">
           <p class="lead">Caption</p>
+        </div>
+        <div class="span2">
+          <p class="lead">Photo Link</p>
         </div>
         <div class="clear"></div>
       </li>
       <% @top_photos.each do |photo| %>
           <li>
-            <div class="span6 no-left-margin">
+            <div class="span5 no-left-margin">
               <%= image_tag photo.image.url %>
             </div>
-            <div class="span5">
+            <div class="span4">
               <%= photo.caption %>
             </div>
+            <div class="span2">
+              <%= photo.photo_link %>
+            </div>
             <div class="span1">
+              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
               <%= link_to 'Destroy', admin_photo_path(photo),
                           method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
@@ -43,16 +50,30 @@
     <h2>Listing bottom photos</h2>
     <ul class="unstyled">
       <li>
-        <% @bottom_photos.each do |photo| %>
-          <div class="span3">
-            <%= image_tag photo.image.url %>
-          </div>
-          <div class="span1 no-left-margin">
-            <%= link_to 'Destroy', admin_photo_path(photo),
-                        method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>
-        <% end %>
+        <div class="span5 no-left-margin">
+          <p class="lead">Photo</p>
+        </div>
+        <div class="span5">
+          <p class="lead">Photo Link</p>
+        </div>
+        <div class="clear"></div>
       </li>
+      <% @bottom_photos.each do |photo| %>
+          <li>
+            <div class="span5 no-left-margin">
+              <%= image_tag photo.image.url %>
+            </div>
+            <div class="span5">
+              <%= photo.photo_link %>
+            </div>
+            <div class="span1 no-left-margin">
+              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
+              <%= link_to 'Destroy', admin_photo_path(photo),
+                          method: :delete, data: { confirm: 'Are you sure?' } %>
+            </div>
+            <div class="clear"></div>
+          </li>
+      <% end %>
     </ul>
     <div class="clear"></div>
     <%= link_to 'New Bottom Photo', new_admin_photo_path(nil, :imageable_type => "BottomPhoto") %>
@@ -67,29 +88,36 @@
     <h2>Listing Suggestion photos</h2>
     <ul class="unstyled">
       <li>
-        <div class="span4 no-left-margin">
+        <div class="span3 no-left-margin">
           <p class="lead">Photo</p>
         </div>
-        <div class="span3">
+        <div class="span2">
           <p class="lead">Title</p>
         </div>
-        <div class="span4">
+        <div class="span3">
           <p class="lead">Text</p>
+        </div>
+        <div class="span3">
+          <p class="lead">Photo Link</p>
         </div>
         <div class="clear"></div>
       </li>
       <% @sug_photos.each do |photo| %>
           <li>
-            <div class="span4 no-left-margin">
+            <div class="span3 no-left-margin">
               <%= image_tag photo.image.url %>
             </div>
-            <div class="span3">
+            <div class="span2">
               <%= photo.caption %>
             </div>
-            <div class="span4">
+            <div class="span3">
               <%= photo.sug_text %>
             </div>
+            <div class="span3">
+              <%= photo.photo_link %>
+            </div>
             <div class="span1">
+              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
               <%= link_to 'Destroy', admin_photo_path(photo),
                           method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>

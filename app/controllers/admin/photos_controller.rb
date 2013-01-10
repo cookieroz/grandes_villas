@@ -43,6 +43,11 @@ class Admin::PhotosController < ApplicationController
 
   # PUT /admin/photos/1
   # PUT /admin/photos/1.json
+  def edit
+    @admin_photo = Photo.find(params[:id])
+    #@villa.photos.build
+  end
+
   def update
     @admin_photo = Photo.find(params[:id])
 

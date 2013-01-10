@@ -1,7 +1,7 @@
 class Photo < ActiveRecord::Base
   include Rails.application.routes.url_helpers
   attr_accessible :caption, :villa_id, :image, :remote_image_url, :remove_image,
-    :imageable_type, :sug_text
+    :imageable_type, :sug_text, :photo_link
   mount_uploader :image, ImageUploader
   delegate :url, to: :image
 
