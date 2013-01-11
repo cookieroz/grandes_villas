@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.js.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.js.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="4" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
+            <state line="14" column="14" selection-start="455" selection-end="455" vertical-scroll-proportion="0.34768212">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/photos/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="61" selection-start="455" selection-end="455" vertical-scroll-proportion="0.23275863">
+            <state line="9" column="61" selection-start="455" selection-end="455" vertical-scroll-proportion="-5.625">
               <folding />
             </state>
           </provider>
@@ -101,8 +101,8 @@
         <option value="$PROJECT_DIR$/app/views/admin/photos/edit.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/admin/photos/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/admin/photos/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/home.js.coffee" />
       </list>
     </option>
   </component>
@@ -840,13 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="4" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -884,7 +877,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/photos/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="61" selection-start="455" selection-end="455" vertical-scroll-proportion="0.23275863">
+        <state line="9" column="61" selection-start="455" selection-end="455" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/home.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="455" selection-end="455" vertical-scroll-proportion="0.34768212">
           <folding />
         </state>
       </provider>

@@ -12,13 +12,10 @@ jQuery ->
     timeout: 0
 
   $("#home-slideshow").cycle
-    fx: "fade",
-    timeout: 5000,
-    speed:   3000,
-    pager: '#banner',
-    pagerAnchorBuilder: (idx, slide) ->
-      # return sel string for existing anchor
-      "#banner a (' + (idx) + ') "
+    fx: "fade"
+    timeout: 5000
+    speed:   3000
+    pager: '#banner'
     after: ->
       title = $('img', this).attr("alt")
       $(".caption p").html title;
