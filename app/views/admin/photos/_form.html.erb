@@ -5,8 +5,10 @@
   <div class="form-inputs">
     <%= f.file_field :image, class: 'controls' %>
     <%= f.input :caption %>
+    <%= f.label :photo_link, "URL Link for All Photos", class: "control-label" %>
+    <%= f.text_field :photo_link %>
+    <%= f.label :photo_link, "Text for Suggestions info only", class: "control-label" %>
     <%= f.text_area :sug_text, :rows => 5 %>
-    <%= f.input :photo_link %>
   </div>
 
   <div class="form-actions">
