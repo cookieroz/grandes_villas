@@ -48,7 +48,7 @@
           <li><%= t ".bath" %>: <strong><%= @villa.bathroom %></strong></li>
         </ul>
         <h4 class="orangeText">Villa <%= t ".feature" %>:</h4>
-        <% @villa.categories.each do |category| %>
+        <% @villa.categories.with_translations(I18n.locale).each do |category| %>
             <% unless category.name.blank? %>
                 <div class="span1 darkBlueText">
                   <%= category.name %>

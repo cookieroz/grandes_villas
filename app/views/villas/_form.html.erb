@@ -88,16 +88,14 @@
       <h3>Villa <%= t ".cat" %></h3>
       <div class="controls">
         <%= hidden_field_tag "villa[category_ids][]", nil%>
-        <% Category.all.each do |category| %>
-          <% unless category.name.blank? %>
-          <div class="cat-text-field">
-            <%= check_box_tag "villa[category_ids][]",
-                              category.id,
-                              @villa.category_ids.include?(category.id),
-                              id: dom_id(category)%>
-            <%= text_field_tag dom_id(category), category.name, class: "cat-check" %>
-          </div>
-          <% end %>
+        <% Category.with_translations(I18n.locale).all.each do |category| %>
+                <div class="cat-text-field">
+                  <%= check_box_tag "villa[category_ids][]",
+                                    category.id,
+                                    @villa.category_ids.include?(category.id),
+                                    id: dom_id(category)%>
+                  <%= text_field_tag dom_id(category), category.name, class: "cat-check" %>
+                </div>
         <% end %>
         <%= link_to_add_fields "Add Category", villa_form, :categories %>
       </div>

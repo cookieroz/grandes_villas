@@ -96,6 +96,8 @@ class VillasController < ApplicationController
     villa_data = params[:villa]
     photo_ids = villa_data.delete :photo_ids
 
+    #@category = Category.with_translations(I18n.locale)
+
     respond_to do |format|
       if @villa.update_attributes(villa_data)
         update_photos_with_villa_id photo_ids, @villa
