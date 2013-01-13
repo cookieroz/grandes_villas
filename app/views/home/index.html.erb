@@ -78,28 +78,47 @@
     </div>
   </div>
   <div class="row services-row">
-    <div class="left-5-margin span8 featured-villas">
+    <div class="left-5-margin span5">
+      <div class="featured-villas">
         <h2 class="pull-left"><%= t "layouts.header.services" %></h2>
-        <%= link_to(t(".all"), "#") %>
-    </div>
-    <div class="span8 services-wrap">
-        <div class="services">
-          <%= link_to image_tag("servicesimgvilla.jpg"), services_path %>
-          <ul class="breadcrumb">
+        <%= link_to(t(".all"), services_path) %>
+      </div>
+      <div class="services-wrap">
+        <div class="services-home">
+          <%= link_to image_tag("servicesimgvilla.jpg"), services_path, class:"pull-left" %>
+          <ul class="unstyled pull-right">
+            <li><%= link_to(t(".cook"),
+                            "http://grandesvillas.com/services/servicio-de-cocina") %>
+            </li>
+            <li><%= link_to "Fridge Filling",
+                            "http://grandesvillas.com/services/fridge-filling-service" %>
+            </li>
             <li><%= link_to(t(".massages"),
-                            "http://grandesvillas.com/services/spa-massages") %>
-              <span class="divider">|</span></li>
+                             "http://grandesvillas.com/services/spa-massages") %>
+            </li>
             <li><%= link_to "Surf",
                             "http://grandesvillas.com/services/surf" %>
-              <span class="divider">|</span></li>
+            </li>
             <li><%= link_to "Golf", "http://grandesvillas.com/services/golf" %>
-              <span class="divider">|</span>
-              <%= link_to "...", services_path %> </li>
+            </li>
+            <li>
+              <%= link_to(t(".all"), services_path,
+                          class: 'btn btn-warning')  %>
+            </li>
           </ul>
+          <div class="clear"></div>
         </div>
+      </div>
     </div>
-    <div class="span4 car-rental">
-      <%= link_to image_tag("car-rental.jpg"), "#" %>
+    <div class="span3 youtube-home">
+       <h2>Grandes Villas Youtube Channel</h2>
+    </div>
+    <div class="span4 left-5-margin">
+      <iframe frameborder="0" style="height: 260px; width: 320px; border-width: 1px;
+              border-style: solid; border-color: #065471;"
+              src="http://www.carhireengine.co.uk/carhireengine/carhireengine.web.servlets.CarHireEngineSearchControlServlet?affiliate=grandesvillas&dm=1&fv=1&pagebm=0px&pagebg=white&formtbp=20px&formlm=auto&formrm=auto&formbg=%23FFFFFF&formrc=block&formt=_parent&titlet=Cheap%20Car%20Hire&titlea=center&titlefc=%23065471&titleff=Verdana&titlefs=20px&titleb=bold&titleu=none&labelsva=middle&labelsha=right&labelsfc=black&labelsff=Arial%2C%20Helvetica&labelsfs=12px&inputsfc=%23065471&inputsff=Arial%2C%20Helvetica&inputsfs=13px&submittype=image&submitimage=4_blue&pickupsearchscope=world&autosuggesthc=%233398CC&carclass=all&trackcode=">
+
+              </iframe>
     </div>
   </div>
   <div class="row special">
