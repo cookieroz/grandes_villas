@@ -174,14 +174,17 @@ h2.month {
 
 /* header styles */
 header {
-  background-image: image-url('head_bg.gif');
+  background-image: image-url('main_bg2.jpg');
   background-repeat: repeat-x;
+  display: block;
   height: 136px;
+  position: relative;
   width: 100%;
   .navbar-inner {
     background: none;
     box-shadow: none;
     padding-top: 93px;
+    *width: 100%;
     #lang {;
       margin-left: 400px;
       position: relative;
@@ -235,26 +238,27 @@ header {
       background: $villaBorderBlue;
     }
     #logo {
+      color: white;
       float: left;
+      *height: 128px;
+      letter-spacing: -1px;
+      line-height: 1;
       margin-right: 10px;
       margin-top: -70px;
-      font-size: 1.7em;
-      color: white;
-      position: relative;
-      text-transform: uppercase;
-      letter-spacing: -1px;
-      font-weight: bold;
-      line-height: 1;
       overflow: hidden;
-      display: inline;
+      position: relative;
+      *width: 140px;
+      *display: block;
     }
     #logo-villas {
       float: left;
-      position: relative;
+      *height: 57px;
       margin-left: 150px;
       margin-top: -60px;
       overflow: hidden;
-      display: inline;
+      position: relative;
+      *width: 187px;
+      *display: inline;
     }
   }
 }
