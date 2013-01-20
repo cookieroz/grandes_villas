@@ -174,9 +174,10 @@ h2.month {
 
 /* header styles */
 header {
-  background-image: image-url('main_bg.png');
+  background-image: image-url('head_bg.gif');
   background-repeat: repeat-x;
   height: 136px;
+  width: 100%;
   .navbar-inner {
     background: none;
     box-shadow: none;
@@ -244,14 +245,16 @@ header {
       letter-spacing: -1px;
       font-weight: bold;
       line-height: 1;
-      *display: inline;
+      overflow: hidden;
+      display: inline;
     }
     #logo-villas {
       float: left;
       position: relative;
       margin-left: 150px;
       margin-top: -60px;
-      *display: inline;
+      overflow: hidden;
+      display: inline;
     }
   }
 }
@@ -676,6 +679,7 @@ body.homepage {
     .span2 {
       display: inline-block;
       float: none;
+      min-height: 10px;
     }
     .input-append {
       margin-bottom: 0;
@@ -850,6 +854,10 @@ ul.thumbnails {
   }
   .services-home {
     img {
+      height: 205px;
+      width: 104px;
+    }
+    a.service-img-home {
       height: 205px;
       width: 104px;
     }
