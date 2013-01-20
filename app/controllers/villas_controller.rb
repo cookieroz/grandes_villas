@@ -23,6 +23,18 @@ class VillasController < ApplicationController
     end
   end
 
+  def motril
+    redirect_to "/villas?=&q%5Blocations_id_eq%5D=4&commit=Search"
+  end
+
+  def salobrena
+    redirect_to "/villas?=&q%5Blocations_id_eq%5D=2&commit=Search"
+  end
+
+  def almunecar
+    redirect_to "/villas?=&q%5Blocations_id_eq%5D=1&commit=Search"
+  end
+
   # GET /villas/1
   # GET /villas/1.json
   def show

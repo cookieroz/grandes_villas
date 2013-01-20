@@ -20,9 +20,13 @@ GrandesVillas::Application.routes.draw do
     match '/about',   to: 'static_pages#about'
     match '/contact', to: 'messages#new'
     match '/owner', to: 'static_pages#owner'
+  match '/villas/search/motril', to: 'villas#motril'
+  match '/villas/search/salobrena', to: 'villas#salobrena'
+  match '/villas/search/almunecar', to: 'villas#almunecar'
 
     resources :villas do
       collection { post :sort_photos }
+      collection { post :search, to: 'villas#index' }
     end
   resources :photos
 

@@ -1,4 +1,5 @@
-<%= search_form_for @search do |f| %>
+<%= search_form_for @search, :url => search_villas_path,
+                    method: :post do |f| %>
 
     <div class="span3 no-left-margin">
       <%= f.select(

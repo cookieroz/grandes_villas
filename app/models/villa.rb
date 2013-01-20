@@ -4,7 +4,7 @@ class Villa < ActiveRecord::Base
                   :bedrooms, :bathroom, :destination_id,
                   :tags_attributes, :photos_attributes,
                   :categories_attributes, :locations_attributes,
-                  :rates_attributes, :reservations_attributes
+                  :rates_attributes, :reservations_attributes, :location_id
 
   translates :content, :observations
 
@@ -48,6 +48,7 @@ class Villa < ActiveRecord::Base
   def self.by_sleeps(sleeps)
     where('sleeps = ?', sleeps.to_i)
   end
+
 
   #has_attached_file :pic, :styles =>
   #                { :medium => "300x300>", :thumb => "100x100>" },
