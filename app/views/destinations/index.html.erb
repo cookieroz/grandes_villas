@@ -17,7 +17,7 @@
             <div class="destination-show-link">
               <ul class="unstyled">
                 <li><%= link_to "Info #{dest.name}", dest %></li>
-                <li><%= link_to "Villas in #{dest.name}", "/villas/search/#{dest.name.downcase}" %></li>
+                <li><%= link_to "Villas in #{dest.name}", "/villas/search/#{dest.name.parameterize.downcase}" %></li>
               </ul>
             </div>
             <% if current_user %>

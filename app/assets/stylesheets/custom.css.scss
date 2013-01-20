@@ -196,6 +196,7 @@ header {
     }
     nav ul.nav {
       margin: -10px 0 0 -350px;
+      *margin-top: 0;
       li {
         font-size: 1.1em;
         height: 36px;
@@ -238,15 +239,19 @@ header {
       margin-top: -70px;
       font-size: 1.7em;
       color: white;
+      position: relative;
       text-transform: uppercase;
       letter-spacing: -1px;
       font-weight: bold;
       line-height: 1;
+      *display: inline;
     }
     #logo-villas {
       float: left;
+      position: relative;
       margin-left: 150px;
       margin-top: -60px;
+      *display: inline;
     }
   }
 }
@@ -463,6 +468,9 @@ h1.villa-h1-bg {
     position: relative;
     z-index: 10;
   }
+  *.span1 {
+    display: inline;
+  }
 }
 
 .btn-villa-search {
@@ -572,12 +580,16 @@ body.homepage {
   padding: 0;
   margin:  0 auto;
   overflow: hidden;
-   img {
+  img {
     width:  960px;
     height: 350px;
     top:  0;
     left: 0
-   }
+  }
+  a {
+    width:  960px;
+    height: 350px;
+  }
 }
 
 .caption {
