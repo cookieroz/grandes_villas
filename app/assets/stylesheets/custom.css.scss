@@ -40,6 +40,7 @@ body {
   /*background: #f9fdff;*/
   height: 100%;
   margin: -10px 0 0 0;
+  width: 100%;
 }
 
 #wrap {
@@ -174,8 +175,7 @@ h2.month {
 
 /* header styles */
 header {
-  background-image: image-url('main_bg2.jpg');
-  background-repeat: repeat-x;
+  background: transparent image-url('main_bg.jpg') repeat-x;
   display: block;
   height: 136px;
   position: relative;
@@ -239,7 +239,6 @@ header {
     }
     #logo {
       color: white;
-      float: left;
       *height: 128px;
       letter-spacing: -1px;
       line-height: 1;
@@ -251,7 +250,6 @@ header {
       *display: block;
     }
     #logo-villas {
-      float: left;
       *height: 57px;
       margin-left: 150px;
       margin-top: -60px;
@@ -683,7 +681,8 @@ body.homepage {
     .span2 {
       display: inline-block;
       float: none;
-      min-height: 10px;
+      *min-height: 10px;
+      *display: inline;
     }
     .input-append {
       margin-bottom: 0;
@@ -1111,6 +1110,33 @@ footer {
   }
   .footer-villa-links {
     margin-top: -30px;
+  }
+}
+
+/* Contact side bar */
+#contact-sidebar {
+  a.support {
+    background-image: image-url("quickcontact.png");
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display:block;
+    font-family: "Myriad Pro",Myriad,"Liberation Sans","Nimbus Sans L",
+    "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    height: 87px;
+    letter-spacing: .2em;
+    margin: 0;
+    padding: 20px 0 0 0;
+    position: fixed;
+    right: 0px;
+    text-align: center;
+    text-decoration: none;
+    top: 250px;
+    width: 181px;
+    z-index: 9999;
+    &:hover {
+      background-position: 0 -108px;
+    }
   }
 }
 
