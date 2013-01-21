@@ -239,22 +239,26 @@ header {
     }
     #logo {
       color: white;
-      *height: 128px;
+      float: left;
+      height: 128px;
       letter-spacing: -1px;
       line-height: 1;
       margin-right: 10px;
       margin-top: -70px;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      *float: none;
       *width: 140px;
       *display: block;
     }
     #logo-villas {
-      *height: 57px;
+      float: left;
+      height: 57px;
       margin-left: 150px;
       margin-top: -60px;
       overflow: hidden;
-      position: relative;
+      position: absolute;
+      *float: none;
       *width: 187px;
       *display: inline;
     }
