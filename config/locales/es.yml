@@ -41,7 +41,7 @@ es:
       rates: "Precios"
       location: "Ubicación"
       beds: "Habitaciones"
-      sleeps: "Duerme"
+      sleeps: "Capacidad"
       feature: "Destacable"
       descript: "Descripción de"
       rental-season: "Villa Temporada"

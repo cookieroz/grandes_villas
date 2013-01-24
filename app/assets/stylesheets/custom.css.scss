@@ -180,6 +180,7 @@ header {
   height: 150px;
   position: relative;
   .navbar {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
     position: relative;
     height: 150px;
     width: 100%;
@@ -693,9 +694,11 @@ body.homepage {
     .span2 {
       display: inline-block;
       float: none;
-      *min-height: 10px;
       *display: inline;
+      *min-height: 10px;
       *position: absolute;
+      *right: 0;
+      *top: 0;
     }
     .input-append {
       margin-bottom: 0;
