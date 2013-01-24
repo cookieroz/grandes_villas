@@ -1,52 +1,54 @@
-<header class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to image_tag("logo-villas.png"), root_path, id: "logo-villas" %>
-      <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
-      <ul id="lang">
-        <li>
-          <%= link_to image_tag("flag-uk.gif"), locale: "en" %>
-        </li>
-        <li>
-          <%= link_to image_tag("flag-es.gif"), locale: "es" %>
-        </li>
-        <li>
-          <%= link_to image_tag("flag-fr.gif"), locale: "fr" %>
-        </li>
-        <li>
-          <% if current_user %>
-              <%= link_to "Log Out", logout_path %>
-          <% end %>
-        </li>
-      </ul>
-      <nav>
-        <ul class="nav pull-left">
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(root_path) %>">
-            <%= link_to(t(".home"), root_path) %>
+<header>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= link_to image_tag("logo-villas.png"), root_path, id: "logo-villas" %>
+        <%= link_to image_tag("logo.png"), root_path, id: "logo" %>
+        <ul id="lang">
+          <li>
+            <%= link_to image_tag("flag-uk.gif"), locale: "en" %>
           </li>
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(villas_path) %>">
-            <%= link_to(t(".villa"), villas_path) %>
+          <li>
+            <%= link_to image_tag("flag-es.gif"), locale: "es" %>
           </li>
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(destinations_path) %>">
-            <%= link_to(t(".destination"), destinations_path) %>
+          <li>
+            <%= link_to image_tag("flag-fr.gif"), locale: "fr" %>
           </li>
-          <li class="divider-vertical"></li>
-          <li class="class="<%= 'active' if current_page?(services_path) %>">
-            <%= link_to(t(".services"), services_path) %>
-          </li>
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(contact_path) %>">
-            <%= link_to(t(".contact"), contact_path) %>
-          </li>
-          <li class="divider-vertical"></li>
-          <li class="<%= 'active' if current_page?(about_path) %>">
-            <%= link_to(t(".about"), about_path) %>
+          <li>
+            <% if current_user %>
+                <%= link_to "Log Out", logout_path %>
+            <% end %>
           </li>
         </ul>
-      </nav>
+        <nav>
+          <ul class="nav pull-left">
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(root_path) %>">
+              <%= link_to(t(".home"), root_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(villas_path) %>">
+              <%= link_to(t(".villa"), villas_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(destinations_path) %>">
+              <%= link_to(t(".destination"), destinations_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="class="<%= 'active' if current_page?(services_path) %>">
+            <%= link_to(t(".services"), services_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(contact_path) %>">
+              <%= link_to(t(".contact"), contact_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(about_path) %>">
+              <%= link_to(t(".about"), about_path) %>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </header>
