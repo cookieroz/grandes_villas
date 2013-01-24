@@ -177,38 +177,41 @@ h2.month {
 header {
   background: transparent image-url('main_bg.jpg') repeat-x;
   display: block;
-  height: 136px;
+  height: 150px;
   position: relative;
-  width: 100%;
-  .navbar-inner {
-    background: none;
-    box-shadow: none;
-    padding-top: 93px;
-    *width: 100%;
-    #lang {;
-      margin-left: 400px;
-      position: relative;
-      top: -50px;
-      ul {
-        list-style-type: none;
+  .navbar {
+    position: relative;
+    height: 150px;
+    width: 100%;
+    .navbar-inner {
+      background: none;
+      box-shadow: none;
+      padding-top: 93px;
+      *width: 100%;
+      #lang {;
+        margin-left: 400px;
+        position: relative;
+        top: -50px;
+        ul {
+          list-style-type: none;
+        }
+        li {
+          float: left;
+          list-style-type: none;
+          padding: 5px;
+        }
       }
-      li {
-        float: left;
-        list-style-type: none;
-        padding: 5px;
-      }
-    }
-    nav ul.nav {
-      margin: -10px 0 0 -350px;
-      *margin-top: 0;
-      li {
-        font-size: 1.1em;
-        height: 36px;
-        padding: 0px;
-        text-shadow: none;
-        &:hover {
-          background: $villaBorderBlue;
-        /* Fallback for web browsers that doesn't support RGBa
+      nav ul.nav {
+        margin: -10px 0 0 -350px;
+        *margin-top: 0;
+        li {
+          font-size: 1.1em;
+          height: 36px;
+          padding: 0px;
+          text-shadow: none;
+          &:hover {
+            background: $villaBorderBlue;
+          /* Fallback for web browsers that doesn't support RGBa
           background: rgb(255, 255, 255);
           /* RGBa with 0.6 opacity
           background: rgba(255, 255, 255, 0.6);
@@ -217,50 +220,51 @@ header {
           /* For IE 8
           -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#7FFFFFFF, endColorstr=#7FFFFFFF)";
           */
-        }
-        a {
-          color: #ffffff;
-          &:hover {
-            color: $villaDarkBlue;
+          }
+          a {
+            color: #ffffff;
+            &:hover {
+              color: $villaDarkBlue;
+            }
           }
         }
       }
-    }
-    nav ul.nav li.active a {
-      background: none;
-      color: $villaDarkBlue;
-      &:hover {
+      nav ul.nav li.active a {
         background: none;
         color: $villaDarkBlue;
+        &:hover {
+          background: none;
+          color: $villaDarkBlue;
+        }
       }
-    }
-    li.active {
-      background: $villaBorderBlue;
-    }
-    #logo {
-      color: white;
-      float: left;
-      height: 128px;
-      letter-spacing: -1px;
-      line-height: 1;
-      margin-right: 10px;
-      margin-top: -70px;
-      overflow: hidden;
-      position: absolute;
-      *float: none;
-      *width: 140px;
-      *display: block;
-    }
-    #logo-villas {
-      float: left;
-      height: 57px;
-      margin-left: 150px;
-      margin-top: -60px;
-      overflow: hidden;
-      position: absolute;
-      *float: none;
-      *width: 187px;
-      *display: inline;
+      li.active {
+        background: $villaBorderBlue;
+      }
+      #logo {
+        color: white;
+        float: left;
+        height: 128px;
+        letter-spacing: -1px;
+        line-height: 1;
+        margin-right: 10px;
+        margin-top: -70px;
+        overflow: hidden;
+        position: absolute;
+        *float: none;
+        *width: 140px;
+        *display: block;
+      }
+      #logo-villas {
+        float: left;
+        height: 57px;
+        margin-left: 150px;
+        margin-top: -60px;
+        overflow: hidden;
+        position: absolute;
+        *float: none;
+        *width: 187px;
+        *display: inline;
+      }
     }
   }
 }
@@ -648,10 +652,12 @@ body.homepage {
   overflow: hidden;
   position: relative;
   img {
-    width:  960px;
     height: 230px;
+    left: 0;
+    overflow: hidden;
+    position: relative;
     top:  0;
-    left: 0
+    width:  960px;
   }
 }
 
@@ -689,10 +695,11 @@ body.homepage {
       float: none;
       *min-height: 10px;
       *display: inline;
-      *position: relative;
+      *position: absolute;
     }
     .input-append {
       margin-bottom: 0;
+      *display: inline;
     }
     .add-on {
       margin-bottom: -30px;
