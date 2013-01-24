@@ -94,7 +94,6 @@ ActiveRecord::Schema.define(:version => 20130110194532) do
   create_table "destination_translations", :force => true do |t|
     t.integer  "destination_id"
     t.string   "locale"
-    t.string   "name"
     t.text     "content"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
@@ -205,27 +204,6 @@ ActiveRecord::Schema.define(:version => 20130110194532) do
   end
 
   add_index "services", ["slug"], :name => "index_services_on_slug"
-
-  create_table "static_page_translations", :force => true do |t|
-    t.integer  "static_page_id"
-    t.string   "locale"
-    t.text     "about_content"
-    t.text     "home_content"
-    t.text     "contact_content"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
-
-  add_index "static_page_translations", ["locale"], :name => "index_static_page_translations_on_locale"
-  add_index "static_page_translations", ["static_page_id"], :name => "index_static_page_translations_on_static_page_id"
-
-  create_table "static_pages", :force => true do |t|
-    t.text     "about_content"
-    t.text     "home_content"
-    t.text     "contact_content"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
-  end
 
   create_table "tag_translations", :force => true do |t|
     t.integer  "tag_id"
