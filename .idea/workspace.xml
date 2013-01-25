@@ -35,7 +35,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="700" column="14" selection-start="12043" selection-end="12043" vertical-scroll-proportion="0.040339705">
+            <state line="332" column="33" selection-start="5908" selection-end="5908" vertical-scroll-proportion="3.0976646">
               <folding />
             </state>
           </provider>
@@ -173,9 +173,9 @@
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/config/locales/es.yml" />
         <option value="$PROJECT_DIR$/config/locales/fr.yml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       </list>
     </option>
   </component>
@@ -1054,7 +1054,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="700" column="14" selection-start="12043" selection-end="12043" vertical-scroll-proportion="0.040339705">
+        <state line="332" column="33" selection-start="5908" selection-end="5908" vertical-scroll-proportion="3.0976646">
           <folding />
         </state>
       </provider>

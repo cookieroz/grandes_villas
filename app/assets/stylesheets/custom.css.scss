@@ -180,9 +180,10 @@ header {
   height: 150px;
   position: relative;
   .navbar {
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    position: relative;
+    background: none;
+    filter: none;
     height: 150px;
+    position: relative;
     width: 100%;
     .navbar-inner {
       background: none;
