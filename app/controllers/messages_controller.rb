@@ -11,9 +11,10 @@ class MessagesController < ApplicationController
     if @message.valid?
       ContactMailer.contact_confirmation(@message).deliver
       ContactMailer.inquiry(@message).deliver
-      redirect_to root_url, notice: "Message sent! Thank you for contacting us."
+      redirect_to :back, notice: "Message sent! Thank you for contacting us."
     else
-      render "new"
+      format.html { render action: "new" }
+      format.json { render json: @message.errors, status: :unprocessable_entity }
     end
   end
 end

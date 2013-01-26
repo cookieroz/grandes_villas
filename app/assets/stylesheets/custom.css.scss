@@ -1161,6 +1161,52 @@ footer {
   }
 }
 
+#feedback {
+  display:block;
+  position: fixed;
+  right: -325px;
+  text-decoration: none;
+  top: 250px;
+  z-index: 9999;
+  form {
+    background: #ffffff;
+    border: 2px solid $captionBlue;
+    border-radius: 5px 5px 5px 5px;
+    padding: 10px;
+    label {
+      width: 60px;
+    }
+    .controls {
+      margin-left: 80px;
+    }
+  }
+  a.pull_feedback{
+    background-image: image-url("quickcontact.png");
+    background-repeat: no-repeat;
+    color: #ffffff;
+    display:block;
+    font-family: "Myriad Pro",Myriad,"Liberation Sans","Nimbus Sans L",
+    "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    height: 87px;
+    letter-spacing: .2em;
+    margin: 0;
+    padding: 20px 0 0 0;
+    position: absolute;
+    left: -181px;
+    text-align: center;
+    text-decoration: none;
+    top: 50px;
+    width: 181px;
+    z-index: 9999;
+    &:hover {
+      background-position: 0 -108px;
+    }
+  }
+}
+
+
+
 /* Misc Styles */
 
 .orangeText {

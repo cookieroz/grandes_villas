@@ -59,6 +59,7 @@ GEM
     ckeditor (3.7.3)
       mime-types
       orm_adapter
+    client_side_validations (3.2.1)
     coderay (1.0.7)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -232,6 +233,7 @@ DEPENDENCIES
   capybara (= 1.1.2)
   carrierwave (= 0.5.8)
   ckeditor (= 3.7.3)
+  client_side_validations (= 3.2.1)
   coffee-rails (~> 3.2.1)
   database_cleaner (= 0.7.0)
   factory_girl_rails (= 1.4.0)
@@ -251,7 +253,7 @@ DEPENDENCIES
   pry
   rails (= 3.2.8)
   rails-translate-routes (= 0.1.3)
-  ransack
+  ransack (= 0.7.0)
   rspec-rails (= 2.8.1)
   sass-rails (~> 3.2.3)
   simple_form (= 2.0.3)

@@ -25,7 +25,9 @@ gem 'globalize3', '0.2.0'
 gem 'friendly_id', '~> 4.0.1'
 gem 'ckeditor', '3.7.3'
 gem 'rails-translate-routes', '0.1.3'
-gem 'ransack'
+gem 'ransack', '0.7.0'
+gem 'client_side_validations', '3.2.1'
+#gem 'client_side_validations-simple_form'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'

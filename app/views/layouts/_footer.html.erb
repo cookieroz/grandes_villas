@@ -64,6 +64,26 @@
   </div>
 </footer>
 
+<!--
 <div id="contact-sidebar">
-  <%= link_to("Quick Message", contact_path, class: "support") %>
+  <%#= link_to("Quick Message", contact_path, class: "support") %>
+</div> -->
+
+<div id="feedback">
+  <%= render 'messages/feedback' %>
+  <a href="#" class="pull_feedback" title="Click to contact us">Quick Message</a>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        jQuery(".pull_feedback").toggle(function(){
+                    jQuery("#feedback").animate({right:"0px"});
+                    return false;
+                },
+                function(){
+                    jQuery("#feedback").animate({right:"-325px"});
+                    return false;
+                }
+        ); //toggle
+    }); //document.ready
+</script>
