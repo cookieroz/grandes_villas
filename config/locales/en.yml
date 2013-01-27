@@ -12,7 +12,6 @@ en:
         about: "About Us"
         destination: "Destinations"
         services: "Services"
-    footer:
   home:
     index:
       feature: "Featured Villas"
@@ -128,13 +127,6 @@ en:
       activities: "Activities"
       beaches: "Beaches"
       restaurants: "Restaurants"
-  simple_form:
-      labels:
-        costa_tropicals:
-          title: "Title"
-          city: "City"
-          activity: "Activity"
-          content: "Content"
   date:
     calendarhead: "Mon Tue Wed Thu Fri Sat Sun"
 

@@ -9,7 +9,15 @@ es:
         about: "Sobre Nosotros"
         destination: "Destinos"
         services: "Servicios"
-    footer:
+  simple_form:
+    labels:
+      defaults:
+        name: "Nombre"
+        tlf: "Tlf"
+        dates: "Fechas"
+        adults: "Adultos"
+        content: "Mensaje"
+        kids: "Niños"
   home:
       index:
         feature: "Villas Descatadas"
@@ -127,13 +135,6 @@ es:
         activities: "Actividades"
         beaches: "Playas"
         restaurants: "Restaurantes"
-  simple_form:
-    labels:
-      costa_tropicals:
-        title: "Título"
-        city: "Cuidad"
-        activity: "Actividad"
-        content: "Contenido"
   date:
     calendarhead: "lun mar mié jue vie sab dom"
     abbr_day_names:

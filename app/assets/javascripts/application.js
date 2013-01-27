@@ -16,4 +16,5 @@
 //= require jquery-fileupload
 //= require bootstrap
 //= require ckeditor/init
+//= require rails.validations
 //= require_tree .

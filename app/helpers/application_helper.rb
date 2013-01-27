@@ -21,6 +21,10 @@ module ApplicationHelper
     !Destination.first
   end
 
+  def new_message
+    Message.new
+  end
+
   def no_res?
     !Reservation.first
   end

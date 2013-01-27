@@ -70,7 +70,7 @@
 </div> -->
 
 <div id="feedback">
-  <%= render 'messages/feedback' %>
+  <%= render 'messages/feedback', :locals => {:message => new_message} %>
   <a href="#" class="pull_feedback" title="Click to contact us">Quick Message</a>
 </div>
 

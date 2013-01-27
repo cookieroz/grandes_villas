@@ -17,7 +17,15 @@ fr:
         about: "À propos de Grandes Villas"
         destination: "Destinations"
         services: "Services"
-    footer:
+  simple_form:
+    labels:
+      defaults:
+        name: "Nom"
+        tlf: "Tel"
+        dates: "Dates"
+        adults: "Adultes"
+        content: "Message"
+        kids: "Enfants"
   home:
       index:
         feature: "Villas Remarquables"

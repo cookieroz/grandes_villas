@@ -1,25 +1,11 @@
 <div class="contact-service-form">
   <h3><%= t ".inquire" %> <%= t "layouts.header.services" %></h3>
-  <%= form_for  @message,
+  <%= simple_form_for  @message, :validate => true,
                 :html => { :class => 'form-horizontal' } do |f| %>
-      <div class="control-group">
-        <%= f.label :name, t("messages.new.name"), class: "control-label" %>
-        <div class="controls">
-          <%= f.text_field :name %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :tlf, class: "control-label" %>
-        <div class="controls">
-          <%= f.text_field :tlf %>
-        </div>
-      </div>
-      <div class="control-group">
-        <%= f.label :email, class: "control-label" %>
-        <div class="controls">
-          <%= f.text_field :email %>
-        </div>
-      </div>
+      <%= f.input :name %>
+      <%= f.input :nickname, :wrapper_html => { :class => 'nickname' } %>
+      <%= f.input :tlf %>
+      <%= f.input :email %>
       <div class="control-group">
         <small>Which services you are interested in?</small>
         <%= f.label :service_interest, t("layouts.header.services"), class: "control-label" %>
@@ -34,12 +20,7 @@
           <%= f.text_field :dates %>
         </div>
       </div>
-      <div class="control-group">
-        <%= f.label :content, t("messages.new.msg"), class: "control-label" %>
-        <div class="controls">
-          <%= f.text_area :content, :rows => 5 %>
-        </div>
-      </div>
+      <%= f.input :content, :as => :text, :input_html => { :rows => 5 } %>
       <div class="actions center">
         <%= f.submit t("messages.new.send"), class: "btn btn-warning" %>
       </div>

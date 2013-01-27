@@ -1,7 +1,7 @@
 source :rubygems
 ruby '1.9.3'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
@@ -9,9 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'json', '1.7.5'
 
 gem 'jquery-rails', '2.1.3'
-#gem 'jquery-ui-bootstrap-rails', '0.0.2'
 gem 'jquery-ui-rails', '1.1.0'
-#gem 'bootstrap-datepicker-rails'
 
 #gem 'rmagick', '2.13.1'
 gem 'mini_magick', '3.4'
@@ -21,8 +19,7 @@ gem 'simple_form', '2.0.3'
 gem 'active_attr', '0.6.0'
 gem 'gmaps4rails', '1.5.5'
 gem 'globalize3', '0.2.0'
-#gem 'easy_globalize3_accessors', '1.2.0'
-gem 'friendly_id', '~> 4.0.1'
+gem 'friendly_id', '~> 4.0.9'
 gem 'ckeditor', '3.7.3'
 gem 'rails-translate-routes', '0.1.3'
 gem 'ransack', '0.7.0'

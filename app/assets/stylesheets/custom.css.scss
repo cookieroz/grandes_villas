@@ -1174,7 +1174,7 @@ footer {
     border-radius: 5px 5px 5px 5px;
     padding: 10px;
     label {
-      width: 60px;
+      width: 65px;
     }
     .controls {
       margin-left: 80px;
@@ -1243,4 +1243,8 @@ footer {
 
 .left-5-margin {
   margin-left: 5px;
+}
+
+.nickname {
+  display: none;
 }

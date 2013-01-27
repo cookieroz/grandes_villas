@@ -32,7 +32,7 @@ GrandesVillas::Application.routes.draw do
 
   resources :shared
 
-    resources :messages
+    resources :messages, :only => [:new, :create]
 
     root :to => 'home#index'
 
