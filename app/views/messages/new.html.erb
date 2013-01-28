@@ -38,7 +38,7 @@
     </div>
     <div class="span5">
       <%= simple_form_for @message,
-                   :html => { :class => 'form-horizontal contact-form' },
+                   :html => { :class => 'form-horizontal contact-form', "data-validate" => "true" },
                    validate: true do |f| %>
           <%= f.input :name %>
           <%= f.input :nickname, :wrapper_html => { :class => 'nickname' } %>
