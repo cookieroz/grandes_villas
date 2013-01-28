@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
       redirect_to :back, notice: "Message sent! Thank you for contacting us."
     else
       flash.now[:notice] = "Please fill all fields."
-      render 'new'
+      render 'edit'
     end
   end
 end
