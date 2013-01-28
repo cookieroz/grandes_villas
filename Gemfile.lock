@@ -60,9 +60,6 @@ GEM
       mime-types
       orm_adapter
     client_side_validations (3.2.1)
-    client_side_validations-simple_form (2.0.1)
-      client_side_validations (~> 3.2.0)
-      simple_form (~> 2.0.3)
     coderay (1.0.7)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -238,7 +235,6 @@ DEPENDENCIES
   carrierwave (= 0.5.8)
   ckeditor (= 3.7.3)
   client_side_validations (= 3.2.1)
-  client_side_validations-simple_form
   coffee-rails (~> 3.2.1)
   database_cleaner (= 0.7.0)
   factory_girl_rails (= 1.4.0)
