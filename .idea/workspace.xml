@@ -23,19 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/messages/_new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="88" selection-start="781" selection-end="781" vertical-scroll-proportion="0.479798">
+            <state line="19" column="89" selection-start="781" selection-end="781" vertical-scroll-proportion="-11.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="29" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
+            <state line="18" column="65" selection-start="751" selection-end="751" vertical-scroll-proportion="0.446281">
               <folding />
             </state>
           </provider>
@@ -101,8 +110,8 @@
         <option value="$PROJECT_DIR$/app/views/messages/_feedback.html.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/_service_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/_new.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -155,6 +164,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="grandes_villas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grandes_villas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grandes_villas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -785,13 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1248" column="15" selection-start="21746" selection-end="21746" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="87" selection-start="494" selection-end="494" vertical-scroll-proportion="0.0">
@@ -820,23 +836,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/messages/_new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="29" selection-start="751" selection-end="751" vertical-scroll-proportion="0.0">
+        <state line="19" column="89" selection-start="781" selection-end="781" vertical-scroll-proportion="-11.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1248" column="15" selection-start="21746" selection-end="21746" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="91" selection-start="839" selection-end="839" vertical-scroll-proportion="0.8252427">
+        <state line="31" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/messages/_new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="88" selection-start="781" selection-end="781" vertical-scroll-proportion="0.479798">
+        <state line="18" column="65" selection-start="751" selection-end="751" vertical-scroll-proportion="0.446281">
           <folding />
         </state>
       </provider>
