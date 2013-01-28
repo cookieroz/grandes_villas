@@ -32,15 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="83" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-9.375">
-              <folding>
-                <marker date="1359394550000" expanded="true" signature="1966:2989" placeholder=" ... end" />
-                <marker date="1359394550000" expanded="true" signature="2367:2989" placeholder=" ... end" />
-                <marker date="1359394550000" expanded="true" signature="2771:2989" placeholder=" ... end" />
-              </folding>
+            <state line="45" column="84" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.42307693">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,10 +59,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="85" selection-start="789" selection-end="789" vertical-scroll-proportion="0.7802013">
+            <state line="11" column="74" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -120,11 +116,11 @@
         <option value="$PROJECT_DIR$/app/models/message.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/_new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/messages/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/messages/_feedback.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/messages_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/views/messages/new.html.erb" />
       </list>
     </option>
   </component>
@@ -877,17 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="83" selection-start="1354" selection-end="1354" vertical-scroll-proportion="-9.375">
-          <folding>
-            <marker date="1359394550000" expanded="true" signature="1966:2989" placeholder=" ... end" />
-            <marker date="1359394550000" expanded="true" signature="2367:2989" placeholder=" ... end" />
-            <marker date="1359394550000" expanded="true" signature="2771:2989" placeholder=" ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/message.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="90" selection-start="520" selection-end="520" vertical-scroll-proportion="0.0">
@@ -925,7 +910,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="85" selection-start="789" selection-end="789" vertical-scroll-proportion="0.7802013">
+        <state line="11" column="74" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messages/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="84" selection-start="1413" selection-end="1413" vertical-scroll-proportion="0.42307693">
           <folding />
         </state>
       </provider>
