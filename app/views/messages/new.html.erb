@@ -39,23 +39,11 @@
     <div class="span5">
       <%= simple_form_for @message, :validate => true,
                    :html => { :class => 'form-horizontal contact-form' } do |f| %>
-          <div class="control-group">
-            <%= f.label :name, t(".name"), class: "control-label" %>
-            <div class="controls">
-              <%= f.text_field :name %>
-            </div>
-          </div>
-          <div style="display: none;">
-            <%= f.input :nickname %>
-          </div>
+          <%= f.input :name %>
+          <%= f.input :nickname, :wrapper_html => { :class => 'nickname' } %>
           <%= f.input :email %>
           <%= f.input :tlf %>
-          <div class="control-group">
-            <%= f.label :content, t(".msg"), class: "control-label" %>
-            <div class="controls">
-              <%= f.text_area :content, :rows => 5 %>
-            </div>
-          </div>
+          <%= f.input :content, :as => :text, :input_html => { :rows => 5 } %>
           <div class="actions center">
             <%= f.submit t(".send"), class: "btn btn-primary" %>
           </div>
