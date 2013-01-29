@@ -1,7 +1,7 @@
 <div class="contact-service-form">
   <h3><%= t ".inquire" %> <%= t "layouts.header.services" %></h3>
-  <%= simple_form_for  @message, :validate => true,
-                :html => { :class => 'form-horizontal' } do |f| %>
+  <%= simple_form_for  @message,
+                :html => { :class => 'form-horizontal', "data-validate" => :true } do |f| %>
       <%= f.input :name %>
       <%= f.input :nickname, :wrapper_html => { :class => 'nickname' } %>
       <%= f.input :tlf %>
@@ -25,4 +25,9 @@
         <%= f.submit t("messages.new.send"), class: "btn btn-warning" %>
       </div>
   <% end %>
+  <script>
+    //<![CDATA[
+    if(window.ClientSideValidations==undefined)window.ClientSideValidations={};if(window.ClientSideValidations.forms==undefined)window.ClientSideValidations.forms={};window.ClientSideValidations.forms['new_message'] = {"type":"SimpleForm::FormBuilder","error_class":"help-inline","error_tag":"span","wrapper_error_class":"error","wrapper_tag":"div","wrapper_class":"control-group","wrapper":"bootstrap","validators":{"message[name]":{"presence":[{"message":"can't be blank"}]},"message[nickname]":{"format":[{"message":"is invalid","with":/^$/}]},"message[email]":{"presence":[{"message":"can't be blank"}],"format":[{"message":"is invalid","with":/^[-a-z0-9_+\.]+\@([-a-z0-9]+\.)+[a-z0-9]{2,4}$/i}]},"message[content]":{"presence":[{"message":"can't be blank"}],"length":[{"messages":{"minimum":"is too short (minimum is 10 characters)","maximum":"is too long (maximum is 1000 characters)"},"minimum":10,"maximum":1000}]}}};
+    //]]>
+  </script>
 </div>
