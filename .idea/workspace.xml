@@ -71,7 +71,7 @@
       <file leaf-file-name="_footer.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="85" selection-start="3913" selection-end="3913" vertical-scroll-proportion="0.302926">
+            <state line="77" column="21" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.56110156">
               <folding />
             </state>
           </provider>
@@ -933,7 +933,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="85" selection-start="3913" selection-end="3913" vertical-scroll-proportion="0.302926">
+        <state line="77" column="21" selection-start="4230" selection-end="4230" vertical-scroll-proportion="0.56110156">
           <folding />
         </state>
       </provider>
