@@ -1,6 +1,6 @@
 <div class="contact-service-form">
   <%= simple_form_for new_message, :validate => true,
-                      :html => { :class => 'form-horizontal' } do |f| %>
+                      :html => { :class => 'form-horizontal widget-form' } do |f| %>
       <%= f.input :name %>
       <%= f.input :nickname, :wrapper_html => { :class => 'nickname' } %>
       <%= f.input :tlf %>
