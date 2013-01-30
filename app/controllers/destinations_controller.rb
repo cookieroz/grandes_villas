@@ -18,9 +18,14 @@ class DestinationsController < ApplicationController
     @json = @destination.to_gmaps4rails
     @home_page = true
 
-    @img_array = "villadarkamus.jpg", "villahelga.jpg", "villalatorre.jpg",
+    @imgs = "villadarkamus.jpg", "villahelga.jpg", "villalatorre.jpg",
                   "villaleticia.jpg", "villaloasis.jpg", "villalujan.jpg", "villamava.jpg",
                   "villanammusia.jpg", "villaromantica.jpg"
+    @urls = "villa-dar-karmus", "villa-helga-ref-135", "villa-la-torre-ref-119",
+    "villa-leticia-ref-128", "villa-oasis-ref-138--2", "villa-lujan", "villa-mava-ref-102",
+        "villa-nammusia-ref-129", "villa-romantica-ref-120"
+
+    @dest_bottom = @imgs.zip(@urls).sample
 
 
     respond_to do |format|

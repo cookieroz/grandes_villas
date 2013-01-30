@@ -32,15 +32,12 @@
         ) %>
   </div>
   <div class="bottom-pics">
-    <div class="span4">
-      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
-    </div>
-    <div class="span4">
-      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
-    </div>
-    <div class="span4">
-      <%= link_to image_tag("destination_btm/#{@img_array.sample}"), "#" %>
-    </div>
+    <% [@imgs, @urls].transpose.sample(3).each do |img, url| %>
+      <div class="span4">
+        <%= link_to image_tag("destination_btm/#{img}"),
+                    "#{villas_path}/#{url}" %>
+      </div>
+    <% end %>
   </div>
   <div class="clear"></div>
 </div>
