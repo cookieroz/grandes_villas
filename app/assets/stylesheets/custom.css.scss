@@ -781,26 +781,27 @@ ul.thumbnails {
   border: 1px solid $villaBorderBlue;
   border-radius: 4px;
   margin-left: 5px;
-  width: 245px;
+  width: 244px;
   .sug-nav {
     padding: 0;
     position: absolute;
     margin-top: 128px;
+    width: 245px;
     z-index: 4000;
     a {
       color: $homeTitleBlue;
       display: block;
-      font-size: 60px;
+      font-size: 50px;
       &:hover {
         color: $villaOrange;
         text-decoration: none;
       }
     }
     #prev1 {
-      margin-left: -3px;
+      margin-left: 1px;
     }
     #next1 {
-     margin-left: 196px;
+      margin-right: 1px;
     }
   }
   .sug-slideshow {
