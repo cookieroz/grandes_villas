@@ -909,6 +909,36 @@ ul.thumbnails {
     font-weight: normal;
     line-height: 20px;
     margin-right: 10px;
+    padding-bottom: 5px;
+  }
+  #player {
+    width: 299px;
+    height: 220px;
+    overflow: hidden;
+    position: absolute;
+    border: none;
+  }
+
+  .youtube .carousel {
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    right: 0px;
+    z-index: 3;
+  }
+
+  .youtube .thumbnail {
+    margin: 2px;
+    width: 80%;
+    border: none;
+  }
+
+  .youtube iframe.player {
+    width: 80%;
+    height: 240px;
+    overflow: auto;
+    border: 0;
   }
 }
 
