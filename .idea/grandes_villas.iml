@@ -52,6 +52,7 @@
     <orderEntry type="library" scope="PROVIDED" name="friendly_id (v4.0.9, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalize3 (v0.2.0, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="gmaps4rails (v1.5.5, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="google-analytics-rails (v0.0.3, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="highline (v1.6.15, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.1, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.1, RVM: ruby-1.9.3-p374 [global]) [gem]" level="application" />
