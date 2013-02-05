@@ -2,6 +2,7 @@
 
 <%#= render 'form' %>
 <p>Edit Language <strong><%= t "villas.form.lang" %></strong></p>
+
 <%= simple_form_for(@admin_photo, :url => admin_photo_path) do |f| %>
     <%= f.error_notification %>
     <%= hidden_field_tag "imageable_type", params[:imageable_type] %>
