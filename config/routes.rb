@@ -1,4 +1,7 @@
 GrandesVillas::Application.routes.draw do
+  resources :posts
+
+
   resources :services
 
   namespace :admin do

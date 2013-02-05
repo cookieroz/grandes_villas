@@ -1,0 +1,13 @@
+<% provide(:title, @post.title) %>
+<p id="notice"><%= notice %></p>
+
+<div class="page-header">
+  <h1><%= @post.title %></h1>
+</div>
+
+<%= raw @post.content %>
+
+<% if current_user %>
+    <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' %> |
+<% end %>
+<%= link_to(t("villas.show.back"), post_path, class: 'btn') %>

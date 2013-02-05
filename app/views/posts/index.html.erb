@@ -1,0 +1,33 @@
+<% provide(:title, "Blog") %>
+<div class="destination-index">
+
+  <ul class="thumbnails">
+    <% @posts.each do |post| %>
+        <li class="span4">
+          <div class="thumbnail">
+            <h2><%= link_to post.title, post %></h2>
+            <p><%= raw truncate(strip_tags(post.content), :length => 380) %></p>
+            <div class="center">
+              <%= link_to(t("villas.index.readmore"), post,
+                          class: 'btn btn-info btn-large') %>
+            </div>
+            <% if current_user %>
+                <br />
+                <br />
+                <%= link_to 'Edit', edit_post_path(post),
+                            class: 'btn btn-primary btn-large' %>
+                <%= link_to 'Delete', post,
+                            method: :delete, data: { confirm: 'Are you sure?' },
+                            class: 'btn btn-danger btn-large' %>
+            <% end %>
+          </div>
+        </li>
+    <% end %>
+  </ul>
+
+    <% if current_user %>
+        <%= link_to 'New Blog Post', new_post_path,
+                    class: 'btn btn-warning btn-large' %>
+    <% end %>
+</div>
+
