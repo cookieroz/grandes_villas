@@ -5,7 +5,6 @@
       <%= stylesheet_link_tag    "application", media: "all" %>
       <%= javascript_include_tag "application" %>
       <%= favicon_link_tag %>
-      <%= analytics_init if Rails.env.production? %>
       <%#= yield(:head) %>
       <%= csrf_meta_tags %>
       <%= render 'layouts/shim' %>
