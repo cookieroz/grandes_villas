@@ -5,6 +5,8 @@ class Photo < ActiveRecord::Base
   mount_uploader :image, ImageUploader
   delegate :url, to: :image
 
+  translates :sug_text, :caption
+
   belongs_to :villa
   belongs_to :imageable, :polymorphic => true
 
@@ -19,5 +21,9 @@ class Photo < ActiveRecord::Base
         "delete_url" => photo_path(:id => id),
         "delete_type" => "DELETE"
     }
+  end
+
+  class Translation
+    attr_accessible :locale
   end
 end

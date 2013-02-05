@@ -23,6 +23,7 @@ gem 'ransack', '0.7.0'
 gem 'simple_form', '2.0.4'
 gem 'client_side_validations', '3.2.1'
 gem 'client_side_validations-simple_form', '2.0.1'
+gem 'google-analytics-rails'
 
 group :development, :test do
   gem 'rspec-rails', '2.8.1'

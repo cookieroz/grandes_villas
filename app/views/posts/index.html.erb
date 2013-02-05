@@ -8,7 +8,7 @@
             <h2><%= link_to post.title, post %></h2>
             <p><%= raw truncate(strip_tags(post.content), :length => 380) %></p>
             <div class="center">
-              <%= link_to(t("villas.index.readmore"), post,
+              <%= link_to(t("posts.readmoreblog"), post,
                           class: 'btn btn-info btn-large') %>
             </div>
             <% if current_user %>

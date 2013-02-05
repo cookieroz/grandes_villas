@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205114108) do
+ActiveRecord::Schema.define(:version => 20130205122637) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -136,6 +136,18 @@ ActiveRecord::Schema.define(:version => 20130205114108) do
   end
 
   add_index "locations", ["villa_id"], :name => "index_locations_on_villa_id"
+
+  create_table "photo_translations", :force => true do |t|
+    t.integer  "photo_id"
+    t.string   "locale"
+    t.string   "caption"
+    t.text     "sug_text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "photo_translations", ["locale"], :name => "index_photo_translations_on_locale"
+  add_index "photo_translations", ["photo_id"], :name => "index_photo_translations_on_photo_id"
 
   create_table "photos", :force => true do |t|
     t.string   "caption"

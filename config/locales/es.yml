@@ -137,6 +137,8 @@ es:
         restaurants: "Restaurantes"
   date:
     calendarhead: "lun mar mié jue vie sab dom"
+  posts:
+    readmoreblog: "Leer más"
     abbr_day_names:
     - dom
     - lun

@@ -30,7 +30,7 @@
               <%= photo.photo_link %>
             </div>
             <div class="span1">
-              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
+              <%= link_to 'Edit', edit_admin_photo_path(photo, :imageable_type => "TopPhoto") %>
               <%= link_to 'Destroy', admin_photo_path(photo),
                           method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
@@ -67,7 +67,7 @@
               <%= photo.photo_link %>
             </div>
             <div class="span1 no-left-margin">
-              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
+              <%= link_to 'Edit', edit_admin_photo_path(photo) %>
               <%= link_to 'Destroy', admin_photo_path(photo),
                           method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
@@ -117,7 +117,7 @@
               <%= photo.photo_link %>
             </div>
             <div class="span1">
-              <%#= link_to 'Edit', edit_admin_photo_path(photo) %>
+              <%= link_to 'Edit', edit_admin_photo_path(photo) %>
               <%= link_to 'Destroy', admin_photo_path(photo),
                           method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>

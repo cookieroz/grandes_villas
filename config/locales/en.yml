@@ -129,4 +129,6 @@ en:
       restaurants: "Restaurants"
   date:
     calendarhead: "Mon Tue Wed Thu Fri Sat Sun"
+  posts:
+      readmoreblog: "Read More"
 

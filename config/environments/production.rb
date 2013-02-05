@@ -64,11 +64,13 @@ GrandesVillas::Application.configure do
       :authentication  => :login
   }
 
-
+  #for google analytics
+  GA.tracker = "UA-38254549-1"
 
 
   # Enable threaded mode
   # config.threadsafe!
+
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify

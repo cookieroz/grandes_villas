@@ -52,8 +52,8 @@ class Admin::PhotosController < ApplicationController
     @admin_photo = Photo.find(params[:id])
 
     respond_to do |format|
-      if @admin_photo.update_attributes(params[:admin_photo])
-        format.html { redirect_to @admin_photo, notice: 'Photo was successfully updated.' }
+      if @admin_photo.update_attributes(params[:photo])
+        format.html { redirect_to admin_photos_path, notice: 'Photo was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

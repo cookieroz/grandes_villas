@@ -143,6 +143,8 @@ fr:
         activities: "Activités"
         beaches: "Plages"
         restaurants: "Restaurants"
+  posts:
+    readmoreblog: "Lire plus"
   date:
     calendarhead: "lun mar mer jeu ven sam dim"
     formats:
