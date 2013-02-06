@@ -127,7 +127,7 @@
   <div class="row special">
     <div class="home-special">
       <% Photo.where(imageable_type: "BottomPhoto").each do |photo| %>
-        <%= link_to image_tag(photo.url), root_url+"/#{photo.photo_link}" %>
+        <%= link_to image_tag(photo.url), root_url+"#{photo.photo_link}" %>
       <% end %>
     </div>
   </div>
