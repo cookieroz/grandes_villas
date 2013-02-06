@@ -35,7 +35,7 @@
     <% [@imgs, @urls].transpose.sample(3).each do |img, url| %>
       <div class="span4">
         <%= link_to image_tag("destination_btm/#{img}"),
-                    "#{villas_path}/#{url}" %>
+                    "#{root_path(:locale => I18n.locale)}/#{url}" %>
       </div>
     <% end %>
   </div>

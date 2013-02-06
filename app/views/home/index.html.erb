@@ -1,6 +1,6 @@
 <div id="home-slideshow" class="pics">
   <% Photo.where(imageable_type: "TopPhoto").each do |photo| %>
-      <%= link_to(image_tag(photo.url, alt: photo.caption), "#{photo.photo_link}") %>
+      <%= link_to(image_tag(photo.url, alt: photo.caption), root_url+"/#{photo.photo_link}") %>
   <% end %>
 </div>
 <div id="banner"></div>
@@ -60,11 +60,11 @@
         <% Photo.where(imageable_type: "SugPhoto").each do |photo| %>
           <div class="sug-slide">
             <div class="featured-villas">
-              <h2><%= link_to(t(".suggestions"), "#{photo.photo_link}") %></h2>
+              <h2><%= link_to(t(".suggestions"), root_url+"/#{photo.photo_link}") %></h2>
             </div>
             <h4><%= photo.caption %></h4>
               <div class="center"><%= link_to(image_tag(photo.url),
-                                              "#{photo.photo_link}") %></div>
+                                              root_url+"/#{photo.photo_link}") %></div>
               <p><%= photo.sug_text %></p>
           </div>
         <% end %>
@@ -127,7 +127,7 @@
   <div class="row special">
     <div class="home-special">
       <% Photo.where(imageable_type: "BottomPhoto").each do |photo| %>
-        <%= link_to image_tag(photo.url), "#{photo.photo_link}" %>
+        <%= link_to image_tag(photo.url), root_url+"/#{photo.photo_link}" %>
       <% end %>
     </div>
   </div>
