@@ -47,7 +47,7 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -90px;
+  margin: 0 auto -200px;
   overflow: hidden;
 }
 
@@ -997,11 +997,6 @@ h4.contact-add {
   width: 280px;
 }
 
-#push {
-  clear: both;
-  height: 110px;
-}
-
 /* Destination styles */
 .destination-show {
   background: #ffffff;
@@ -1133,6 +1128,11 @@ h4.contact-add {
   }
 }
 
+#push {
+  clear: both;
+  height: 200px;
+}
+
 /* footer */
 
 footer {
@@ -1140,7 +1140,7 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
-  height: 250px;
+  height: 200px;
   a {
     color: #ffffff;
     &:hover {
