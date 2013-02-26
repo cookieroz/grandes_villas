@@ -5,6 +5,12 @@ class VillasController < ApplicationController
   # GET /villas.json
 
   def index
+    if params[:q].present? && params[:q][:locations_id_eq].present?
+      location = Location.find params[:q][:locations_id_eq]
+      params_for_search = params.merge({location_id: location.id, location_name: location.place.parameterize.underscore})
+      redirect_to search_villas_seo_en_path(params_for_search)
+      return
+    end
     @search = Villa.search params[:q]
     @villas = @search.result.order("sleeps DESC")
     if params[:start_date].present? && params[:end_date].present? && params[:start_date].length > 0 && params[:end_date].length > 0
@@ -19,6 +25,25 @@ class VillasController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.json { render :json => @photos.collect { |p| p.to_jq_upload }.to_json  }
+    end
+  end
+
+  def search
+    @search = Villa.search params[:q]
+    @villas = @search.result.order("sleeps DESC")
+    if params[:start_date].present? && params[:end_date].present? && params[:start_date].length > 0 && params[:end_date].length > 0
+      overlaped_villas = Villa.
+        joins(:reservations).
+        where("start_date <= ? AND end_date >= ?", params[:end_date], params[:start_date])
+
+      @villas = @villas.where("villas.id not in (?)", overlaped_villas) if overlaped_villas.any?
+    end
+
+    @photos = Photo.all
+
+    respond_to do |format|
+      format.html { render "index" }
       format.json { render :json => @photos.collect { |p| p.to_jq_upload }.to_json  }
     end
   end
