@@ -18,7 +18,7 @@ GrandesVillas::Application.routes.draw do
   end
 
   #scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
-    resources :costa_tropicals
+   # resources :costa_tropicals
 
     match '/about',   to: 'static_pages#about'
     match '/contact', to: 'messages#new'
