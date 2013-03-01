@@ -26,7 +26,7 @@ GrandesVillas::Application.routes.draw do
   match '/villas/search/motril', to: 'villas#motril'
   match '/villas/search/salobrena', to: 'villas#salobrena'
   match '/villas/search/almunecar', to: 'villas#almunecar'
-  match '/villas/in/:location_name/:location_id', to: 'villas#search', as: :search_villas_seo
+  match '/villas/in/(:location_name)-(:location_id)-(:sleeps)-(:bedrooms)-(:start_date)-(:end_date)', to: 'villas#search', as: :search_villas_seo
 
     resources :villas do
       collection { post :sort_photos }

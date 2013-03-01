@@ -1,14 +1,16 @@
 class VillasController < ApplicationController
   before_filter :authorize, only: [:edit, :update]
   require 'date'
+
   # GET /villas
   # GET /villas.json
-
   def index
-    if params[:q].present? && params[:q][:locations_id_eq].present?
-      location = Location.find params[:q][:locations_id_eq]
-      params_for_search = params.merge({location_id: location.id, location_name: location.place.parameterize.underscore})
-      redirect_to search_villas_seo_en_path(params_for_search)
+    if params[:q].present?
+      params[:q][:start_date] = Time.new(params[:q][:start_date]).to_i if params[:q][:start_date].present?
+      params[:q][:end_date] = Time.new(params[:q][:end_date]).to_i if params[:q][:end_date].present?
+      location = Location.where(id: params[:q][:location_id]).first
+      params[:q][:location_name] = location.place.parameterize if location
+      redirect_to search_villas_seo_en_path(params[:q])
       return
     end
     @search = Villa.search params[:q]
@@ -30,9 +32,13 @@ class VillasController < ApplicationController
   end
 
   def search
-    @search = Villa.search params[:q]
-    @villas = @search.result.order("sleeps DESC")
-    if params[:start_date].present? && params[:end_date].present? && params[:start_date].length > 0 && params[:end_date].length > 0
+    params[:start_date] = Time.at(params[:start_date].to_i).to_date if params[:start_date].present?
+    params[:end_date] = Time.at(params[:end_date].to_i).to_date if params[:end_date].present?
+    @villas = Villa
+    @villas = @villas.where("sleeps >= ?", params[:sleeps]) if params[:sleeps].present?
+    @villas = @villas.where("bedrooms >= ?", params[:bedrooms]) if params[:bedrooms].present?
+    @villas = @villas.order("sleeps DESC")
+    if params[:start_date].present? && params[:end_date].present?
       overlaped_villas = Villa.
         joins(:reservations).
         where("start_date <= ? AND end_date >= ?", params[:end_date], params[:start_date])
