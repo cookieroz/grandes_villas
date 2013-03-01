@@ -2,8 +2,6 @@ module ApplicationHelper
   def full_title(page_title)
     base_title = "Villa Rental Spain"
     if page_title.empty?
-      return base_title
-    elsif @homepage = true
       return "Grandes Villas"
     else
       "#{base_title} | #{page_title}"

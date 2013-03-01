@@ -35,7 +35,7 @@
       <file leaf-file-name="application_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="58" selection-start="116" selection-end="116" vertical-scroll-proportion="0.06880734">
+            <state line="4" column="28" selection-start="145" selection-end="145" vertical-scroll-proportion="0.09174312">
               <folding />
             </state>
           </provider>
@@ -721,13 +721,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="56" selection-start="1360" selection-end="1401" vertical-scroll-proportion="9.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/villas/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="49" selection-start="271" selection-end="271" vertical-scroll-proportion="-4.375">
@@ -770,9 +763,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/villas/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="56" selection-start="1360" selection-end="1401" vertical-scroll-proportion="9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="58" selection-start="116" selection-end="116" vertical-scroll-proportion="0.06880734">
+        <state line="4" column="28" selection-start="145" selection-end="145" vertical-scroll-proportion="0.09174312">
           <folding />
         </state>
       </provider>
