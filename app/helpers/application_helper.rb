@@ -1,6 +1,6 @@
 module ApplicationHelper
   def full_title(page_title)
-    base_title = "Grandes Villas"
+    base_title = "Villa Rental Spain"
     if page_title.empty?
       return base_title
     else
