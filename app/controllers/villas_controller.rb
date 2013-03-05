@@ -37,6 +37,7 @@ class VillasController < ApplicationController
     @villas = Villa
     @villas = @villas.where("sleeps >= ?", params[:sleeps]) if params[:sleeps].present?
     @villas = @villas.where("bedrooms >= ?", params[:bedrooms]) if params[:bedrooms].present?
+    @villas = @villas.joins(:locations).where("locations.id" => params[:location_id]) if params[:location_id].present?
     @villas = @villas.order("sleeps DESC")
     if params[:start_date].present? && params[:end_date].present?
       overlaped_villas = Villa.
