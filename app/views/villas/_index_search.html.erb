@@ -2,13 +2,13 @@
     <div class="span3 no-left-margin">
       <%= select_tag(
                   "q[sleeps]",
-                  options_for_select(%w[+2 +4 +6 +8 +10].each_with_index.map {|name, index| [name,index]}),
+                  options_for_select(%w[+2 +4 +6 +8 +10].each_with_index.map {|name, index| [name, name.to_i]}),
                   { prompt: t("villas.index.selectsleep"), selected: params.try(:[], :q).try(:[], :sleeps_gteq) }
           ) %>
 
       <%= select_tag(
                   "q[bedrooms]",
-                  options_for_select(%w[1 2 3 4 5 +6].each_with_index.map {|name, index| [name,index]}),
+                  options_for_select(%w[1 2 3 4 5 +6].each_with_index.map {|name, index| [name, name.to_i]}),
                   { :prompt => t("villas.index.selectbed"), selected: params.try(:[], :q).try(:[], :bedrooms_gteq) }
           ) %>
 
