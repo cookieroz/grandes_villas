@@ -703,6 +703,9 @@ body.homepage {
       *position: absolute;
       *right: 0;
       *top: 0;
+      input {
+        width: 120px;
+      }
     }
     .input-append {
       margin-bottom: 0;
