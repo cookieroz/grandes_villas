@@ -31,6 +31,7 @@ es:
         findvilla: "Encuentra tu villa"
         massages: "Masajes"
         suggestions: "Nuestras Sugerencias"
+        discover: "Descubre"
   villas:
     index:
       h1: "Nuestras Villas de Alquiler"

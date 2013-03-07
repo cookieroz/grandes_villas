@@ -39,6 +39,7 @@ fr:
         findvilla: "Trouvez votre villa"
         massages: "Massages"
         suggestions: "Nous Suggestions"
+        discover: "Découvir"
   villas:
       index:
         h1: "Louer Villas"

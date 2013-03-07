@@ -23,12 +23,8 @@
         <nav>
           <ul class="nav pull-left">
             <li class="divider-vertical"></li>
-            <li class="<%= 'active' if current_page?(root_path) %>">
-              <%= link_to(t(".home"), root_path) %>
-            </li>
-            <li class="divider-vertical"></li>
             <li class="<%= 'active' if current_page?(villas_path) %>">
-              <%= link_to(t(".villa"), villas_path) %>
+              <%= link_to("Rent a Villa Spain", villas_path) %>
             </li>
             <li class="divider-vertical"></li>
             <li class="<%= 'active' if current_page?(destinations_path) %>">
@@ -49,6 +45,10 @@
             <li class="divider-vertical"></li>
             <li class="<%= 'active' if current_page?(posts_path) %>">
               <%= link_to("Blog", posts_path) %>
+            </li>
+            <li class="divider-vertical"></li>
+            <li class="<%= 'active' if current_page?(root_path) %>">
+              <%= link_to(t(".home"), root_path) %>
             </li>
           </ul>
         </nav>
