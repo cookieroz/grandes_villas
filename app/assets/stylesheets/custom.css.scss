@@ -1198,7 +1198,7 @@ footer {
 #feedback {
   display:block;
   position: fixed;
-  right: -325px;
+  right: 0; //-325px
   text-decoration: none;
   top: 10px;
   z-index: 9999;
@@ -1225,7 +1225,7 @@ footer {
     height: 87px;
     letter-spacing: .2em;
     margin: 0;
-    padding: 20px 0 0 0;
+    padding: 10px 0 0 0;
     position: absolute;
     left: -181px;
     text-align: center;

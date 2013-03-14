@@ -88,23 +88,23 @@
 </div> -->
 
 <div id="feedback">
-  <%= render 'messages/feedback', :locals => {:message => new_message} %>
-  <a href="#" class="pull_feedback" title="Click to contact us">Opportunities</a>
+  <%#= render 'messages/feedback', :locals => {:message => new_message} %>
+  <%= link_to "Contact Information", contact_path, class: "pull_feedback" %>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-        jQuery(".pull_feedback").toggle(function(){
-                    jQuery("#feedback").animate({right:"0px"});
-                    return false;
-                },
-                function(){
-                    jQuery("#feedback").animate({right:"-325px"});
-                    return false;
-                }
-        ); //toggle
-    }); //document.ready
-</script>
+<!-- <script type="text/javascript">
+   // $(document).ready(function(){
+   //     jQuery(".pull_feedback").toggle(function(){
+   //                 jQuery("#feedback").animate({right:"0px"});
+   //                 return false;
+   //             },
+   //             function(){
+   //                 jQuery("#feedback").animate({right:"-325px"});
+   //                 return false;
+   //             }
+   //     ); //toggle
+   // }); //document.ready
+</script>  -->
 
 <script type="text/javascript">
 
