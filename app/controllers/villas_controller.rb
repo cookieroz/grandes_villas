@@ -6,8 +6,8 @@ class VillasController < ApplicationController
   # GET /villas.json
   def index
     if params[:q].present?
-      params[:q][:start_date] = Time.new(params[:q][:start_date]).to_i if params[:q][:start_date].present?
-      params[:q][:end_date] = Time.new(params[:q][:end_date]).to_i if params[:q][:end_date].present?
+      params[:q][:start_date] = Time.parse(params[:q][:start_date]).to_i if params[:q][:start_date].present?
+      params[:q][:end_date] = Time.parse(params[:q][:end_date]).to_i if params[:q][:end_date].present?
       location = Location.where(id: params[:q][:location_id]).first
       params[:q][:location_name] = location.place.parameterize if location
       redirect_to search_villas_seo_en_path(params[:q])
